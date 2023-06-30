@@ -1,0 +1,241 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+::placeholder {
+  color: #666
+}
+
+::selection {
+  background-color: $accent;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: $mobileW;
+  overflow:-x hidden;
+}
+
+body {
+  height: 100%;
+  font-family: $userfont;
+	font-size: $fontsize;
+	line-height: $lineheight;
+	color: $textcolor;
+  font-weight: $fontweight;
+	position: relative;
+	overflow-x: hidden;
+  word-break: break-word;
+
+  @media (max-width: $tableW) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.index-body {
+  background: $bg1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; 
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+[class*="__container"] {
+  max-width: calc($desktopW + $pad + $pad);
+  padding: 0 $pad;
+  margin: 0 auto;
+
+  @media (max-width: $tableW) {
+    max-width: calc($desktopW + 10px + 10px);
+    padding: 0 10px;
+  }
+};
+
+.no-scrolling {
+  overflow: hidden;
+}
+
+.button {
+  overflow: hidden;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 212px;
+
+  border-radius: 10px;
+  background: linear-gradient(180deg, #FFD875 0%, rgba(255, 143, 80, 0.99) 100%);
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.75px;
+  text-transform: uppercase; 
+  transition: $trans;
+
+  &:hover {
+    border-radius: 50px;
+    background: linear-gradient(180deg, #F5A255 0%, #E7760D 100%);
+  }
+
+  &:active {
+    background: linear-gradient(180deg, #EA882E 0%, #CE6809 100%);
+  }
+
+  &:focus {
+    background: linear-gradient(180deg, #FFAC5F 0%, #F18017 100%);
+  }
+
+  &-large {
+    min-height: 64px;
+  }
+  &-normal {
+    min-height: 56px;
+  }
+  &-small {
+    min-height: 40px;
+  }
+
+  &-icon {
+    &::before {
+      content: '';
+      margin-right: 10px;
+      width: 24px;
+      height: 24px;
+      background-image: url('@img/icons/icons.svg#pencil');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
+.title-1,
+.title-2,
+.title-3,
+.title-4 {
+  color: #212121;
+  font-family: $secondFont;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.title-1 {
+  font-size: 40px;
+  line-height: 50px;
+
+  @media (max-width: $desktopW) {
+    font-size: calcFluidFontSize(40, 24, 1200, 375);
+  }
+
+  @media (max-width: $tableW) {
+    line-height: 36px;
+  }
+}
+
+.title-2 {
+  font-size: 32px;
+  line-height: 42px;
+
+  @media (max-width: $desktopW) {
+    font-size: calcFluidFontSize(32, 22, 1200, 375);
+  }
+
+  @media (max-width: $tableW) {
+    line-height: 30px;
+  }
+}
+
+.title-3 {
+  font-size: 24px;
+  line-height: 32px;
+
+  @media (max-width: $desktopW) {
+    font-size: calcFluidFontSize(24, 16, 1200, 375);
+  }
+
+  @media (max-width: $tableW) {
+    line-height: 26px;
+  }
+}
+
+.title-4 {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.my-circle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(70px);
+}

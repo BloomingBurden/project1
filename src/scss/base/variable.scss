@@ -1,0 +1,29 @@
+//Screen's width
+$mobileW: 375px;
+$tableW: 768px;
+$desktopW: 1200px;
+$viewportD: 1240px;
+$pad: 20px;
+
+//color
+$accent: linear-gradient(180deg, #FFAC5F 0%, #F18017 100%);
+$btn-base-color: linear-gradient(180deg, #FFD875 0%, rgba(255, 143, 80, 0.99) 100%);
+$blue-gradient: linear-gradient(180deg, #3D465A 0%, #313849 100%);
+$hover-orange: #e47d18;
+$active-orange: #d36c0f;
+$dark-blue: #1D1C25;
+
+$bg1: conic-gradient(from -61deg at 0% -0.00%, #FFF8F1 142.5000035762787deg, #FFF 157.5deg, #EEF3FF 168.75deg, #FDFDFE 189.37500715255737deg, #E6EBF8 211.87500715255737deg);
+
+// Base variable
+$textcolor: #202020;
+$text-main-color: #04061B;
+$lineheight: 27px;
+$fontsize: 18px;
+$userfont: 'RobotoMono', sans-serif;
+$fontweight: 300;
+$secondFont: 'Syncopate', sans-serif;
+
+//transition
+$trans: 0.5s ease;
+$cubicTrans: 0.8s cubic-bezier(.06,.94,.21,.96);
