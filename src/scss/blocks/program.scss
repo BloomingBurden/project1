@@ -32,7 +32,7 @@
     background-color: $textcolor;
 
     @media (max-width: $tableW) {
-      box-shadow: 0 0 400px 400px #000;
+      box-shadow: 0 0 0 600px #000;
       filter: blur(200px) brightness(50%) saturate(300%);
     }
   }
