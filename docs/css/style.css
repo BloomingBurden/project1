@@ -1680,6 +1680,11 @@ button {
 
 .program__caption {
   margin-bottom: 5px;
+  display: block;
+}
+
+.program__caption span {
+  display: block;
 }
 
 .program__years {

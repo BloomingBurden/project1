@@ -170,6 +170,11 @@
 
 .program__caption {
   margin-bottom: 5px;
+  display: block;
+
+  span {
+    display: block;
+  }
 
   @media (max-width: $tableW) {
     font-size: 32px;
