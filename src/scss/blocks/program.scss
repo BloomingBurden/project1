@@ -120,6 +120,7 @@
     background: -webkit-linear-gradient(#FFD6BE, #FFAA7A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px #00000000;
   }
 
   .program__num {
@@ -168,19 +169,7 @@
   }
 }
 
-.program__caption {
-  margin-bottom: 5px;
-  display: block;
 
-  span {
-    display: block;
-  }
-
-  @media (max-width: $tableW) {
-    font-size: 32px;
-    line-height: 42px;
-  }
-}
 
 .program__years {
   color: #EDEDED;
@@ -320,6 +309,7 @@
     background: -webkit-linear-gradient(#C5FAC8, #97D49B);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px #00000000;
   }
 
   .program__num {
@@ -364,6 +354,7 @@
     background: -webkit-linear-gradient(#EAF1FF, #AAC5F6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px #00000000;
   }
 
   .program__num {
@@ -423,6 +414,7 @@
     background: -webkit-linear-gradient(#FFE5EA, #F7BAC5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px #00000000;
   }
 
   .program__num {
@@ -481,6 +473,7 @@
     background: -webkit-linear-gradient(#EFEAFF, #BEAAF6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px #00000000;
   }
 
   .program__num {
@@ -522,6 +515,20 @@
 
   @media (max-width: $tableW) {
     padding-right: 30px;
+  }
+}
+
+.program__caption {
+  margin-bottom: 5px;
+  display: block;
+
+  span {
+    display: block;
+  }
+
+  @media (max-width: $tableW) {
+    font-size: 32px;
+    line-height: 42px;
   }
 }
 
