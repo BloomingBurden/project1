@@ -135,7 +135,7 @@
 .header__login:hover,
 .header__login:focus,
 .header__login-scroll:hover,
-.header__login-scrol:focus {
+.header__login-scroll:focus {
   border-radius: 50%;
 }
 
@@ -264,6 +264,7 @@
     display: flex;
     width: 40px;
     height: 40px;
+    padding: 8px;
   }
 }
 
