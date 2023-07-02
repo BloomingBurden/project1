@@ -7,7 +7,8 @@ import { moveCircle } from './modules/moveCircle.js';
 window.addEventListener('load', () => {
     clickMenu();
     onScrollMenu();
-    moveCircle('.my-circle-1');
+    moveCircle('.my-circle-1', 35, 5);
+    moveCircle('.my-circle-2', 30, 4);
 
     if (document.body.classList.contains('index-body')) {
         const swiper = new Swiper('.swiper', {       
@@ -29,6 +30,17 @@ window.addEventListener('load', () => {
                     spaceBetween: 24
                 }
               },
-          });          
+          });  
+
+          const swiper2 = new Swiper('.swiper-2', {       
+            // Navigation arrows
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+
+            slidesPerView: 1,
+            spaceBetween: 20
+          }); 
     };
 });

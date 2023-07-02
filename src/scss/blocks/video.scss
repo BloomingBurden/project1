@@ -1,0 +1,106 @@
+.custom-video {
+  position: relative;
+
+  video {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+
+  video[poster] {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.custom-video__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.custom-video__play {
+  font-size: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  background-color: rgba(189, 189, 189, 0.50);
+  backdrop-filter: blur(10px);
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 36px;
+    height: 36px;
+    transform: translate(-50%, -50%);
+    background-image: url('@img/icons/icons.svg#play');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(313deg) brightness(107%) contrast(101%);
+  }
+}
+
+.custom-video__bottom {
+  display: none;
+  background-color: rgba(0,0,0,0.1);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  padding: 10px 20px 20px;
+  z-index: 1;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #ffffff;
+}
+
+.custom-video__play-small,
+.custom-video__audio,
+.custom-video__full {
+  font-size: 0;
+  margin-right: 10px;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(313deg) brightness(107%) contrast(101%);
+}
+
+.custom-video__play-small {
+  background-image: url('@img/icons/icons.svg#play');
+}
+
+.custom-video__audio {
+  background-image: url('@img/icons/icons.svg#speaker-off');
+}
+
+.custom-video__full {
+  margin-left: auto;
+  background-image: url('@img/icons/icons.svg#maximize');
+}
+.custom-video__time {
+  flex: 0 0 93px;
+}
+
+.custom-video__duration,
+.custom-video__current {
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
