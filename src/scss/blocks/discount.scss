@@ -1,0 +1,71 @@
+.discount {
+  display: flex;
+  min-height: 160px;
+  align-items: center;
+  padding: 23px 50px 23px 265px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #313849 0%, #131822 100%);
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 1000px) {
+    padding-left: 200px;
+  }
+
+  @media (max-width: $tableW) {
+    align-items: center;
+    flex-direction: column;
+    padding: 173px 20px 20px 20px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 50px;
+    top: 50%;
+    width: 102px;
+    height: 113px;
+    transform: translateY(-50%);
+
+    background-image: url('@img/gift.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (max-width: $tableW) {
+      left: 50%;
+      top: 30px;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.discount__title {
+  max-width: 560px;
+  flex: 1 1 auto;
+  margin-right: 10px;
+  color: #ffffff;
+
+  @media (max-width: 1000px) {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  @media (max-width: $tableW) {
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.discount__button {
+  flex: 0 0 212px;
+  margin-left: auto;
+
+  @media (max-width: $tableW) {
+    width: 315px;
+    flex: 0 0 auto;
+    margin: 0;
+  }
+}

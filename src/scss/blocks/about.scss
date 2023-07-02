@@ -35,7 +35,7 @@
   grid-template-areas: 'b s sm'
                         'b w w';
   grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: 50% 1fr 1fr;
+  grid-template-columns: 510px 1fr 1fr;
 
 
   @media (max-width: $desktopW) {

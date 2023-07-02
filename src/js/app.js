@@ -10,6 +10,7 @@ window.addEventListener('load', () => {
     moveCircle('.my-circle-1', 35, 5);
     moveCircle('.my-circle-2', 30, 4);
     moveCircle('.my-circle-3', 20, 3);
+    moveCircle('.my-circle-4', 40, 4);
 
     if (document.body.classList.contains('index-body')) {
         const swiper = new Swiper('.swiper', {       
@@ -53,6 +54,31 @@ window.addEventListener('load', () => {
 
             slidesPerView: 1,
             spaceBetween: 20
+          }); 
+
+          const swiper4 = new Swiper('.swiper-4', {       
+            // Navigation arrows
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+
+            breakpoints: {
+                // when window width is >= 320px
+                375: {
+                  slidesPerView: 1.8,
+                  spaceBetween: 10
+                },
+
+                768: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 24,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                }
+              },
           }); 
     };
 });
