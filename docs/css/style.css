@@ -1634,7 +1634,8 @@ button {
 }
 
 .program__item-1 .program__caption {
-  background: -webkit-linear-gradient(#FFD6BE, #FFAA7A);
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFD6BE), to(#FFAA7A));
+  background: linear-gradient(#FFD6BE, #FFAA7A);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1680,6 +1681,13 @@ button {
 
 .program__caption {
   margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .program__years {
@@ -1787,7 +1795,8 @@ button {
 }
 
 .program__item-2 .program__caption {
-  background: -webkit-linear-gradient(#C5FAC8, #97D49B);
+  background: -webkit-gradient(linear, left top, left bottom, from(#C5FAC8), to(#97D49B));
+  background: linear-gradient(#C5FAC8, #97D49B);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1814,7 +1823,8 @@ button {
 }
 
 .program__item-3 .program__caption {
-  background: -webkit-linear-gradient(#EAF1FF, #AAC5F6);
+  background: -webkit-gradient(linear, left top, left bottom, from(#EAF1FF), to(#AAC5F6));
+  background: linear-gradient(#EAF1FF, #AAC5F6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1849,7 +1859,8 @@ button {
 }
 
 .program__item-4 .program__caption {
-  background: -webkit-linear-gradient(#FFE5EA, #F7BAC5);
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFE5EA), to(#F7BAC5));
+  background: linear-gradient(#FFE5EA, #F7BAC5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1885,7 +1896,8 @@ button {
 }
 
 .program__item-5 .program__caption {
-  background: -webkit-linear-gradient(#EFEAFF, #BEAAF6);
+  background: -webkit-gradient(linear, left top, left bottom, from(#EFEAFF), to(#BEAAF6));
+  background: linear-gradient(#EFEAFF, #BEAAF6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
