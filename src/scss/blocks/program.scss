@@ -27,19 +27,14 @@
   }
 
   .my-circle-2 {
-    box-shadow: 0 0 200px 200px #000;
-    filter: blur(200px) brightness(50%);
+    filter: blur(60px) saturate(300%);
     background-color: $textcolor;
-
-    @media (max-width: $tableW) {
-      box-shadow: 0 0 0 600px #000;
-      filter: blur(200px) brightness(50%) saturate(300%);
-    }
   }
 
   &::after {
     content: "";
-    backdrop-filter: blur(150px);
+    background-color: rgba(0,0,0,0.7);
+    backdrop-filter: blur(100px);
     bottom: 0;
     right: 0;
     left: 0;

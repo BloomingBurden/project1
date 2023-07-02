@@ -4,22 +4,22 @@ export const moveCircle = (id, rad, quantity=16) => {
 
     // Создаем массив объектов, каждый из которых представляет круг
     const circles = [
-        { x: 260, y: 20, radius: rad, color: 'blue', speedX: 0.2, speedY: 0.2 },
-        { x: 220, y: 25, radius: rad, color: '#e47d18', speedX: -0.1, speedY: -0.1 },
-        { x: 75, y: 30, radius: rad, color: 'red', speedX: -0.3, speedY: -0.3 },
-        { x: 56, y: 60, radius: rad, color: '#FFD875', speedX: 0.5, speedY: 0.5 },
-        { x: 132, y: 80, radius: rad, color: 'blue', speedX: 0.2, speedY: 0.2 },
-        { x: 254, y: 32, radius: rad, color: '#e47d18', speedX: -0.1, speedY: -0.1 },
-        { x: 80, y: 90, radius: rad, color: 'red', speedX: -0.3, speedY: -0.3 },
-        { x: 14, y: 1, radius: rad, color: '#FFD875', speedX: 0.5, speedY: 0.5 },
-        { x: 200, y: 50, radius: rad, color: 'blue', speedX: 0.2, speedY: 0.2 },
-        { x: 213, y: 65, radius: rad, color: '#e47d18', speedX: -0.1, speedY: -0.1 },
-        { x: 80, y: 28, radius: rad, color: 'red', speedX: -0.3, speedY: -0.3 },
-        { x: 50, y: 11, radius: rad, color: '#FFD875', speedX: 0.5, speedY: 0.5 },
-        { x: 260, y: 15, radius: rad, color: 'blue', speedX: 0.2, speedY: 0.2 },
-        { x: 225, y: 7, radius: rad, color: '#e47d18', speedX: -0.1, speedY: -0.1 },
-        { x: 55, y: 4, radius: rad, color: 'red', speedX: -0.3, speedY: -0.3 },
-        { x: 60, y: 70, radius: rad, color: '#FFD875', speedX: 0.5, speedY: 0.5 }
+        { x: 260, y: 20, radius: rad, color: '#B9A3F8', speedX: 0.2, speedY: 0.2 },
+        { x: 220, y: 25, radius: rad, color: '#FFE8D2', speedX: -0.1, speedY: -0.1 },
+        { x: 75, y: 30, radius: rad, color: '#1C86E2', speedX: -0.3, speedY: -0.3 },
+        { x: 56, y: 60, radius: rad, color: '#FF8D8F', speedX: 0.5, speedY: 0.5 },
+        { x: 132, y: 80, radius: rad, color: '#B9A3F8', speedX: 0.2, speedY: 0.2 },
+        { x: 254, y: 32, radius: rad, color: '#FFE8D2', speedX: -0.1, speedY: -0.1 },
+        { x: 80, y: 90, radius: rad, color: '#1C86E2', speedX: -0.3, speedY: -0.3 },
+        { x: 14, y: 1, radius: rad, color: '#FF8D8F', speedX: 0.5, speedY: 0.5 },
+        { x: 200, y: 50, radius: rad, color: '#B9A3F8', speedX: 0.2, speedY: 0.2 },
+        { x: 213, y: 65, radius: rad, color: '#FFE8D2', speedX: -0.1, speedY: -0.1 },
+        { x: 80, y: 28, radius: rad, color: '#1C86E2', speedX: -0.3, speedY: -0.3 },
+        { x: 50, y: 11, radius: rad, color: '#B9A3F8', speedX: 0.5, speedY: 0.5 },
+        { x: 260, y: 15, radius: rad, color: '#E0FFDB', speedX: 0.2, speedY: 0.2 },
+        { x: 225, y: 7, radius: rad, color: '#FFE8D2', speedX: -0.1, speedY: -0.1 },
+        { x: 55, y: 4, radius: rad, color: '#1C86E2', speedX: -0.3, speedY: -0.3 },
+        { x: 60, y: 70, radius: rad, color: '#FF8D8F', speedX: 0.5, speedY: 0.5 }
     ];
 
     // Функция для отрисовки круга
