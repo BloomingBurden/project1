@@ -1,6 +1,10 @@
 .custom-video {
   position: relative;
 
+  &:hover .custom-video__play {
+    border-radius: 50%;
+  }
+
   video {
     object-fit: contain;
     width: 100%;
@@ -28,6 +32,7 @@
 }
 
 .custom-video__play {
+  transition: $cubicTrans;
   font-size: 0;
   width: 64px;
   height: 64px;

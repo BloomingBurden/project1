@@ -9,6 +9,7 @@ window.addEventListener('load', () => {
     onScrollMenu();
     moveCircle('.my-circle-1', 35, 5);
     moveCircle('.my-circle-2', 30, 4);
+    moveCircle('.my-circle-3', 20, 3);
 
     if (document.body.classList.contains('index-body')) {
         const swiper = new Swiper('.swiper', {       
@@ -33,6 +34,17 @@ window.addEventListener('load', () => {
           });  
 
           const swiper2 = new Swiper('.swiper-2', {       
+            // Navigation arrows
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+
+            slidesPerView: 1,
+            spaceBetween: 20
+          }); 
+
+          const swiper3 = new Swiper('.swiper-3', {       
             // Navigation arrows
             navigation: {
               nextEl: '.swiper-button-next',
