@@ -3,10 +3,13 @@ import './modules/functions.js';
 import { clickMenu } from './modules/clickMenu.js';
 import { onScrollMenu } from './modules/onScrollMenu.js';
 import { moveCircle } from './modules/moveCircle.js';
+import { setCustomVideoPlayer } from './modules/setCustomVideoPlayer.js';
 
 window.addEventListener('load', () => {
     clickMenu();
     onScrollMenu();
+    setCustomVideoPlayer();
+    
     moveCircle('.my-circle-1', 35, 5);
     moveCircle('.my-circle-2', 30, 4);
     moveCircle('.my-circle-3', 20, 3);
