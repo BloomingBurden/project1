@@ -5,7 +5,49 @@
 
 <main class="main">
   @@include('html/quest.html', {})
-  @@include('html/category.html', {})
+
+  <section class="category">
+    <div class="category__container">
+      <div class="category__inner">
+        <ul class="category__breadcrumbs">
+          <li class="category__bread-item">
+            <a href="./index.html">Главная</a>
+          </li>
+          <li class="category__bread-item category__bread-item-current">
+            <a href="./index.html">Наши курсы</a>
+          </li>
+        </ul>
+
+        <h1 class="category__title">Наши курсы</h1>
+        
+        <ul class="category__list">
+          <li class="category__item category__item-current">
+            <a href="#" class="category__link">Все</a>
+          </li>
+          <li class="category__item">
+            <a href="#" class="category__link">6-9 лет</a>
+          </li>
+          <li class="category__item">
+            <a href="#" class="category__link">7-11 лет</a>
+          </li>
+          <li class="category__item">
+            <a href="#" class="category__link">8-12 лет</a>
+          </li>
+          <li class="category__item">
+            <a href="#" class="category__link">9-13 лет</a>
+          </li>
+          <li class="category__item">
+            <a href="#" class="category__link">10-16 лет</a>
+          </li>
+          <li class="category__item">
+            <a href="#" class="category__link">от 18 лет</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  @@include('html/courses.html', {})
 
 
   <div class="discount__container">

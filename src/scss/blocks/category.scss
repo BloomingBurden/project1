@@ -1,0 +1,133 @@
+.category {
+  margin-top: 190px;
+}
+
+.category__inner {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 30px 300px 30px 50px;
+  border-radius: 20px;
+  background-image: url('@img/category/category-stars.png'), linear-gradient(135deg, #313849 0%, #131822 100%);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-size: cover, cover;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 240px;
+    height: 240px;
+
+    background-image: url('@img/category/category-courses.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.category__breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.category__bread-item {
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: #929292;
+    border-radius: 50%;
+  }
+
+  a {
+    margin-right: 10px;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+}
+
+.category__bread-item-current {
+
+  &::after {
+    display: none;
+  }
+
+  a {
+    cursor: default;
+    color:  #929292;
+  }
+}
+
+.category__title {
+  margin-bottom: 55px;
+  font-size: 40px;
+  font-family: $secondFont;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 42px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.category__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.category__item {
+  margin-right: 9px;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.category__link {
+  display: block;
+  padding: 7px 10px;
+  border-radius: 50px;
+
+  color: $dark-blue;
+  font-size: 15px;
+  font-family: $secondFont;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid #F5F3E9;
+
+  background: -webkit-linear-gradient(#EBD1FF, #EFF8D9, #E9DBEF, #F5F3E9, #C9C2A6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px #00000000;
+}
+
+.category__item-current {
+  border-radius: 50px;
+  background: linear-gradient(#EBD1FF, #EFF8D9, #E9DBEF, #F5F3E9, #C9C2A6);
+
+  a {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: $dark-blue;
+  }
+}
