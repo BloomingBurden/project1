@@ -1,14 +1,44 @@
 export const setCustomVideoPlayer = () => {
     const videoList = document.querySelectorAll('.custom-video');
 
+    const videoTime = (time) => { //Рассчитываем время в секундах и минутах
+        time = Math.floor(time);
+        let minutes = Math.floor(time / 60);
+        let seconds = Math.floor(time - minutes * 60);
+        let minutesVal = minutes;
+        let secondsVal = seconds;
+
+        if(minutes < 10) {
+            minutesVal = '0' + minutes;
+        }
+        if(seconds < 10) {
+            secondsVal = '0' + seconds;
+        }
+
+        return minutesVal + ':' + secondsVal;
+    }
+
+    const setCurrentTime = (item, video) => {
+        const currentTime = item.querySelector('.custom-video__current-time');
+        const duration = item.querySelector('.custom-video__duration');
+
+        currentTime.textContent = videoTime(video.currentTime);
+        duration.textContent = videoTime(video.duration);
+    };
+
     const progressVideo = (item, video) => {
         const progressLine = item.querySelector('.custom-video__current');
 
         let progress = video.currentTime / video.duration;
 
         progressLine.style.width = progress.toFixed(3) * 100 + '%';
+        setCurrentTime(item, video);
     };
 
+    const checkVolume = (item, video) => {
+        video.muted = !video.muted;
+        item.classList.toggle('custom-video-no-audio');
+    };
 
     const openFullscreen = (elem) => {
         if (elem.requestFullscreen) {
@@ -55,6 +85,9 @@ export const setCustomVideoPlayer = () => {
         }
         if (target.closest('.custom-video__full')) {
             openFullscreen(video)
+        }
+        if(target.closest('.custom-video__audio')) {
+            checkVolume(item, video);
         }
     };
 
