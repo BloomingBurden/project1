@@ -1,29 +1,34 @@
-export const moveCircle = (id, rad, quantity=16) => {
+export const moveCircle = (id) => {
     
     let canvas = document.querySelector(id);
     
     if (!canvas) return;
 
+    const SPEED = +canvas.dataset.circleSpeed ? +canvas.dataset.circleSpeed : 1;
+    const RAD = +canvas.dataset.circleRad ? +canvas.dataset.circleRad : 30;
+    const QUANTITY = +canvas.dataset.circleQuantity ? +canvas.dataset.circleQuantity : 5;
     const ctx = canvas.getContext('2d');
+
+    if (QUANTITY > 16) return;
 
     // Создаем массив объектов, каждый из которых представляет круг
     const circles = [
-        { x: 55, y: 90, radius: rad, color: '#B9A3F8', speedX: 0.2, speedY: 0.2 },
-        { x: 150, y: 45, radius: rad, color: '#FFE8D2', speedX: -0.1, speedY: -0.1 },
-        { x: 100, y: 50, radius: rad, color: '#7234F6', speedX: -0.3, speedY: -0.3 },
-        { x: 84, y: 100, radius: rad, color: '#FF8D8F', speedX: 0.5, speedY: 0.5 },
-        { x: 200, y: 80, radius: rad, color: '#B9A3F8', speedX: 0.2, speedY: 0.2 },
-        { x: 254, y: 50, radius: rad, color: '#FFE8D2', speedX: -0.1, speedY: -0.1 },
-        { x: 80, y: 90, radius: rad, color: '#7234F6', speedX: -0.3, speedY: -0.3 },
-        { x: 42, y: 100, radius: rad, color: '#FF8D8F', speedX: 0.5, speedY: 0.5 },
-        { x: 200, y: 50, radius: rad, color: '#B9A3F8', speedX: 0.2, speedY: 0.2 },
-        { x: 213, y: 65, radius: rad, color: '#FFE8D2', speedX: -0.1, speedY: -0.1 },
-        { x: 80, y: 28, radius: rad, color: '#7234F6', speedX: -0.3, speedY: -0.3 },
-        { x: 50, y: 11, radius: rad, color: '#B9A3F8', speedX: 0.5, speedY: 0.5 },
-        { x: 260, y: 15, radius: rad, color: '#E0FFDB', speedX: 0.2, speedY: 0.2 },
-        { x: 225, y: 7, radius: rad, color: '#FFE8D2', speedX: -0.1, speedY: -0.1 },
-        { x: 55, y: 4, radius: rad, color: '#7234F6', speedX: -0.3, speedY: -0.3 },
-        { x: 60, y: 70, radius: rad, color: '#FF8D8F', speedX: 0.5, speedY: 0.5 }
+        { x: 55, y: 90, radius: RAD, color: '#B9A3F8', speedX: 0.1, speedY: 0.1 },
+        { x: 150, y: 45, radius: RAD, color: '#FFE8D2', speedX: -0.2, speedY: -0.2 },
+        { x: 50, y: 50, radius: RAD, color: '#7234F6', speedX: -0.3, speedY: -0.3 },
+        { x: 84, y: 100, radius: RAD, color: '#FF8D8F', speedX: 0.5, speedY: 0.5 },
+        { x: 200, y: 80, radius: RAD, color: '#B9A3F8', speedX: 0.2, speedY: 0.2 },
+        { x: 254, y: 50, radius: RAD, color: '#FFE8D2', speedX: -0.1, speedY: -0.1 },
+        { x: 80, y: 90, radius: RAD, color: '#7234F6', speedX: -0.3, speedY: -0.3 },
+        { x: 42, y: 100, radius: RAD, color: '#FF8D8F', speedX: 0.5, speedY: 0.5 },
+        { x: 200, y: 50, radius: RAD, color: '#B9A3F8', speedX: 0.2, speedY: 0.2 },
+        { x: 213, y: 65, radius: RAD, color: '#FFE8D2', speedX: -0.1, speedY: -0.1 },
+        { x: 80, y: 28, radius: RAD, color: '#7234F6', speedX: -0.3, speedY: -0.3 },
+        { x: 50, y: 11, radius: RAD, color: '#B9A3F8', speedX: 0.5, speedY: 0.5 },
+        { x: 260, y: 15, radius: RAD, color: '#E0FFDB', speedX: 0.2, speedY: 0.2 },
+        { x: 225, y: 7, radius: RAD, color: '#FFE8D2', speedX: -0.1, speedY: -0.1 },
+        { x: 55, y: 4, radius: RAD, color: '#7234F6', speedX: -0.3, speedY: -0.3 },
+        { x: 60, y: 70, radius: RAD, color: '#FF8D8F', speedX: 0.5, speedY: 0.5 }
     ];
 
     // Функция для отрисовки круга
@@ -40,9 +45,9 @@ export const moveCircle = (id, rad, quantity=16) => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         
         // Проходимся по всем кругам и изменяем их координаты
-        for (let i = 0; i < quantity; i++) {
-            circles[i].y += circles[i].speedX;
-            circles[i].x += circles[i].speedY;
+        for (let i = 0; i < QUANTITY; i++) {
+            circles[i].y += circles[i].speedX * SPEED;
+            circles[i].x += circles[i].speedY * SPEED;
             
             // Если круг достиг верхней или нижней границы, меняем направление его движения
             if (circles[i].y + circles[i].radius > canvas.height || circles[i].y - circles[i].radius < 0) {

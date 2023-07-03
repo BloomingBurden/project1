@@ -18,6 +18,8 @@ export const parallax = (elem) => {
 
     requestParallax();
 
+    center = wrapper.getBoundingClientRect().top;
+
     window.addEventListener('scroll', () => {
         if (window.innerHeight > wrapper.getBoundingClientRect().top && 0 < wrapper.getBoundingClientRect().top + wrapper.getBoundingClientRect().height) {
             center = wrapper.getBoundingClientRect().top;

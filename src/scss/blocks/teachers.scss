@@ -62,6 +62,11 @@
 
 .teachers__body {
   flex: 1 1 auto;
+
+  @media (max-width: $tableW) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .teachers__name {
@@ -86,6 +91,13 @@
     background: -webkit-linear-gradient(#FFAC5F, #F18017);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+}
+
+.teachers__descr-list {
+  @media (max-width: $tableW) {
+    margin-top: auto;
+    margin-bottom: auto;
   }
 }
 
@@ -127,7 +139,6 @@
   &:hover,
   &:focus {
     border-radius: 50%;
-    background-color: $hover-orange;
   }
 
   @media (max-width: $tableW) {
@@ -166,6 +177,12 @@
   flex: 0 0 330px;
   margin-bottom: 40px;
 
+  &:hover {
+    .teachers__icon img {
+      transform: rotate(20deg);
+    }
+  }
+
   @media (max-width: $tableW) {
     flex: 1 1 100%;
   }
@@ -182,6 +199,10 @@
   height: 60px;
   border-radius: 10px;
   background: linear-gradient(180deg, #3D465A 0%, #313849 100%);
+
+  img {
+    transition: $trans;
+  }
 
   @media (max-width: $tableW) {
     margin-right: 10px;

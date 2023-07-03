@@ -1,17 +1,29 @@
 .category {
   margin-top: 190px;
+  
+  @media (max-width: 1000px) {
+    margin-top: 100px;
+  }
+
+  @media (max-width: $tableW) {
+    margin-top: 80px;
+  }
 }
 
 .category__inner {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  padding: 30px 300px 30px 50px;
+  padding: 30px 300px 20px 50px;
   border-radius: 20px;
   background-image: url('@img/category/category-stars.png'), linear-gradient(135deg, #313849 0%, #131822 100%);
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
   background-size: cover, cover;
+
+  @media (max-width: $tableW) {
+    padding: 30px 20px;
+  }
 
   &::after {
     content: '';
@@ -27,6 +39,14 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @media (max-width: $tableW) {
+      width: 70px;
+      height: 70px;
+      right: 20px;
+      top: 15px;
+      transform: translate(0);
+    }
   }
 }
 
@@ -85,6 +105,14 @@
   line-height: 42px;
   text-transform: uppercase;
   color: #ffffff;
+
+  @media (max-width: $desktopW) {
+    font-size: calcFluidFontSize(40, 24, 1200, 375);
+  }
+
+  @media (max-width: $tableW) {
+    line-height: 36px;
+  }
 }
 
 .category__list {
@@ -95,6 +123,7 @@
 
 .category__item {
   margin-right: 9px;
+  margin-bottom: 10px;
   
   &:last-child {
     margin-right: 0;

@@ -1,32 +1,154 @@
 .courses {
+  padding: 100px 0;
+
+  @media (max-width: $tableW) {
+    padding: 60px 0;
+  }
 }
-.courses__container {
-}
-.visually-hidden {
-}
+
 .courses__item {
+  margin-bottom: 56px;
+
+  @media (max-width: $tableW) {
+    margin-bottom: 45px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
-.course {
+
+.course-caption {
+  .course__title {
+    margin-bottom: 40px;
+
+    @media (max-width: $tableW) {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+
+  .course__img {
+    margin-bottom: 30px;
+  }
 }
+
 .course__title {
+  margin-bottom: 19px;
+
+  @media (max-width: $tableW) {
+    margin-bottom: 25px;
+  }
 }
-.title-2 {
+
+.course__caption {
+  color: #212121;
+  margin-bottom: 28px;
+
+  @media (max-width: $tableW) {
+    margin-bottom: 22px;
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
+
 .course__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -12px;
+
+  @media (max-width: $tableW) {
+    margin: 0;
+    flex-direction: column;
+  }
 }
+
 .course__item {
+  flex: 0 0 408px;
+  padding: 0 12px;
+  margin-bottom: 24px;
+  
+  @media (max-width: $desktopW) {
+    flex: 1 1 33.333%;
+    max-width: 408px;
+    min-width: 330px;
+  }
+
+  @media (max-width: $tableW) {
+    margin-bottom: 20px;
+    padding: 0;
+    flex: 0 0 auto;
+    width: 100%;
+  } 
 }
+
+.course__inner {
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 25px 20px;
+  overflow: hidden;
+  min-height: 565px;
+
+  border-radius: 20px;
+  border: 1px solid #DFDFDF;
+  background-color: #ffffff;
+  transition: $cubicTrans;
+
+  @media (max-width: $tableW) {
+    padding-bottom: 30px;
+  }
+}
+
 .course__img {
+  background-color: #DFDFDF;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 190px;
+
+  @media (max-width: $tableW) {
+    margin-bottom: 25px;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
 }
+
 .course__subtitle {
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-family: $secondFont;
+  font-weight: 400;
+  line-height: 26px;
+  text-transform: uppercase;
+
+  @media (max-width: $tableW) {
+    margin-bottom: 7px;
+  }
 }
+
 .course__age {
+  margin-bottom: 15px;
+
+  color: #7F44CD;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 27px;
 }
+
 .course__descr {
+  @media (max-width: $tableW) {
+    font-size: 18px;
+    line-height: 27px;
+  }
 }
+
 .course__btn {
-}
-.button-normal {
-}
-.button-icon {
+  width: 212px;
+  margin-top: auto;
 }

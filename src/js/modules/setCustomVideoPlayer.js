@@ -18,12 +18,23 @@ export const setCustomVideoPlayer = () => {
         return minutesVal + ':' + secondsVal;
     }
 
+    const removeVideo = (item, video) => {
+        item.classList.remove('custom-video-playing');
+        item.classList.remove('custom-video-played');
+
+        video.currentTime = 0;
+    };
+
     const setCurrentTime = (item, video) => {
         const currentTime = item.querySelector('.custom-video__current-time');
         const duration = item.querySelector('.custom-video__duration');
 
         currentTime.textContent = videoTime(video.currentTime);
         duration.textContent = videoTime(video.duration);
+
+        if (video.ended) {
+            removeVideo(item, video);
+        }
     };
 
     const progressVideo = (item, video) => {
@@ -71,7 +82,7 @@ export const setCustomVideoPlayer = () => {
     const onStartVideo = (item, video, evt) => {
         const target = evt.target;
         
-        if (!target.closest('.custom-video__bottom') || target.closest('.custom-video__play-small')) {
+        if (!target.closest('.custom-video__bottom') || !target.closest('.custom-video__close') || target.closest('.custom-video__play-small')) {
             if (video.paused) {
                 startVideo(video, item);
             } else {
@@ -88,6 +99,10 @@ export const setCustomVideoPlayer = () => {
         }
         if(target.closest('.custom-video__audio')) {
             checkVolume(item, video);
+        }
+        if(target.closest('.custom-video__close')) {
+            removeVideo(item, video);
+            stopVideo(video, item);
         }
     };
 

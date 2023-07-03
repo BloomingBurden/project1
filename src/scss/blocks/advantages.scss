@@ -73,6 +73,10 @@
     &::before {
       transform: rotate(-15deg);
     }
+    &::after {
+      transform: rotate(30deg) scale(1.15);
+      
+    }
   }
 
   &::after,
@@ -87,11 +91,13 @@
 
   &::after {
     right: 30px;
+    bottom: -40px;
     z-index: -2;
-    width: 231px;
-    height: 193px;
+    width: 230px;
+    height: 230px;
     background-image: url('@img/advantages/advantages-1.png');
-    background-size: cover;
+    background-size: 231px 231px;
+    transition: $trans;
 
     @media (max-width: $tableW) {
       bottom: -55px;

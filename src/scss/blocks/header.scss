@@ -1,18 +1,46 @@
-@keyframes opacityMenu {
+@keyframes moveDown {
   from {
-    opacity: 0;
+    transform: translateY(100%);
   }
   to {
-    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+@keyframes moveUpScroll {
+  from {
+    transform: translateY(-150%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes moveLeftElem {
+  from {
+    flex: 0 0 1100px;
+  }
+  to {
+    flex: 1 1 100%;
+  }
+}
+
+@keyframes moveRightElem {
+  from {
+    width: 800px
+  }
+  to {
+    width: 100%;
+  }
+}
+
 
 .header {
   width: 100%;
   position: absolute;
   z-index: 999;
+  transition: 0.25s ease;
 }
-
 
 .header__top {
   display: flex;
@@ -24,6 +52,11 @@
     min-height: 80px;
     padding: 0 19px 0 10px;
   }
+}
+
+.header__nav {
+  margin: 0 auto;
+  animation: moveRightElem $cubicTrans forwards;
 }
 
 .header__logo {
@@ -140,6 +173,9 @@
 }
 
 .header__body {
+  border-radius: 20px;
+  background-color: #ffffff;
+
   @media (max-width: 1000px) {
     overflow-y: auto;;
     padding: 75px 20px;
@@ -164,18 +200,6 @@
   transform: translateX(0);
   user-select: auto;
 }
-
-.header__logo-scroll {
-  display: none;
-
-  @media (max-width: 1000px) {
-    margin: 0 auto;
-    display: block;
-    width: 295px;
-    margin-bottom: 40px;
-  }
-}
-
 .header__burger {
   display: none;
   position: relative;
@@ -254,6 +278,18 @@
   }
 }
 
+.header__logo-scroll {
+  display: none;
+
+  @media (max-width: 1000px) {
+    margin: 0 auto;
+    display: block;
+    width: 295px;
+    margin-bottom: 40px;
+  }
+}
+
+
 .header__login-scroll {
   display: none;
 
@@ -275,14 +311,36 @@
 .header--scrolling {
   position: fixed;
   background-color: #ffffff;
-  animation: opacityMenu 0.5s cubic-bezier(.88,.12,.96,.29) forwards;
 }
 
 @media (min-width: 1000px) {
+  .header__logo {
+    animation: moveDown $cubicTrans forwards;
+  }
+
+  .header__button {
+    animation: moveDown $cubicTrans forwards;
+  }
+
+  .header__login {
+    animation: moveDown $cubicTrans forwards;
+  }
+
+  .header__login-scroll {
+    transform: translateY(-150%);
+  }
+
+  .header__logo-scroll {
+    transform: translateY(-150%);
+  }
+
+  .header__button-scroll {
+    transform: translateY(-150%);
+  }
+
   .header--scrolling {
     position: fixed;
     background-color: #ffffff;
-    animation: opacityMenu 0.5s cubic-bezier(.88,.12,.96,.29) forwards;
   
     .header__top {
       display: none;
@@ -291,13 +349,13 @@
     .header__body {
       display: flex;
       align-items: center;
+      justify-content: center;
     }
   
     .header__nav {
       padding: 0;
-      max-width: 777px;
-      flex: 1 1 100%;
       margin-right: 36px;
+      animation: moveLeftElem $cubicTrans forwards;
   
       @media (max-width: 1080px) {
         margin-right: 10px;
@@ -316,16 +374,16 @@
   
     .header__login-scroll {
       display: flex;
+      animation: moveUpScroll $cubicTrans forwards;
+      animation-delay: 0.1s;
       flex: 0 0 40px;
       height: 40px;
     }
   
-    .header__button-scroll {
-      display: block;
-    }
-  
     .header__logo-scroll {
-      display: block;
+      display: flex;
+      animation: moveUpScroll $cubicTrans forwards;
+      animation-delay: 0.1s;
       flex: 0 0 120px;
       margin-right: 37px;
   
@@ -335,6 +393,9 @@
     }
   
     .header__button-scroll {
+      display: flex;
+      animation: moveUpScroll $cubicTrans forwards;
+      animation-delay: 0.1s;
       min-height: 40px;
       min-width: 156px;
       margin-right: 10px;

@@ -1,13 +1,18 @@
 .preview {
   margin-top: 190px;
 
+  @media (max-width: 1000px) {
+    margin-top: 100px;
+  }
+
   @media (max-width: $tableW) {
     margin-top: 79px;
   }
 }
 
 .preview .parallax-inner {
-  top: 0;
+  top: 10%;
+  height: 100%;
 
   @media (max-width: $tableW) {
     top: -20%;

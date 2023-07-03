@@ -1,6 +1,6 @@
 export const onScrollMenu = () => {
     const header = document.querySelector('.header');
-    const HEIGHT = header.getBoundingClientRect().height / 2 + 20;
+    const HEIGHT = header.querySelector('.header__top').getBoundingClientRect().height;
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > HEIGHT) {

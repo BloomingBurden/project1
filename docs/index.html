@@ -76,7 +76,7 @@
                 </picture>
               </div>
             </div>
-            <canvas class="my-circle my-circle-3"></canvas>
+            <canvas class="my-circle my-circle-3" data-circle-speed="2" data-circle-rad="20" data-circle-quantity="3"></canvas>
             <div class="preview__content">
               <h1 class="preview__title title-1">Программируем БУДУЩЕЕ ВМЕСТЕ!</h1>
               <p class="preview__subtitle">Открываем для ребёнка мир IT. Вдохновляем на создание своих проектов.</p>
@@ -94,14 +94,15 @@
         <div class="teachers__container">
           <h2 class="teachers__title title-2">Преподаватели умеют объяснять сложные вещи простыми словами</h2>
           <div class="teachers__swiper swiper">
-            <div class="swiper-button-prev swiper-btn"></div>
-            <div class="swiper-button-next swiper-btn"></div>
+            <div class="swiper-button-prev swiper-btn" onmousedown="event.preventDefault()"></div>
+            <div class="swiper-button-next swiper-btn" onmousedown="event.preventDefault()"></div>
             <div class="teachers__list swiper-wrapper">
               <div class="teachers__item swiper-slide">
                 <div class="teachers__video custom-video">
                   <div class="custom-video__bg" style="background-image: url('img/teachers/teacher-1.jpg');"></div>
                   <div class="custom-video__controls">
                     <button class="custom-video__play">Старт видео</button>
+                    <button type="button" class="custom-video__close">Закрыть видео</button>
                     <div class="custom-video__bottom">
                       <div class="custom-video__wrap">
                         <button type="button" class="custom-video__play-small">Играть видео</button>
@@ -117,7 +118,7 @@
                       </span>
                     </div>
                   </div>
-                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none" loop=""></video>
+                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none"></video>
                 </div>
                 <div class="teachers__body">
                   <h3 class="teachers__name title-3">Айгуль</h3>
@@ -134,6 +135,7 @@
                   <div class="custom-video__bg" style="background-image: url('img/teachers/teacher-2.jpg');"></div>
                   <div class="custom-video__controls">
                     <button class="custom-video__play">Старт видео</button>
+                    <button type="button" class="custom-video__close">Закрыть видео</button>
                     <div class="custom-video__bottom">
                       <div class="custom-video__wrap">
                         <button type="button" class="custom-video__play-small">Играть видео</button>
@@ -149,7 +151,7 @@
                       </span>
                     </div>
                   </div>
-                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none" loop=""></video>
+                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none"></video>
                 </div>
                 <div class="teachers__body">
                   <h3 class="teachers__name title-3">Данил</h3>
@@ -167,6 +169,7 @@
                   <div class="custom-video__bg" style="background-image: url('img/teachers/teacher-2.jpg');"></div>
                   <div class="custom-video__controls">
                     <button class="custom-video__play">Старт видео</button>
+                    <button type="button" class="custom-video__close">Закрыть видео</button>
                     <div class="custom-video__bottom">
                       <div class="custom-video__wrap">
                         <button type="button" class="custom-video__play-small">Играть видео</button>
@@ -182,7 +185,7 @@
                       </span>
                     </div>
                   </div>
-                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none" loop=""></video>
+                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none"></video>
                 </div>
                 <div class="teachers__body">
                   <h3 class="teachers__name title-3">Данил</h3>
@@ -233,8 +236,8 @@
         <div class="lessons__container">
           <h2 class="lessons__title title-2">Как проходят наши уроки</h2>
           <div class="lessons__swiper swiper-2">
-            <div class="swiper-button-prev swiper-btn"></div>
-            <div class="swiper-button-next swiper-btn"></div>
+            <div class="swiper-button-prev swiper-btn" onmousedown="event.preventDefault()"></div>
+            <div class="swiper-button-next swiper-btn" onmousedown="event.preventDefault()"></div>
             <div class="lessons__list swiper-wrapper">
               <div class="lessons__item swiper-slide">
                 <div class="lessons__body">
@@ -244,6 +247,7 @@
                     <div class="custom-video__bg" style="background-image: url('img/lessons/lessons-main.jpg');"></div>
                     <div class="custom-video__controls">
                       <button class="custom-video__play">Старт видео</button>
+                      <button type="button" class="custom-video__close">Закрыть видео</button>
                       <div class="custom-video__bottom">
                         <div class="custom-video__wrap">
                           <button type="button" class="custom-video__play-small">Играть видео</button>
@@ -259,7 +263,7 @@
                         </span>
                       </div>
                     </div>
-                    <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none" loop=""></video>
+                    <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none"></video>
                   </div>
                 </div>
 
@@ -282,6 +286,7 @@
                     <div class="custom-video__bg" style="background-image: url('img/lessons/lessons-main.jpg');"></div>
                     <div class="custom-video__controls">
                       <button class="custom-video__play">Старт видео</button>
+                      <button type="button" class="custom-video__close">Закрыть видео</button>
                       <div class="custom-video__bottom">
                         <div class="custom-video__wrap">
                           <button type="button" class="custom-video__play-small">Играть видео</button>
@@ -297,7 +302,7 @@
                         </span>
                       </div>
                     </div>
-                    <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none" loop=""></video>
+                    <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none"></video>
                   </div>
                 </div>
 
@@ -320,6 +325,7 @@
                     <div class="custom-video__bg" style="background-image: url('img/lessons/lessons-main.jpg');"></div>
                     <div class="custom-video__controls">
                       <button class="custom-video__play">Старт видео</button>
+                      <button type="button" class="custom-video__close">Закрыть видео</button>
                       <div class="custom-video__bottom">
                         <div class="custom-video__wrap">
                           <button type="button" class="custom-video__play-small">Играть видео</button>
@@ -335,7 +341,7 @@
                         </span>
                       </div>
                     </div>
-                    <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none" loop=""></video>
+                    <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none"></video>
                   </div>
                 </div>
 
@@ -357,7 +363,7 @@
       <article class="program">
         <div class="program__container">
           <div class="program__inner">
-            <canvas class="my-circle my-circle-2"></canvas>
+            <canvas class="my-circle my-circle-2" data-circle-speed="0.5" data-circle-rad="30" data-circle-quantity="6"></canvas>
             <h2 class="program__title title-1">Программа обучения</h2>
 
             <div class="program__body">
@@ -624,14 +630,15 @@
           <h2 class="about__title title-2">О центре Progin</h2>
 
           <div class="about__swiper swiper-3">
-            <div class="swiper-button-prev swiper-btn"></div>
-            <div class="swiper-button-next swiper-btn"></div>
+            <div class="swiper-button-prev swiper-btn" onmousedown="event.preventDefault()"></div>
+            <div class="swiper-button-next swiper-btn" onmousedown="event.preventDefault()"></div>
             <div class="about__list swiper-wrapper">
               <div class="about__item swiper-slide">
                 <div class="about__video about__video-big custom-video">
                   <div class="custom-video__bg" style="background-image: url('img/about/about-1.jpg');"></div>
                   <div class="custom-video__controls">
                     <button class="custom-video__play">Старт видео</button>
+                    <button type="button" class="custom-video__close">Закрыть видео</button>
                     <div class="custom-video__bottom">
                       <div class="custom-video__wrap">
                         <button type="button" class="custom-video__play-small">Играть видео</button>
@@ -647,12 +654,13 @@
                       </span>
                     </div>
                   </div>
-                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none" loop=""></video>
+                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none"></video>
                 </div>
                 <div class="about__video about__video-small custom-video">
                   <div class="custom-video__bg" style="background-image: url('img/about/about-2.jpg');"></div>
                   <div class="custom-video__controls">
                     <button class="custom-video__play">Старт видео</button>
+                    <button type="button" class="custom-video__close">Закрыть видео</button>
                     <div class="custom-video__bottom">
                       <div class="custom-video__wrap">
                         <button type="button" class="custom-video__play-small">Играть видео</button>
@@ -668,12 +676,13 @@
                       </span>
                     </div>
                   </div>
-                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none" loop=""></video>
+                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none"></video>
                 </div>
                 <div class="about__video about__video-small about__video-small-sm custom-video">
                   <div class="custom-video__bg" style="background-image: url('img/about/about-3.jpg');"></div>
                   <div class="custom-video__controls">
                     <button class="custom-video__play">Старт видео</button>
+                    <button type="button" class="custom-video__close">Закрыть видео</button>
                     <div class="custom-video__bottom">
                       <div class="custom-video__wrap">
                         <button type="button" class="custom-video__play-small">Играть видео</button>
@@ -689,12 +698,13 @@
                       </span>
                     </div>
                   </div>
-                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none" loop=""></video>
+                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none"></video>
                 </div>
                 <div class="about__video about__video-wide custom-video">
                   <div class="custom-video__bg" style="background-image: url('img/about/about-4.jpg');"></div>
                   <div class="custom-video__controls">
                     <button class="custom-video__play">Старт видео</button>
+                    <button type="button" class="custom-video__close">Закрыть видео</button>
                     <div class="custom-video__bottom">
                       <div class="custom-video__wrap">
                         <button type="button" class="custom-video__play-small">Играть видео</button>
@@ -710,7 +720,7 @@
                       </span>
                     </div>
                   </div>
-                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none" loop=""></video>
+                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none"></video>
                 </div>
               </div>
               <div class="about__item swiper-slide">
@@ -718,6 +728,7 @@
                   <div class="custom-video__bg" style="background-image: url('img/about/about-1.jpg');"></div>
                   <div class="custom-video__controls">
                     <button class="custom-video__play">Старт видео</button>
+                    <button type="button" class="custom-video__close">Закрыть видео</button>
                     <div class="custom-video__bottom">
                       <div class="custom-video__wrap">
                         <button type="button" class="custom-video__play-small">Играть видео</button>
@@ -733,12 +744,13 @@
                       </span>
                     </div>
                   </div>
-                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none" loop=""></video>
+                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none"></video>
                 </div>
                 <div class="about__video about__video-small custom-video">
                   <div class="custom-video__bg" style="background-image: url('img/about/about-2.jpg');"></div>
                   <div class="custom-video__controls">
                     <button class="custom-video__play">Старт видео</button>
+                    <button type="button" class="custom-video__close">Закрыть видео</button>
                     <div class="custom-video__bottom">
                       <div class="custom-video__wrap">
                         <button type="button" class="custom-video__play-small">Играть видео</button>
@@ -754,12 +766,13 @@
                       </span>
                     </div>
                   </div>
-                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none" loop=""></video>
+                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none"></video>
                 </div>
                 <div class="about__video about__video-small about__video-small-sm custom-video">
                   <div class="custom-video__bg" style="background-image: url('img/about/about-3.jpg');"></div>
                   <div class="custom-video__controls">
                     <button class="custom-video__play">Старт видео</button>
+                    <button type="button" class="custom-video__close">Закрыть видео</button>
                     <div class="custom-video__bottom">
                       <div class="custom-video__wrap">
                         <button type="button" class="custom-video__play-small">Играть видео</button>
@@ -775,12 +788,13 @@
                       </span>
                     </div>
                   </div>
-                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none" loop=""></video>
+                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none"></video>
                 </div>
                 <div class="about__video about__video-wide custom-video">
                   <div class="custom-video__bg" style="background-image: url('img/about/about-4.jpg');"></div>
                   <div class="custom-video__controls">
                     <button class="custom-video__play">Старт видео</button>
+                    <button type="button" class="custom-video__close">Закрыть видео</button>
                     <div class="custom-video__bottom">
                       <div class="custom-video__wrap">
                         <button type="button" class="custom-video__play-small">Играть видео</button>
@@ -796,7 +810,7 @@
                       </span>
                     </div>
                   </div>
-                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none" loop=""></video>
+                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none"></video>
                 </div>
               </div>
               <div class="about__item swiper-slide">
@@ -804,6 +818,7 @@
                   <div class="custom-video__bg" style="background-image: url('img/about/about-1.jpg');"></div>
                   <div class="custom-video__controls">
                     <button class="custom-video__play">Старт видео</button>
+                    <button type="button" class="custom-video__close">Закрыть видео</button>
                     <div class="custom-video__bottom">
                       <div class="custom-video__wrap">
                         <button type="button" class="custom-video__play-small">Играть видео</button>
@@ -819,12 +834,13 @@
                       </span>
                     </div>
                   </div>
-                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none" loop=""></video>
+                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none"></video>
                 </div>
                 <div class="about__video about__video-small custom-video">
                   <div class="custom-video__bg" style="background-image: url('img/about/about-2.jpg');"></div>
                   <div class="custom-video__controls">
                     <button class="custom-video__play">Старт видео</button>
+                    <button type="button" class="custom-video__close">Закрыть видео</button>
                     <div class="custom-video__bottom">
                       <div class="custom-video__wrap">
                         <button type="button" class="custom-video__play-small">Играть видео</button>
@@ -840,12 +856,13 @@
                       </span>
                     </div>
                   </div>
-                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none" loop=""></video>
+                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none"></video>
                 </div>
                 <div class="about__video about__video-small about__video-small-sm custom-video">
                   <div class="custom-video__bg" style="background-image: url('img/about/about-3.jpg');"></div>
                   <div class="custom-video__controls">
                     <button class="custom-video__play">Старт видео</button>
+                    <button type="button" class="custom-video__close">Закрыть видео</button>
                     <div class="custom-video__bottom">
                       <div class="custom-video__wrap">
                         <button type="button" class="custom-video__play-small">Играть видео</button>
@@ -861,12 +878,13 @@
                       </span>
                     </div>
                   </div>
-                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none" loop=""></video>
+                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none"></video>
                 </div>
                 <div class="about__video about__video-wide custom-video">
                   <div class="custom-video__bg" style="background-image: url('img/about/about-4.jpg');"></div>
                   <div class="custom-video__controls">
                     <button class="custom-video__play">Старт видео</button>
+                    <button type="button" class="custom-video__close">Закрыть видео</button>
                     <div class="custom-video__bottom">
                       <div class="custom-video__wrap">
                         <button type="button" class="custom-video__play-small">Играть видео</button>
@@ -882,7 +900,7 @@
                       </span>
                     </div>
                   </div>
-                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none" loop=""></video>
+                  <video src="./video/teachers/teacher.mp4" type="video/mp4" playsinline="" preload="none"></video>
                 </div>
               </div>
             </div>
@@ -926,8 +944,8 @@
         <div class="partners__container">
           <h2 class="partners__title title-2">Наши партнеры</h2>
           <div class="partners__swiper swiper-4">
-            <div class="swiper-button-prev swiper-btn"></div>
-            <div class="swiper-button-next swiper-btn"></div>
+            <div class="swiper-button-prev swiper-btn" onmousedown="event.preventDefault()"></div>
+            <div class="swiper-button-next swiper-btn" onmousedown="event.preventDefault()"></div>
             <div class="partners__list swiper-wrapper">
               <div class="partners__item swiper-slide">
                 <img src="img/partners/nt.png" alt="Ntic" width="206" loading="lazy">

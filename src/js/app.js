@@ -5,17 +5,19 @@ import { onScrollMenu } from './modules/onScrollMenu.js';
 import { moveCircle } from './modules/moveCircle.js';
 import { setCustomVideoPlayer } from './modules/setCustomVideoPlayer.js';
 import { parallax } from './modules/parallax.js';
+import { onMouseRotate } from './modules/onMouseRotate.js';
 
 window.addEventListener('load', () => {
     clickMenu();
     onScrollMenu();
     setCustomVideoPlayer();
     parallax('.preview__bg');
-    
-    moveCircle('.my-circle-1', 35, 5);
-    moveCircle('.my-circle-2', 30, 4);
-    moveCircle('.my-circle-3', 20, 3);
-    moveCircle('.my-circle-4', 40, 4);
+    onMouseRotate('.courses', '.course__inner');
+
+    moveCircle('.my-circle-1');
+    moveCircle('.my-circle-2');
+    moveCircle('.my-circle-3');
+    moveCircle('.my-circle-4');
 
     if (document.body.classList.contains('index-body')) {
         const swiper = new Swiper('.swiper', {       
