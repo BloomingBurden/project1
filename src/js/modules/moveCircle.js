@@ -1,5 +1,9 @@
 export const moveCircle = (id, rad, quantity=16) => {
+    
     let canvas = document.querySelector(id);
+    
+    if (!canvas) return;
+
     const ctx = canvas.getContext('2d');
 
     // Создаем массив объектов, каждый из которых представляет круг

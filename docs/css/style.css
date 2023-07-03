@@ -494,6 +494,11 @@ body {
 
 .index-body {
   background-image: conic-gradient(from -61deg at 0% 0%, #FFF8F1 142.5000035763deg, #FFF 157.5deg, #EEF3FF 168.75deg, #FDFDFE 189.3750071526deg, #E6EBF8 211.8750071526deg);
+  background-color: #F5F8FF;
+}
+
+.courses-body {
+  background-color: #F5F8FF;
 }
 
 img {

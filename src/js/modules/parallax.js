@@ -1,8 +1,12 @@
 export const parallax = (elem) => {
     const wrapper = document.querySelector(elem);
+    
+    if (!wrapper) return;
+    
     const target = wrapper.querySelector('.parallax-inner');
     let center = 0;
     const SPEED = +wrapper.dataset.parallaxSpeed;
+
 
     if (isNaN(SPEED)) return;
 
