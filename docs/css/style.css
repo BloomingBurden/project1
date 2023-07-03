@@ -685,6 +685,62 @@ button {
   margin-top: 120px;
 }
 
+.parallax-bg {
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.parallax-inner {
+  position: absolute;
+  top: -10%;
+  will-change: transform;
+  -webkit-transform: translateY(0) translateZ(0);
+          transform: translateY(0) translateZ(0);
+  height: 125%;
+  width: 100%;
+}
+
+.parallax-inner img {
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.quest {
+  width: 64px;
+  height: 64px;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 40px;
+  bottom: 40px;
+  z-index: 9999;
+  border-radius: 50%;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFD875), to(rgba(255, 143, 80, 0.99)));
+  background: linear-gradient(180deg, #FFD875 0%, rgba(255, 143, 80, 0.99) 100%);
+}
+
+.quest__btn {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/icons/icons.svg#help-circle");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 36px 36px;
+}
+
 .custom-video {
   position: relative;
   overflow: hidden;
@@ -1288,6 +1344,10 @@ button {
   margin-top: 190px;
 }
 
+.preview .parallax-inner {
+  top: 0;
+}
+
 .preview__body {
   position: relative;
   z-index: 1;
@@ -1295,6 +1355,7 @@ button {
   padding: 115px 50px 147px;
   min-height: 550px;
   width: 100%;
+  background: linear-gradient(135deg, #1F2431 0%, #1A1E26 100%, #131C33 100%);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -1303,24 +1364,6 @@ button {
   z-index: -1;
   -webkit-filter: blur(200px);
           filter: blur(200px);
-}
-
-.no-webp .preview__body::before {
-  background-image: url("../img/bg-main.jpg"); }
-
-.preview__body::before {
-  content: "";
-  position: absolute;
-  z-index: -2;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .preview__content {
@@ -2552,6 +2595,9 @@ button {
   padding: 10px 20px;
 }
 
+.no-webp .discount {
+  background-image: url("../img/discount/discount-star.png"), linear-gradient(135deg, #313849 0%, #131822 100%); }
+
 .discount {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2562,7 +2608,9 @@ button {
           align-items: center;
   padding: 23px 50px 23px 265px;
   border-radius: 20px;
-  background: linear-gradient(135deg, #313849 0%, #131822 100%);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  background-size: cover;
   position: relative;
   z-index: 1;
 }
@@ -3503,6 +3551,19 @@ button {
     margin-top: 70px;
   }
 
+  .quest {
+    right: 25px;
+    bottom: 25px;
+    width: 40px;
+    height: 40px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFB986), color-stop(#FFC786), color-stop(#FFB186), color-stop(#FFCF86), to(#FFB186));
+    background: linear-gradient(#FFB986, #FFC786, #FFB186, #FFCF86, #FFB186);
+  }
+
+  .quest__btn {
+    background-size: 24px 24px;
+  }
+
   .header__top {
     min-height: 80px;
     padding: 0 19px 0 10px;
@@ -3526,23 +3587,19 @@ button {
     margin-top: 79px;
   }
 
+  .preview .parallax-inner {
+    top: -20%;
+  }
+
   .preview__body {
     padding: 100px 15px 50px;
     min-height: 650px;
     margin-bottom: 20px;
-    background: linear-gradient(135deg, #1F2431 0%, #1A1E26 100%, #131C33 100%);
   }
 
   .preview__body .my-circle-3 {
     -webkit-filter: blur(70px) saturate(300%);
             filter: blur(70px) saturate(300%);
-  }
-
-  .no-webp .preview__body::before {
-    background-image: url("../img/preview-bg-m.png"); }
-
-  .preview__body::before {
-    background-position: bottom center;
   }
 
   .preview__content {
@@ -3977,8 +4034,6 @@ button {
   }
 }
 
-.webp .preview__body::before { background-image: url(../img/bg-main.webp); }
-
 .webp .preview__bottom::after { background-image: url(../img/preview-display.webp); }
 
 .webp .lessons__descr:nth-child(1)::before { background-image: url(../img/lessons/lessons-bg-1.webp); }
@@ -4001,12 +4056,9 @@ button {
 
 .webp .advantages__item-4::after { background-image: url(../img/advantages/advantages-4-m.webp); }
 
+.webp .discount { background-image: url(../img/discount/discount-star.webp), linear-gradient(135deg, #313849 0%, #131822 100%); }
+
 .webp .discount::after { background-image: url(../img/gift.webp); }
-
-@media (max-width: 768px) {
-
-  .webp .preview__body::before { background-image: url(../img/preview-bg-m.webp); }
-}
 
 @media (max-width: 768px) {
 

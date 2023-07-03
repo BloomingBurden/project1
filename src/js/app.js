@@ -4,11 +4,13 @@ import { clickMenu } from './modules/clickMenu.js';
 import { onScrollMenu } from './modules/onScrollMenu.js';
 import { moveCircle } from './modules/moveCircle.js';
 import { setCustomVideoPlayer } from './modules/setCustomVideoPlayer.js';
+import { parallax } from './modules/parallax.js';
 
 window.addEventListener('load', () => {
     clickMenu();
     onScrollMenu();
     setCustomVideoPlayer();
+    parallax('.preview__bg');
     
     moveCircle('.my-circle-1', 35, 5);
     moveCircle('.my-circle-2', 30, 4);

@@ -4,7 +4,10 @@
   align-items: center;
   padding: 23px 50px 23px 265px;
   border-radius: 20px;
-  background: linear-gradient(135deg, #313849 0%, #131822 100%);
+  background-image: url('@img/discount/discount-star.png'), linear-gradient(135deg, #313849 0%, #131822 100%);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  background-size: cover;
   position: relative;
   z-index: 1;
 
