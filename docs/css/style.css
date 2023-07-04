@@ -2041,7 +2041,7 @@ button {
 }
 
 .program__num {
-  cursor: pointer;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2066,6 +2066,18 @@ button {
   font-family: "Syncopate", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.program__num:hover .program__help {
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  visibility: visible;
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
+  opacity: 1;
 }
 
 .program__list {
@@ -2461,6 +2473,72 @@ button {
 
 .program__branch-subtitle-hidden {
   display: none;
+}
+
+.program__help {
+  -webkit-transition: 1s cubic-bezier(0.06, 0.94, 0.21, 0.96);
+  transition: 1s cubic-bezier(0.06, 0.94, 0.21, 0.96);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  z-index: 1;
+  top: calc(-100% - 10px);
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+      -ms-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  width: 234px;
+  border-radius: 10px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 4px 8px 0px rgba(142, 141, 208, 0.16);
+          box-shadow: 0px 4px 8px 0px rgba(142, 141, 208, 0.16);
+  padding: 8px 8px 10px 8px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.24px;
+  color: #202020;
+  text-align: left;
+  text-transform: none;
+  font-family: "RobotoMono", sans-serif;
+}
+
+.program__help::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 6px;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-image: url("../img/icons/icons.svg#help-arrow");
+  background-position: center;
+  background-size: cover;
+}
+
+.program__help-text {
+  margin-bottom: 10px;
+}
+
+.program__help-link {
+  color: #424FC6;
+}
+
+.program__help-link:hover {
+  text-decoration: underline;
 }
 
 .about {
@@ -2977,8 +3055,16 @@ button {
 }
 
 .category__link {
-  display: block;
-  padding: 7px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px 10px;
   border-radius: 50px;
   color: #1D1C25;
   font-size: 15px;

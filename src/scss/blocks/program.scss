@@ -180,7 +180,7 @@
 }
 
 .program__num {
-  cursor: pointer;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,6 +197,13 @@
   font-family: $secondFont;
   font-weight: 400;
   text-transform: uppercase;
+
+  &:hover .program__help {
+    transform: translate(-50%, 0);
+    visibility: visible;
+    user-select: auto;
+    opacity: 1;
+  }
 
   @media (max-width: $desktopW) {
     margin-right: 15px;
@@ -877,5 +884,59 @@
 
   @media (max-width: $tableW) {
     margin-bottom: 40px;
+  }
+}
+
+.program__help {
+  transition: $cubicTrans;
+  opacity: 0;
+  visibility: hidden;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1;
+  top: calc(-100% - 10px);
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 234px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px 0px rgba(142, 141, 208, 0.16);
+  padding: 8px 8px 10px 8px;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.24px;
+  color: $textcolor;
+  text-align: left;
+  text-transform: none;
+  font-family: $userfont;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 6px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-image: url('@img/icons/icons.svg#help-arrow');
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.program__help-text {
+  margin-bottom: 10px;
+}
+
+.program__help-link {
+  color: #424FC6;
+
+  &:hover {
+    text-decoration: underline;
   }
 }

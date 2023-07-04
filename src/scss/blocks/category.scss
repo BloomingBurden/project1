@@ -131,8 +131,10 @@
 }
 
 .category__link {
-  display: block;
-  padding: 7px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
   border-radius: 50px;
 
   color: $dark-blue;
