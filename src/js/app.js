@@ -16,6 +16,7 @@ window.addEventListener('load', () => {
     setCustomVideoPlayer();
     parallax('.preview__bg');
     onMouseRotate('.courses', '.course__inner');
+    onMouseRotate('.shop__list', '.shop__inner');
     onClickPhoneForm();
 
     moveCircle('.my-circle-1');
@@ -92,4 +93,15 @@ window.addEventListener('load', () => {
               },
           }); 
     };
+
+    if (document.body.classList.contains('shop-body')) {
+        const swiper5 = new Swiper('.swiper-shop', {       
+            slidesPerView: 1,
+            spaceBetween: 10,
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+          }); 
+    }
 });
