@@ -604,16 +604,118 @@
               </li>
             </ul>
           </article>
+
+          <div class="numbers">
+            <button type="button" class="numbers__btn number__btn-back">Назад</button>
+            <ul class="numbers__list">
+              <li class="numbers__item numbers__item-current">
+                <a href="#" class="numbers__link">1</a>
+              </li>
+              <li class="numbers__item">
+                <a href="#" class="numbers__link">2</a>
+              </li>
+              <li class="numbers__item">
+                <a href="#" class="numbers__link">3</a>
+              </li>
+              <li class="numbers__item">
+                <a href="#" class="numbers__link">4</a>
+              </li>
+              <li class="numbers__item numbers__item-more">
+                <span class="numbers__link"></span>
+              </li>
+              <li class="numbers__item">
+                <a href="#" class="numbers__link">15</a>
+              </li>
+            </ul>
+            <button type="button" class="numbers__btn number__btn-next">Вперед</button>
+          </div>
+        </div>
+      </section>
+      <section class="sign sign-general">
+        <div class="sign__container">
+          <div class="sign__inner">
+            <div class="sign__header">
+              <h2 class="sign__title title-2">Запишитесь на бесплатный урок</h2>
+              <p class="sign__subtitle">Наши консультанты по обучению перезвонят Вам и ответят на все интересующие Вас вопросы.</p>
+            </div>
+            <div class="sign__body">
+              <form action="#" method="POST" class="sign__form form-sign">
+                <div class="form-sign__item form-sign__name">
+                  <label for="form-sign-name" class="visually-hidden">Имя</label>
+                  <input type="text" id="form-sign-name" name="Имя" value="" placeholder="Как Вас зовут?" minlength="2" required>
+                </div>
+                <div class="form-sign__item form-sign__phone">
+                  <div class="form-sign__countries">
+                    <span class="countries__img countries__img-current">
+                <img src="img/icons/icons.svg#icon-code-7" alt="Иконка страны" width="18">
+              </span>
+                    <button type="button" class="form-sign__country-btn">Выбрать страну</button>
+                  </div>
+                  <ul class="countries__list">
+                    <li class="countries__item">
+                      <a href="#" class="countries__link" data-country-code="7">
+                        <span class="countries__img">
+                    <img src="img/icons/icons.svg#icon-code-7" alt="Иконка страны" width="18">
+                  </span>
+                        <span>Российская Федерация</span>
+                      </a>
+                    </li>
+                    <li class="countries__item">
+                      <a href="#" class="countries__link" data-country-code="250">
+                        <span class="countries__img">
+                    <img src="img/icons/icons.svg#icon-code-250" alt="Иконка страны" width="18">
+                  </span>
+                        <span>Руанда</span>
+                      </a>
+                    </li>
+                    <li class="countries__item">
+                      <a href="#" class="countries__link" data-country-code="40">
+                        <span class="countries__img">
+                    <img src="img/icons/icons.svg#icon-code-40" alt="Иконка страны" width="18">
+                  </span>
+                        <span>Румыния</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <label for="form-sign-phone" class="visually-hidden">Телефон</label>
+                  <input type="tel" id="form-sign-phone" name="phone" value="" placeholder="+7 (000) 000-00-00" reuired>
+                </div>
+                <div class="form-sign__item form-sign__email">
+                  <label for="form-sign-email" class="visually-hidden">Email</label>
+                  <input type="email" id="form-sign-email" name="Email" value="" placeholder="Ваш email" required>
+                </div>
+                <button class="form-sign__button button button-normal">Отправить</button>
+              </form>
+              <p class="sign__text">Оставляя заявĸу Вы принимаете условия <a href="#">соглашения</a> об обработĸе персональных данных</p>
+            </div>
+          </div>
         </div>
       </section>
 
-
       <div class="discount__container">
-        <article class="discount">
+        <article class="discount discount-general">
           <h2 class="discount__title title-2">Получи скидку за приглашенного друга</h2>
           <button class="discount__button button button-large button-icon">Записаться</button>
         </article>
       </div>
+
+      <section class="about-main">
+        <div class="about-main__container">
+          <div class="about-main__header">
+            <h2 class="about-main__title title-2">О центре progin</h2>
+            <p class="about-main__descr">В нашем центре мы преподаем самые передовые и востребованные языки, благодаря, которым дети получат все необходимые навыки. Занятия проходят в игровой форме, чтобы максимально сильно завлечь ребенка к IT.</p>
+            <p class="about-main__descr"> В нашем центре мы преподаем самые передовые и востребованные языки, благодаря, которым дети получат все необходимые навыки. Занятия проходят в игровой форме, чтобы максимально сильно завлечь ребенка к IT.</p>
+          </div>
+          <div class="about-main__body">
+            <div class="about-main__img about-main__img-big">
+              <img src="img/about-main/about-2.jpg" alt="Фоновое изображение" width="400">
+            </div>
+            <div class="about-main__img about-main__img-small">
+              <img src="img/about-main/about-1.jpg" alt="Фоновое изображение" width="350">
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">

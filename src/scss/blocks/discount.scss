@@ -1,8 +1,12 @@
+.discount-general {
+  margin-bottom: 100px;
+}
+
 .discount {
   display: flex;
   min-height: 160px;
   align-items: center;
-  padding: 23px 50px 23px 265px;
+  padding: 18px 50px 23px 265px;
   border-radius: 20px;
   background-image: url('@img/discount/discount-star.png'), linear-gradient(135deg, #313849 0%, #131822 100%);
   background-repeat: no-repeat, no-repeat;

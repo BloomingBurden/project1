@@ -6,13 +6,17 @@ import { moveCircle } from './modules/moveCircle.js';
 import { setCustomVideoPlayer } from './modules/setCustomVideoPlayer.js';
 import { parallax } from './modules/parallax.js';
 import { onMouseRotate } from './modules/onMouseRotate.js';
+import { onClickPhoneForm } from './modules/clickPhoneForm.js';
+import { setMaskForm } from './modules/myMask.js';
 
 window.addEventListener('load', () => {
+    setMaskForm('7');
     clickMenu();
     onScrollMenu();
     setCustomVideoPlayer();
     parallax('.preview__bg');
     onMouseRotate('.courses', '.course__inner');
+    onClickPhoneForm();
 
     moveCircle('.my-circle-1');
     moveCircle('.my-circle-2');
