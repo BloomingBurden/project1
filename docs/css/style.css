@@ -1496,15 +1496,6 @@ button {
           filter: invert(51%) sepia(96%) saturate(1365%) hue-rotate(355deg) brightness(95%) contrast(87%);
 }
 
-.nav__link:active {
-  color: #d36c0f;
-}
-
-.nav__link:active::after {
-  -webkit-filter: invert(47%) sepia(51%) saturate(3797%) hue-rotate(8deg) brightness(94%) contrast(88%);
-          filter: invert(47%) sepia(51%) saturate(3797%) hue-rotate(8deg) brightness(94%) contrast(88%);
-}
-
 .nav__link::after {
   content: "";
   position: absolute;
@@ -3766,6 +3757,7 @@ button {
   width: 282px;
   min-height: 426px;
   padding: 20px;
+  will-change: transform;
   background-color: #fff;
   border-radius: 20px;
 }

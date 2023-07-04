@@ -75,14 +75,6 @@
     }
   }
 
-  &:active {
-    color: $active-orange;
-
-    &::after {
-      filter: invert(47%) sepia(51%) saturate(3797%) hue-rotate(8deg) brightness(94%) contrast(88%);
-    }
-  }
-
   &::after {
     content: '';
     position: absolute;

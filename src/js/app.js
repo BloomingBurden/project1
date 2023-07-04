@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
     setCustomVideoPlayer();
     parallax('.preview__bg');
     onMouseRotate('.courses', '.course__inner');
-    onMouseRotate('.shop__list', '.shop__inner');
+    onMouseRotate('.shop', '.shop__inner');
     onClickPhoneForm();
 
     moveCircle('.my-circle-1');
