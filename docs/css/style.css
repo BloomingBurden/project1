@@ -2957,9 +2957,6 @@ button {
   background-size: cover, cover;
 }
 
-.no-webp .category__inner::after {
-  background-image: url("../img/category/category-courses.png"); }
-
 .category__inner::after {
   content: "";
   position: absolute;
@@ -2975,6 +2972,12 @@ button {
   background-position: center;
   background-size: cover;
 }
+
+.no-webp .courses-body .category__inner::after {
+  background-image: url("../img/category/category-courses.png"); }
+
+.no-webp .shop-body .category__inner::after {
+  background-image: url("../img/category/shop-category.png"); }
 
 .category__breadcrumbs {
   display: -webkit-box;
@@ -5354,7 +5357,9 @@ button {
 
 .webp .category__inner { background-image: url(../img/category/category-stars.webp), linear-gradient(135deg, #313849 0%, #131822 100%); }
 
-.webp .category__inner::after { background-image: url(../img/category/category-courses.webp); }
+.webp .courses-body .category__inner::after { background-image: url(../img/category/category-courses.webp); }
+
+.webp .shop-body .category__inner::after { background-image: url(../img/category/shop-category.webp); }
 
 @media (max-width: 768px) {
 

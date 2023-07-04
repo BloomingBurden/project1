@@ -24,7 +24,7 @@ window.addEventListener('load', () => {
     moveCircle('.my-circle-4');
 
     if (document.body.classList.contains('index-body')) {
-        const swiper = new Swiper('.swiper', {       
+        const swiper = new Swiper('.swiper-1', {       
             // Navigation arrows
             navigation: {
               nextEl: '.swiper-button-next',
