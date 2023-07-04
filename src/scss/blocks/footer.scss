@@ -149,6 +149,8 @@
 .footer__address-item {
   color: $text-main-color;
   margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
 
   &:last-child {
     margin-bottom: 0;

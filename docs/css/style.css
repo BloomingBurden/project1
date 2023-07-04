@@ -471,11 +471,12 @@ template {
 }
 
 ::-moz-selection {
-  background-color: linear-gradient(180deg, #FFAC5F 0%, #F18017 100%);
+  background-image: linear-gradient(180deg, #FFAC5F 0%, #F18017 100%);
 }
 
 ::selection {
-  background-color: linear-gradient(180deg, #FFAC5F 0%, #F18017 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFAC5F), to(#F18017));
+  background-image: linear-gradient(180deg, #FFAC5F 0%, #F18017 100%);
 }
 
 input,
@@ -2879,6 +2880,10 @@ button {
   margin-bottom: 100px;
 }
 
+.index-body .discount {
+  margin-bottom: 0;
+}
+
 .no-webp .discount {
   background-image: url("../img/discount/discount-star.png"), linear-gradient(135deg, #313849 0%, #131822 100%); }
 
@@ -3840,6 +3845,13 @@ button {
 .footer__address-item {
   color: #04061B;
   margin-bottom: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .footer__address-item:last-child {
@@ -4876,7 +4888,7 @@ button {
   }
 
   .lessons__body {
-    pading: 30px 15px 15px 15px;
+    padding: 30px 15px 15px 15px;
   }
 
   .lessons__preview {
