@@ -34,6 +34,12 @@
 }
 
 .numbers__item {
+  margin-right: 5px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
   &-current .numbers__link {
     color: #ffffff;
     border-radius: 10px;
@@ -70,6 +76,11 @@
   transition: $trans;
   overflow: hidden;
 
+  @media (max-width: $tableW) {
+    width: 44px;
+    height: 44px;
+  }
+
   &::after {
     content: '';
     border-radius: 10px;
@@ -89,13 +100,13 @@
     border-radius: 10px;
     color: #ffffff;
 
+    @media (max-width: $tableW) {
+      width: 44px;
+    }
+
     &::after {
       opacity: 1;
     }
-  }
-
-  &:focus {
-    border: 1px solid #F331F6;
   }
 }
 

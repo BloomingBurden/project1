@@ -1,0 +1,117 @@
+@@include('html/header.html', {
+  "title": "Контакты",
+  "bodyClass": "contacts-body basic-bg"
+})
+
+<main class="main">
+  @@include('html/quest.html', {})
+
+  <section class="category">
+    <div class="category__container">
+      <div class="category__inner">
+        <ul class="category__breadcrumbs">
+          <li class="category__bread-item">
+            <a href="./index.html">Главная</a>
+          </li>
+          <li class="category__bread-item category__bread-item-current">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+
+        <h1 class="category__title">Контакты</h1>
+        
+        <ul class="category__list">
+          <li class="category__item category__item-current">
+            <button type="button" class="category__link">Казань</button>
+          </li>
+          <li class="category__item">
+            <button type="button" class="category__link">Высокая гора</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacts">
+    <div class="contacts__container">
+      <div class="contacts__header">
+        <div class="contacts__contact">
+          <canvas class="my-circle my-circle-5" data-circle-speed="2" data-circle-rad="35" data-circle-quantity="4"></canvas>
+          <h3 class="contacts__subtitle title-3">Контакты центра Progin</h3>
+          <a href="tel:+79600813434" class="contacts__phone">+7 960 081 34 34</a>
+          <a href="mailto:admin@progin.tech" class="contacts__mail">admin@progin.tech</a>
+        </div>
+        <div class="contacts__social">
+          <canvas class="my-circle my-circle-6" data-circle-speed="2" data-circle-rad="50" data-circle-quantity="3"></canvas>
+          <h3 class="contacts__subtitle title-3">Progin в <br> социальных сетях</h3> 
+          <ul class="contacts__social-list social">
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <p class="social__img social__img-telega">
+                  <img src="@img/icons/icons.svg#Telegram" alt="Телеграм" width="12">
+                </p>
+                <span>
+                  @progin_tech
+                </span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <p class="social__img social__img-vk">
+                  <img src="@img/icons/icons.svg#vk_logo" alt="Ввконтакте" width="24">
+                </p>
+                <span>
+                  progin_tech
+                </span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="tel:+79600813434" class="social__link">
+                <p class="social__img social__img-what">
+                  <img src="@img/icons/icons.svg#WhatsApp" alt="Ватсап" width="12">
+                </p>
+                <span>
+                  7 960 081 34 34
+                </span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <p class="social__img social__img-inst">
+                  <img src="@img/icons/icons.svg#Instagram_logo" alt="Инстаграм" width="12">
+                </p>
+                <span>
+                  @progin_tech
+                </span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <p class="social__img social__img-face">
+                  <img src="@img/icons/icons.svg#Facebook" alt="Фейсбук" width="12">
+                </p>
+                <span>
+                  progin.tech.official
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contacts__map map">
+        
+      </div>
+    </div>
+  </section>
+
+  @@include('html/sign.html', {})
+
+  <div class="discount__container">
+    @@include('html/discount.html', {})
+  </div>
+
+  @@include('html/about-main.html', {})
+</main>
+
+@@include('html/footer.html', {})

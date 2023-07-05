@@ -10,12 +10,34 @@
   }
 }
 
+.preview__bg {
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('@img/stars-preview.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
 .preview .parallax-inner {
-  top: 10%;
-  height: 100%;
+  top: 5%;
+  height: 150%;
+  transition: $cubicTrans;
 
   @media (max-width: $tableW) {
-    top: 5%;
+    height: 110%;
+    top: 0%;
+
+    img {
+      object-position: bottom;
+    }
   }
 }
 
@@ -39,10 +61,10 @@
 
   .my-circle-3 {
     z-index: -1;
-    filter: blur(200px);
+    filter: blur(250px);
 
     @media (max-width: $tableW) {
-      filter: blur(70px) saturate(300%);
+      filter: blur(100px) saturate(100%);
     }
   }
 }
@@ -154,6 +176,12 @@
 .preview__enroll {
   background: $dark-blue;
   color: #ffffff;
+
+  &:hover {
+    &::after {
+      opacity: 0;
+    }
+  }
 
   @media (max-width: $desktopW) {
     margin: 0 auto;

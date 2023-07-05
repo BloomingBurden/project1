@@ -1,4 +1,5 @@
 import './modules/swiper.js';
+import './modules/mixitup.min.js';
 import './modules/functions.js';
 import { clickMenu } from './modules/clickMenu.js';
 import { onScrollMenu } from './modules/onScrollMenu.js';
@@ -8,6 +9,8 @@ import { parallax } from './modules/parallax.js';
 import { onMouseRotate } from './modules/onMouseRotate.js';
 import { onClickPhoneForm } from './modules/clickPhoneForm.js';
 import { setMaskForm } from './modules/myMask.js';
+import { showHelp } from './modules/showHelp.js';
+import { clickFilter } from './modules/clickFilter.js';
 
 window.addEventListener('load', () => {
     setMaskForm('7');
@@ -18,11 +21,16 @@ window.addEventListener('load', () => {
     onMouseRotate('.courses', '.course__inner');
     onMouseRotate('.shop', '.shop__inner');
     onClickPhoneForm();
+    showHelp();
+    clickFilter();
 
     moveCircle('.my-circle-1');
     moveCircle('.my-circle-2');
     moveCircle('.my-circle-3');
     moveCircle('.my-circle-4');
+    moveCircle('.my-circle-5');
+    moveCircle('.my-circle-6');
+
 
     if (document.body.classList.contains('index-body')) {
         const swiper = new Swiper('.swiper-1', {       
@@ -103,5 +111,35 @@ window.addEventListener('load', () => {
                 el: '.swiper-pagination',
             },
           }); 
+
+
+          var mixer = mixitup('.shop__list', {
+            selectors: {
+              control: '.category__link' // Селектор фильтра
+            }
+        });
+    }
+
+    if (document.body.classList.contains('about-body')) {
+        const swiper6 = new Swiper('.swiper-about', {       
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+          }); 
+    }
+
+
+    if (document.body.classList.contains('courses-body')) {
+        var mixer = mixitup('.courses', {
+            selectors: {
+              control: '.category__link' // Селектор фильтра
+            }
+        });
     }
 });

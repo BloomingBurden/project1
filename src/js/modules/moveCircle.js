@@ -14,11 +14,11 @@ export const moveCircle = (id) => {
     // Создаем массив объектов, каждый из которых представляет круг
     const circles = [
         { x: 55, y: 90, radius: RAD, color: '#B9A3F8', speedX: 0.1, speedY: 0.1 },
-        { x: 150, y: 45, radius: RAD, color: '#FFE8D2', speedX: -0.2, speedY: -0.2 },
+        { x: 150, y: 45, radius: RAD, color: '#FF8D8F', speedX: -0.2, speedY: -0.2 },
         { x: 50, y: 50, radius: RAD, color: '#7234F6', speedX: -0.3, speedY: -0.3 },
-        { x: 84, y: 100, radius: RAD, color: '#FF8D8F', speedX: 0.5, speedY: 0.5 },
+        { x: 84, y: 100, radius: RAD, color: '#FFC773', speedX: 0.5, speedY: 0.5 },
         { x: 200, y: 80, radius: RAD, color: '#B9A3F8', speedX: 0.2, speedY: 0.2 },
-        { x: 254, y: 50, radius: RAD, color: '#FFE8D2', speedX: -0.1, speedY: -0.1 },
+        { x: 254, y: 50, radius: RAD, color: '#FFC773', speedX: -0.1, speedY: -0.1 },
         { x: 80, y: 90, radius: RAD, color: '#7234F6', speedX: -0.3, speedY: -0.3 },
         { x: 42, y: 100, radius: RAD, color: '#FF8D8F', speedX: 0.5, speedY: 0.5 },
         { x: 200, y: 50, radius: RAD, color: '#B9A3F8', speedX: 0.2, speedY: 0.2 },

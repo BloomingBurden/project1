@@ -10,6 +10,21 @@
   }
 }
 
+.about-body .category {
+  margin-bottom: 20px;
+
+  @media (max-width: $tableW) {
+    margin-bottom: 25px;
+  }
+}
+
+.schedule-body .category {
+  margin-bottom: 60px;
+
+  @media (max-width: $tableW) {
+    margin-bottom: 25px;
+  }
+}
 
 .category__inner {
   position: relative;
@@ -59,6 +74,35 @@
 .shop-body .category__inner {
   &::after {
     background-image: url('@img/category/shop-category.png');
+  }
+}
+
+.contacts-body .category__inner {
+  &::after {
+    background-image: url('@img/category/category-contact.png');
+  }
+}
+
+.about-body {
+  .category__inner {
+    &::after {
+      right: 40px;
+      width: 180px;
+      height: 180px;
+      background-image: url('@img/category/category-about.png');
+  
+      @media (max-width: $tableW) {
+        width: 50px;
+        height: 50px;
+        right: 20px;
+      }
+    }
+  }
+
+  .category__title {
+    @media (max-width: $tableW) {
+      margin-bottom: 25px;
+    }
   }
 }
 
@@ -169,7 +213,7 @@
   border-radius: 50px;
   background: linear-gradient(#EBD1FF, #EFF8D9, #E9DBEF, #F5F3E9, #C9C2A6);
 
-  a {
+  button {
     -webkit-background-clip: text;
     -webkit-text-fill-color: $dark-blue;
   }

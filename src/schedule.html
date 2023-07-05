@@ -1,0 +1,43 @@
+@@include('html/header.html', {
+  "title": "Расписание",
+  "bodyClass": "schedule-body basic-bg"
+})
+
+<main class="main">
+  @@include('html/quest.html', {})
+
+  <section class="category">
+    <div class="category__container">
+      <div class="category__inner">
+        <ul class="category__breadcrumbs">
+          <li class="category__bread-item">
+            <a href="./index.html">Главная</a>
+          </li>
+          <li class="category__bread-item category__bread-item-current">
+            <a href="#">Расписание</a>
+          </li>
+        </ul>
+
+        <h1 class="category__title">Расписание</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="schedule">
+    <div class="schedule__container">
+      <div class="schedule__inner">
+        <!-- СЮДА ВСТАВЛЯТЬ IFRAME -->
+      </div>
+    </div>
+  </section>
+
+  @@include('html/sign.html', {})
+
+  <div class="discount__container">
+    @@include('html/discount.html', {})
+  </div>
+
+  @@include('html/about-main.html', {})
+</main>
+
+@@include('html/footer.html', {})

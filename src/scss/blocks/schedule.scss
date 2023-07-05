@@ -1,0 +1,12 @@
+.schedule {
+  margin-bottom: 100px;
+
+  @media (max-width: $tableW) {
+    margin-bottom: 70px;
+  }
+}
+
+.schedule__inner {
+  width: 100%;
+  background-color: grey;
+}

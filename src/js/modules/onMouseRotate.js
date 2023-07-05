@@ -11,11 +11,14 @@ export const onMouseRotate = (wrap, elem) => {
 
     if (!wrapper) return;
 
+    const SCALE = wrapper.dataset.rotateScale ? wrapper.dataset.rotateScale : 1.03;
+    const SPEED = wrapper.dataset.rotateSpeed ? wrapper.dataset.rotateSpeed : 60;
+
     const changeRotateSlider = (evt) => {
         const target = evt.target.closest(elem);
         
         if (currentTarget) {
-            currentTarget.style.cssText = `transform: perspective(700px) rotateX(${currentY / 60}deg) rotateY(${-currentX / 60}deg) scale3d(1.02, 1.02, 1.02)!important; box-shadow: 0 0 20px 3px rgba(0,0,0,0.2);`
+            currentTarget.style.cssText = `transform: perspective(700px) rotateX(${currentY / SPEED}deg) rotateY(${-currentX / SPEED}deg) scale3d(${SCALE}, ${SCALE}, ${SCALE})!important; box-shadow: 0 0 20px 3px rgba(0,0,0,0.2);`
         }   
       
         if (target !== currentTarget && currentTarget || currentTarget && !target) {

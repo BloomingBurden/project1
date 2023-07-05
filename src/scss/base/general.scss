@@ -19,20 +19,19 @@ textarea {
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
   min-width: $mobileW;
-  overflow:-x hidden;
+  overflow-x: hidden;
 }
 
 body {
-  height: 100%;
   font-family: $userfont;
 	font-size: $fontsize;
 	line-height: $lineheight;
 	color: $textcolor;
   font-weight: $fontweight;
 	position: relative;
-	overflow-x: hidden;
+  overflow-x: hidden;
   word-break: break-word;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -43,15 +42,33 @@ body {
   }
 }
 
-.index-body {
-  background-image: $bg1;
+.basic-bg {
   background-color: $basic-bg;
 }
 
-.courses-body,
-.shop-body {
-  background-color: $basic-bg;
+.bg-1 {
+  background-image: conic-gradient(from -61deg at 0% -0.00%, #FFF8F1 142.5000035762787deg, #FFF 157.5deg, #EEF3FF 168.75deg, #FDFDFE 189.37500715255737deg, #E6EBF8 211.87500715255737deg);
+  background-blend-mode: lighten;
 }
+
+.bg-2 {
+  background-image: conic-gradient(from -61deg at 0% -0.00%, #FFD1A6 131.2500035762787deg, #FFF 155.6249964237213deg, #E2E5FF 168.75deg, #FDFDFE 195.00000715255737deg, #EEE7FF 223.12500715255737deg);
+  background-blend-mode: lighten;
+}
+
+.bg-3 {
+  background-image: radial-gradient(485.12% 115.32% at 104.74% 55.72%, #FFE9DC 0%, #DEE5FF 35.42%, #FFEAEA 59.90%, #E5E8FF 79.17%, #FFEFE4 93.23%, #E3EEFF 100%);
+}
+
+.bg-4 {
+  background-image: linear-gradient(180deg, #FBE8E8 0%, #F3EAFF 29.69%, #F5E9F0 63.02%, #FFF9F3 100%);
+}
+
+.bg-5 {
+  background-image: conic-gradient(from -61deg at 0% -0.00%, #FEFFB9 80.62499821186066deg, #DCD4AD 121.87499642372131deg, #E7D2FD 123.41427326202393deg, #FFEDE3 163.125deg, #D6C0FF 188.6760449409485deg, #FDAAFF 196.0251259803772deg, #FFE3CA 213.75deg, #FFD596 281.25deg), linear-gradient(90deg, rgba(235, 209, 255, 0.10) 0%, rgba(239, 248, 217, 0.10) 29.69%, rgba(233, 219, 239, 0.10) 58.33%, rgba(245, 243, 233, 0.10) 75.52%, rgba(201, 194, 166, 0.10) 100%);
+  background-blend-mode: lighten, normal;
+}
+
 
 img {
   max-width: 100%;

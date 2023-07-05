@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class=shop-body>
+<body class="shop-body basic-bg">
   <div class="wrapper">
     <header class="header">
       <div class="header__container">
@@ -72,7 +72,7 @@
                 <a href="./index.html">Главная</a>
               </li>
               <li class="category__bread-item category__bread-item-current">
-                <a href="./index.html">Магазин</a>
+                <a href="#">Магазин</a>
               </li>
             </ul>
 
@@ -80,29 +80,29 @@
 
             <ul class="category__list">
               <li class="category__item category__item-current">
-                <a href="#" class="category__link">Все</a>
+                <button type="button" class="category__link" data-filter="all">Все</button>
               </li>
               <li class="category__item">
-                <a href="#" class="category__link">Аксессуары</a>
+                <button type="button" class="category__link" data-filter=".category-a">Аксессуары</button>
               </li>
               <li class="category__item">
-                <a href="#" class="category__link">Игры</a>
+                <button type="button" class="category__link" data-filter=".category-b">Игры</button>
               </li>
               <li class="category__item">
-                <a href="#" class="category__link">Канцелярия</a>
+                <button type="button" class="category__link" data-filter=".category-c">Канцелярия</button>
               </li>
               <li class="category__item">
-                <a href="#" class="category__link">Одежда</a>
+                <button type="button" class="category__link" data-filter=".category-d">Одежда</button>
               </li>
               <li class="category__item">
-                <a href="#" class="category__link">Техника</a>
+                <button type="button" class="category__link" data-filter=".category-f">Техника</button>
               </li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section class="shop">
+      <section class="shop" data-rotate-scale="1.05" data-rotate-speed="30">
         <div class="shop__container">
           <h2 class="visually-hidden">Магазин</h2>
           <div class="shop__preview">
@@ -111,7 +111,7 @@
           </div>
 
           <ul class="shop__list">
-            <li class="shop__item">
+            <li class="shop__item category-c mix">
               <div class="shop__inner">
                 <span class="shop__category shop__category-blue">Канцелярия</span>
                 <div class="shop__img swiper swiper-shop">
@@ -142,7 +142,7 @@
                 <button type="button" class="shop__button button button-normal button-icon">Купить</button>
               </div>
             </li>
-            <li class="shop__item">
+            <li class="shop__item category-f mix">
               <div class="shop__inner">
                 <span class="shop__category shop__category-pink">Техника</span>
                 <div class="shop__img swiper swiper-shop">
@@ -173,7 +173,7 @@
                 <button type="button" class="shop__button button button-normal button-icon">Купить</button>
               </div>
             </li>
-            <li class="shop__item">
+            <li class="shop__item category-a mix">
               <div class="shop__inner">
                 <span class="shop__category shop__category-orange">Аксессуары</span>
                 <div class="shop__img swiper swiper-shop">
@@ -204,7 +204,7 @@
                 <button type="button" class="shop__button button button-normal button-icon">Купить</button>
               </div>
             </li>
-            <li class="shop__item">
+            <li class="shop__item category-b mix">
               <div class="shop__inner">
                 <span class="shop__category shop__category-yellow">Игры</span>
                 <div class="shop__img swiper swiper-shop">
@@ -235,7 +235,7 @@
                 <button type="button" class="shop__button button button-normal button-icon">Купить</button>
               </div>
             </li>
-            <li class="shop__item">
+            <li class="shop__item category-d mix">
               <div class="shop__inner">
                 <span class="shop__category shop__category-neon">Одежда</span>
                 <div class="shop__img swiper swiper-shop">
@@ -266,7 +266,7 @@
                 <button type="button" class="shop__button button button-normal button-icon">Купить</button>
               </div>
             </li>
-            <li class="shop__item">
+            <li class="shop__item category-a mix">
               <div class="shop__inner">
                 <span class="shop__category shop__category-orange">Аксессуары</span>
                 <div class="shop__img swiper swiper-shop">
@@ -297,7 +297,7 @@
                 <button type="button" class="shop__button button button-normal button-icon">Купить</button>
               </div>
             </li>
-            <li class="shop__item">
+            <li class="shop__item category-c mix">
               <div class="shop__inner">
                 <span class="shop__category shop__category-blue">Канцелярия</span>
                 <div class="shop__img swiper swiper-shop">
@@ -328,7 +328,7 @@
                 <button type="button" class="shop__button button button-normal button-icon">Купить</button>
               </div>
             </li>
-            <li class="shop__item">
+            <li class="shop__item category-f mix">
               <div class="shop__inner">
                 <span class="shop__category shop__category-pink">Техника</span>
                 <div class="shop__img swiper swiper-shop">
@@ -359,7 +359,7 @@
                 <button type="button" class="shop__button button button-normal button-icon">Купить</button>
               </div>
             </li>
-            <li class="shop__item">
+            <li class="shop__item category-a mix">
               <div class="shop__inner">
                 <span class="shop__category shop__category-orange">Аксессуары</span>
                 <div class="shop__img swiper swiper-shop">
@@ -390,7 +390,7 @@
                 <button type="button" class="shop__button button button-normal button-icon">Купить</button>
               </div>
             </li>
-            <li class="shop__item">
+            <li class="shop__item category-f mix">
               <div class="shop__inner">
                 <span class="shop__category shop__category-pink">Техника</span>
                 <div class="shop__img swiper swiper-shop">
@@ -421,7 +421,7 @@
                 <button type="button" class="shop__button button button-normal button-icon">Купить</button>
               </div>
             </li>
-            <li class="shop__item">
+            <li class="shop__item category-c mix">
               <div class="shop__inner">
                 <span class="shop__category shop__category-blue">Канцелярия</span>
                 <div class="shop__img swiper swiper-shop">
@@ -452,7 +452,7 @@
                 <button type="button" class="shop__button button button-normal button-icon">Купить</button>
               </div>
             </li>
-            <li class="shop__item">
+            <li class="shop__item category-f mix">
               <div class="shop__inner">
                 <span class="shop__category shop__category-pink">Техника</span>
                 <div class="shop__img swiper swiper-shop">
@@ -700,6 +700,7 @@
       </div>
     </footer>
   </div>
+
   <script src="js/app.min.js"></script>
 </body>
 
