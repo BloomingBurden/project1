@@ -7,13 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="images/favicon.png">
   <meta property="og:image" content="images/dist/preview.jpg">
-  <title>Расписание</title>
+  <title>404</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="schedule-body basic-bg">
+<body class="no-page-body basic-bg">
   <div class="wrapper">
     <header class="header">
       <div class="header__container">
@@ -64,119 +64,26 @@
         <button type="button" class="quest__btn">Помочь?</button>
       </article>
 
-      <section class="category">
-        <div class="category__container">
-          <div class="category__inner">
-            <ul class="category__breadcrumbs">
-              <li class="category__bread-item">
-                <a href="./index.html">Главная</a>
-              </li>
-              <li class="category__bread-item category__bread-item-current">
-                <a href="#">Расписание</a>
-              </li>
-            </ul>
-
-            <h1 class="category__title">Расписание</h1>
-          </div>
-        </div>
-      </section>
-
-      <section class="schedule">
-        <div class="schedule__container">
-          <div class="schedule__inner">
-            <!-- СЮДА ВСТАВЛЯТЬ IFRAME -->
-          </div>
-        </div>
-      </section>
-
-      <section class="sign sign-general">
-        <div class="sign__container">
-          <div class="sign__inner">
-            <div class="sign__header">
-              <h2 class="sign__title title-2">Запишитесь на бесплатный урок</h2>
-              <p class="sign__subtitle">Наши консультанты по обучению перезвонят Вам и ответят на все интересующие Вас вопросы.</p>
+      <section class="no-page">
+        <div class="no-page__container">
+          <div class="no-page__inner">
+            <canvas class="my-circle my-circle-7" data-circle-speed="2" data-circle-rad="25" data-circle-quantity="3"></canvas>
+            <div class="no-page__header">
+              <h1 class="no-page__title">404</h1>
+              <p class="no-page__text">Кажется, что-то пошло не так. Страница, которую вы ищете, не существует. Возможно она устарела, была удалена, или вы ввели неверный адрес в поисковой строке.</p>
+              <a href="./index.html" class="no-page__link button button-large">Вернуться на главную</a>
             </div>
-            <div class="sign__body">
-              <form action="#" method="POST" class="sign__form form-sign">
-                <div class="form-sign__item form-sign__name">
-                  <label for="form-sign-name" class="visually-hidden">Имя</label>
-                  <input type="text" id="form-sign-name" name="Имя" value="" placeholder="Как Вас зовут?" minlength="2" required>
-                </div>
-                <div class="form-sign__item form-sign__phone">
-                  <div class="form-sign__countries">
-                    <span class="countries__img countries__img-current">
-                <img src="img/icons/icons.svg#icon-code-7" alt="Иконка страны" width="18">
-              </span>
-                    <button type="button" class="form-sign__country-btn">Выбрать страну</button>
-                  </div>
-                  <ul class="countries__list">
-                    <li class="countries__item">
-                      <a href="#" class="countries__link" data-country-code="7">
-                        <span class="countries__img">
-                    <img src="img/icons/icons.svg#icon-code-7" alt="Иконка страны" width="18">
-                  </span>
-                        <span>Российская Федерация</span>
-                      </a>
-                    </li>
-                    <li class="countries__item">
-                      <a href="#" class="countries__link" data-country-code="7">
-                        <span class="countries__img">
-                    <img src="img/icons/icons.svg#kazah-flag" alt="Иконка страны" width="18">
-                  </span>
-                        <span>Казахстан</span>
-                      </a>
-                    </li>
-                    <li class="countries__item">
-                      <a href="#" class="countries__link" data-country-code="998">
-                        <span class="countries__img">
-                    <img src="img/icons/icons.svg#uzbekistan-flag" alt="Иконка страны" width="18">
-                  </span>
-                        <span>Узбекистан</span>
-                      </a>
-                    </li>
-                  </ul>
-                  <label for="form-sign-phone" class="visually-hidden">Телефон</label>
-                  <input type="tel" id="form-sign-phone" name="phone" value="" placeholder="+7 (000) 000-00-00" required>
-                </div>
-                <div class="form-sign__item form-sign__email">
-                  <label for="form-sign-email" class="visually-hidden">Email</label>
-                  <input type="email" id="form-sign-email" name="Email" value="" placeholder="Ваш email" required>
-                </div>
-                <div class="form-sign__item captcha">
-
-                </div>
-                <button class="form-sign__button button button-normal">Отправить</button>
-              </form>
-              <p class="sign__text">Оставляя заявĸу Вы принимаете условия <a href="#" target="_blank">соглашения</a> об обработĸе персональных данных</p>
+            <div class="no-page__img">
+              <picture>
+                <source type="image/webp" srcset="img/404/404-tarelka.webp">
+                <img src="img/404/404-tarelka.png" alt="Фоновое изображение">
+              </picture>
             </div>
           </div>
         </div>
       </section>
 
-      <div class="discount__container">
-        <article class="discount discount-general">
-          <h2 class="discount__title title-2">Получи скидку за приглашенного друга</h2>
-          <button class="discount__button button button-large button-icon">Записаться</button>
-        </article>
-      </div>
 
-      <section class="about-main">
-        <div class="about-main__container">
-          <div class="about-main__header">
-            <h2 class="about-main__title title-2">О центре progin</h2>
-            <p class="about-main__descr">В нашем центре мы преподаем самые передовые и востребованные языки, благодаря, которым дети получат все необходимые навыки. Занятия проходят в игровой форме, чтобы максимально сильно завлечь ребенка к IT.</p>
-            <p class="about-main__descr"> В нашем центре мы преподаем самые передовые и востребованные языки, благодаря, которым дети получат все необходимые навыки. Занятия проходят в игровой форме, чтобы максимально сильно завлечь ребенка к IT.</p>
-          </div>
-          <div class="about-main__body">
-            <div class="about-main__img about-main__img-big">
-              <img src="img/about-main/about-2.jpg" alt="Фоновое изображение" width="400">
-            </div>
-            <div class="about-main__img about-main__img-small">
-              <img src="img/about-main/about-1.jpg" alt="Фоновое изображение" width="350">
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer class="footer">

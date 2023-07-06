@@ -1,18 +1,27 @@
 @keyframes moveDown {
   from {
-    transform: translateY(100%);
+    transform: translateY(200%);
   }
   to {
     transform: translateY(0);
   }
 }
 
-@keyframes moveUpScroll {
+@keyframes moveUpScrollLeft {
   from {
-    transform: translateY(-150%);
+    transform: translate(30%,-150%);
   }
   to {
-    transform: translateY(0%);
+    transform: translate(0%,0%);
+  }
+}
+
+@keyframes moveUpScrollRight {
+  from {
+    transform: translate(-30%,-150%);
+  }
+  to {
+    transform: translate(0%,0%);
   }
 }
 
@@ -200,6 +209,7 @@
   transform: translateX(0);
   user-select: auto;
 }
+
 .header__burger {
   display: none;
   position: relative;
@@ -217,16 +227,16 @@
     left: 0;
     transition: $cubicTrans;
     background-color: #000000;
-}
+  }
 
   &::after {
     top: 8px;
     box-shadow: 0 8px 0 #000000;
-}
+  }
 
   @media (max-width: 1000px) {
     display: block;
-}
+  }
 }
 
 .header__close {
@@ -327,15 +337,15 @@
   }
 
   .header__login-scroll {
-    transform: translateY(-150%);
+    transform: translate(-30%, -150%);
   }
 
   .header__logo-scroll {
-    transform: translateY(-150%);
+    transform: translate(30%, -150%);
   }
 
   .header__button-scroll {
-    transform: translateY(-150%);
+    transform: translate(-30%, -150%);
   }
 
   .header--scrolling {
@@ -374,7 +384,7 @@
   
     .header__login-scroll {
       display: flex;
-      animation: moveUpScroll $cubicTrans forwards;
+      animation: moveUpScrollRight $cubicTrans forwards;
       animation-delay: 0.1s;
       flex: 0 0 40px;
       height: 40px;
@@ -382,7 +392,7 @@
   
     .header__logo-scroll {
       display: flex;
-      animation: moveUpScroll $cubicTrans forwards;
+      animation: moveUpScrollLeft $cubicTrans forwards;
       animation-delay: 0.1s;
       flex: 0 0 120px;
       margin-right: 37px;
@@ -394,7 +404,7 @@
   
     .header__button-scroll {
       display: flex;
-      animation: moveUpScroll $cubicTrans forwards;
+      animation: moveUpScrollRight $cubicTrans forwards;
       animation-delay: 0.1s;
       min-height: 40px;
       min-width: 156px;

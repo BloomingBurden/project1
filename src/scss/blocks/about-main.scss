@@ -75,7 +75,6 @@
     width: calc(100% + 10px);
     height: calc(100% + 10px);
     z-index: -1;
-    background: linear-gradient(#EBD1FF, #EFF8D9, #E9DBEF, #F5F3E9, #C9C2A6);
   }
 
   img {
@@ -92,6 +91,10 @@
     height: 385px;
     transform: rotate(-14deg);
 
+    &::after {
+      background: linear-gradient(#e5e5e5, #fcddfd, #ffffff, #d6b6d7, #858585);
+    }
+
     @media (max-width: 1000px) {
       top: calc(100% + 40px);
       left: calc(50% - 30px);
@@ -107,6 +110,11 @@
     right: 0;
     bottom: -70px;
     transform: rotate(16deg);
+    box-shadow: -23px -6px 27px 0px rgba(0, 0, 0, 0.25);
+
+    &::after {
+      background: linear-gradient(#e5e5e5, #fcddfd, #ede4f6, #ecffe8, #e5e5e5);
+    }
 
     @media (max-width: 1000px) {
       top: calc(100% + 170px);

@@ -11,6 +11,10 @@ import { onClickPhoneForm } from './modules/clickPhoneForm.js';
 import { setMaskForm } from './modules/myMask.js';
 import { showHelp } from './modules/showHelp.js';
 import { clickFilter } from './modules/clickFilter.js';
+import { onClickSubmitForm } from './modules/validatorForm.js';
+import { setYandexMap } from './modules/yandexMap.js';
+import { elementMove } from './modules/elementMove.js';
+import { popup } from './modules/popup.js';
 
 window.addEventListener('load', () => {
     setMaskForm('7');
@@ -18,11 +22,15 @@ window.addEventListener('load', () => {
     onScrollMenu();
     setCustomVideoPlayer();
     parallax('.preview__bg');
-    onMouseRotate('.courses', '.course__inner');
-    onMouseRotate('.shop', '.shop__inner');
     onClickPhoneForm();
     showHelp();
     clickFilter();
+    onClickSubmitForm();
+    setYandexMap();
+    popup();
+    
+    elementMove('.no-page-body', '.no-page__img');
+    elementMove('.discount-popup', '.popup__img');
 
     moveCircle('.my-circle-1');
     moveCircle('.my-circle-2');
@@ -30,6 +38,10 @@ window.addEventListener('load', () => {
     moveCircle('.my-circle-4');
     moveCircle('.my-circle-5');
     moveCircle('.my-circle-6');
+    moveCircle('.my-circle-7');
+
+    onMouseRotate('.courses', '.course__inner');
+    onMouseRotate('.shop', '.shop__inner');
 
 
     if (document.body.classList.contains('index-body')) {
@@ -141,5 +153,41 @@ window.addEventListener('load', () => {
               control: '.category__link' // Селектор фильтра
             }
         });
+    }
+
+    if (document.body.classList.contains('contacts-body')) {
+        const swiper7 = new Swiper('.swiper-contacts', {       
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+
+            pagination: {
+                el: '.swiper-pagination',
+                dynamicBullets: true,
+                dynamicMainBullets: 2,
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                375: {
+                  slidesPerView: 1.3,
+                  spaceBetween: 10
+                },
+
+                500: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                },
+
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                },
+                1000: {
+                    slidesPerView: 4,
+                    spaceBetween: 24,
+                }
+              },
+        }); 
     }
 });

@@ -1,0 +1,31 @@
+@@include('html/header.html', {
+  "title": "404",
+  "bodyClass": "no-page-body basic-bg"
+})
+
+<main class="main">
+  @@include('html/quest.html', {})
+
+  <section class="no-page">
+    <div class="no-page__container">
+      <div class="no-page__inner">
+        <canvas class="my-circle my-circle-7" data-circle-speed="2" data-circle-rad="25" data-circle-quantity="3"></canvas>
+        <div class="no-page__header">
+          <h1 class="no-page__title">404</h1>
+          <p class="no-page__text">Кажется, что-то пошло не так. Страница, которую вы ищете, не существует. Возможно она устарела, была удалена, или вы ввели неверный адрес в поисковой строке.</p>
+          <a href="./index.html" class="no-page__link button button-large">Вернуться на главную</a>
+        </div>
+        <div class="no-page__img">
+          <picture>
+            <source type="image/webp" srcset="@img/404/404-tarelka.webp">
+            <img src="@img/404/404-tarelka.png" alt="Фоновое изображение">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+</main>
+
+@@include('html/footer.html', {})

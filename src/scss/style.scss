@@ -14,6 +14,7 @@
 @import 'base/general';
 @import 'blocks/quest';
 
+//ГЛАВНАЯ
 @import 'blocks/video';
 @import 'blocks/header';
 @import 'blocks/logo';
@@ -27,18 +28,26 @@
 @import 'blocks/partners';
 @import 'blocks/discount';
 
+//КУРСЫ
 @import 'blocks/category';
 @import 'blocks/courses';
 @import 'blocks/numbers';
 @import 'blocks/sign';
 @import 'blocks/about-main';
 
+//МАГАЗИН
 @import 'blocks/shop';
-
+//О НАС
 @import 'blocks/about-index';
 
+//РАСПИСАНИЕ
 @import 'blocks/schedule';
 
+//КОНТАКТ
 @import 'blocks/contacts';
+//404 Error
+@import 'blocks/404';
+
+@import 'blocks/popup';
 
 @import 'blocks/footer';

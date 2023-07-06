@@ -1,8 +1,10 @@
-import { setMaskForm, firstMask } from "./myMask.js";
+import { firstMask } from "./myMask.js";
 
 const setNewMask = (target) => {
-    const currentCode = target.closest('.countries__link').dataset.countryCode;
-    const elem = document.querySelector('.form-sign__phone');
+    const selectLink = target.closest('.countries__link')
+    const currentCode = selectLink.dataset.countryCode;
+    const selectImg = selectLink.querySelector('.countries__img img');
+    const elem = target.closest('.form-sign__phone');
     const input = elem.querySelector('input');
     const img = elem.querySelector('.countries__img-current img');
 
@@ -26,7 +28,7 @@ const setNewMask = (target) => {
     }
 
     input.placeholder = `+${currentCode} (000)000-00-00`;
-    img.src = `./img/icons/icons.svg#icon-code-${currentCode}`;
+    img.src = selectImg.src;
 
     firstMask.updateOptions({
         mask: result, // обновляем формат маски с учетом выбранного кода страны
@@ -40,11 +42,15 @@ export const onClickPhoneForm = () => {
     
     document.addEventListener('click', (evt) => {
         const target = evt.target;
+        const targetBtn = target.closest('.form-sign__country-btn');
+        const targetPhone = target.closest('.form-sign__phone');
 
-        if (target.closest('.form-sign__country-btn')) {
-            elem.classList.add('form-sign__phone-active');
+        if (targetBtn && targetPhone) {
+            targetPhone.classList.toggle('form-sign__phone-active');
         } else {
-            elem.classList.remove('form-sign__phone-active');
+            if (!targetPhone) return;
+            
+            targetPhone.classList.remove('form-sign__phone-active');
         }
 
         if (target.closest('.countries__link')) {

@@ -2,16 +2,21 @@
   padding: 60px 0 100px;
 
   @media (max-width: $tableW) {
-    padding: 30px 0 70px;
+    padding: 30px 0 60px;
   }
 }
 
 .contacts__header {
   display: flex;
   min-height: 260px;
+  margin-bottom: 60px;
 
   @media (max-width: 1000px) {
     display: block;
+  }
+
+  @media (max-width: $tableW) {
+    margin-bottom: 30px;
   }
 }
 
@@ -168,4 +173,112 @@
 
 .my-circle-6 {
   filter: blur(250px);
+}
+
+.contacts__map {
+  margin-bottom: 70px;
+  padding: 55px 30px 30px 30px;
+  border-radius: 20px;
+  border: 1px solid #DFDFDF;
+  background: #FFF;
+
+  @media (max-width: $tableW) {
+    padding: 30px 20px 20px 20px;
+  }
+}
+
+.map__title {
+  margin-bottom: 24px;
+
+  @media (max-width: $tableW) {
+    margin-bottom: 20px;
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+.map__address {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 60px;
+
+  @media (max-width: $tableW) {
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+  }
+}
+
+.map__inner {
+  border-radius: 20px;
+  overflow: hidden;
+
+  @media (max-width: $tableW) {
+    height: 341px;
+  }
+}
+
+.contacts__caption {
+  @media (max-width: $tableW) {
+    margin-bottom: 30px;
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+.contacts__swiper {
+  padding-top: 86px;
+  margin-top: -55px;
+
+  @media (max-width: $tableW) {
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 30px;
+  }
+}
+
+.contacts .swiper-pagination {
+  display: none;
+  bottom: 0;
+
+  @media (max-width: $tableW) {
+    display: block;
+  }
+}
+
+.contacts .swiper-pagination-bullet-active {
+  background: linear-gradient(180deg, #343434 0%, #111 100%);
+}
+
+.swiper {
+}
+
+.swiper-contacts {
+}
+
+.swiper-button-prev {
+}
+.swiper-btn {
+}
+.swiper-button-next {
+}
+.contacts__list-img {
+}
+.swiper-wrapper {
+}
+.contacts__item-img {
+  height: 205px;
+  border-radius: 20px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+.swiper-slide {
 }
