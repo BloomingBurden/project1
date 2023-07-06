@@ -30,7 +30,8 @@ window.addEventListener('load', () => {
     popup();
     
     elementMove('.no-page-body', '.no-page__img');
-    elementMove('.discount-popup', '.popup__img');
+    elementMove('.discount-popup', '.discount-popup .popup__img');
+    elementMove('.chance-popup', '.chance-popup .popup__img');
 
     moveCircle('.my-circle-1');
     moveCircle('.my-circle-2');

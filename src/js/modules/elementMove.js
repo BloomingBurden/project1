@@ -1,7 +1,6 @@
 export const elementMove = (wrapper=window, elem) => {
     const target = document.querySelector(elem);
     const wrap = document.querySelector(wrapper);
-
     if (!target || !wrap) return;
 
     let left = null;
@@ -9,7 +8,6 @@ export const elementMove = (wrapper=window, elem) => {
 
     const moveElemRequest = () => {
         target.style.cssText = `transform: translate(${left / -30}px, ${top / -30}px)`;
-
         requestAnimationFrame(moveElemRequest);
     };
 

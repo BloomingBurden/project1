@@ -18,9 +18,19 @@ export const setCustomVideoPlayer = () => {
         return minutesVal + ':' + secondsVal;
     }
 
+    const pagination = (target, num) => {
+        const pagination = target.querySelector('.swiper-pagination');
+
+        if (!pagination) return;
+
+        num === 1 ?  pagination.classList.add('d-none') : pagination.classList.remove('d-none')    
+    };
+
     const removeVideo = (item, video) => {
         item.classList.remove('custom-video-playing');
         item.classList.remove('custom-video-played');
+        
+        pagination(item.closest('.swiper'), 2);
 
         video.currentTime = 0;
     };
@@ -83,13 +93,15 @@ export const setCustomVideoPlayer = () => {
         const target = evt.target;
         
         if (!target.closest('.custom-video__bottom') || !target.closest('.custom-video__close') || target.closest('.custom-video__play-small')) {
+            pagination(target.closest('.swiper'), 1);
+            
             if (video.paused) {
                 startVideo(video, item);
             } else {
                 stopVideo(video, item);
             }
         }
-        
+
 
         if (target.closest('.custom-video__progress')) {
             onClickProgress(item, video, evt)

@@ -8,6 +8,8 @@ const showChance = () => {
     if (!chance) return;
     
     chance.classList.add('popup--active');
+    document.documentElement.classList.add('no-scrolling');
+    document.body.classList.add('no-scrolling');
 
     anotherForm = true;
 }
@@ -16,11 +18,12 @@ const showDiscount = () => {
     const discount = document.querySelector('.discount-popup');
     
     if (!discount || anotherForm) return;
-    console.log(true);
 
     isFirstTime = false;
 
     discount.classList.add('popup--active');
+    document.documentElement.classList.add('no-scrolling');
+    document.body.classList.add('no-scrolling');
 };
 
 const popupClose = () => {
@@ -32,6 +35,8 @@ const popupClose = () => {
     popupList.forEach(item => {
         item.addEventListener('click', (evt) => {
             item.closest('.popup').classList.remove('popup--active');
+            document.documentElement.classList.remove('no-scrolling');
+            document.body.classList.remove('no-scrolling');
             anotherForm = false;
         });
     });
