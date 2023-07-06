@@ -76,7 +76,7 @@ const onClickAnyBtn = (evt) => {
 
 export const popup = () => {
     document.addEventListener('mousemove', resetTimer);
-    document.addEventListener('touchstart', resetTimer);
+    document.addEventListener('touchmove', resetTimer);
     document.addEventListener('keypress', resetTimer);
     document.addEventListener('click', onClickAnyBtn);
     
