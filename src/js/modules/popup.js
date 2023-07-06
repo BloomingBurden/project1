@@ -1,3 +1,5 @@
+import { buyItem } from "./buyItem.js";
+
 let myTimeout = null;
 let isFirstTime = true;
 let anotherForm = false;
@@ -65,10 +67,16 @@ const onClickAnyBtn = (evt) => {
         showChance();
     }
 
+    if (target.closest('[data-shop-id]')) {
+        buyItem(target);
+        anotherForm = true;
+    }
+
 };
 
 export const popup = () => {
     document.addEventListener('mousemove', resetTimer);
+    document.addEventListener('touchstart', resetTimer);
     document.addEventListener('keypress', resetTimer);
     document.addEventListener('click', onClickAnyBtn);
     
