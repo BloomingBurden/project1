@@ -363,4 +363,8 @@
     visibility: visible;
     margin-top: 15px;
   }
+
+  .quest-popup__subtitle::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
 }
