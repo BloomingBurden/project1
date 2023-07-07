@@ -789,7 +789,7 @@ button {
   display: flex;
   right: 40px;
   bottom: 40px;
-  z-index: 9999;
+  z-index: 9998;
   border-radius: 50%;
   overflow: hidden;
   background: -webkit-gradient(linear, left top, left bottom, from(#FFD875), to(rgba(255, 143, 80, 0.99)));
@@ -3204,7 +3204,8 @@ button {
   text-transform: uppercase;
   text-align: center;
   border: 1px solid #F5F3E9;
-  background: -webkit-linear-gradient(#EBD1FF, #EFF8D9, #E9DBEF, #F5F3E9, #C9C2A6);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#EBD1FF), color-stop(#EFF8D9), color-stop(#E9DBEF), color-stop(#F5F3E9), to(#C9C2A6));
+  background-image: linear-gradient(#EBD1FF, #EFF8D9, #E9DBEF, #F5F3E9, #C9C2A6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0px 0px rgba(0, 0, 0, 0);
@@ -6465,18 +6466,11 @@ button {
     line-height: 24px;
   }
 
-  .shop__list {
-    margin: 0;
-  }
-
   .shop__item {
     margin-bottom: 20px;
-    width: 100%;
-    padding: 0;
   }
 
   .shop__inner {
-    width: 100%;
     padding: 20px 15px;
   }
 
@@ -6693,6 +6687,19 @@ button {
 @media (max-width: 480px) {
   .lessons__video {
     height: 221px;
+  }
+
+  .shop__list {
+    margin: 0;
+  }
+
+  .shop__item {
+    width: 100%;
+    padding: 0;
+  }
+
+  .shop__inner {
+    width: 100%;
   }
 }
 

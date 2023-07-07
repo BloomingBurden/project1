@@ -61,9 +61,9 @@
   margin-left: -12px;
   margin-right: -12px;
 
-  @media (max-width: $tableW) {
+  @media (max-width: 480px) {
     margin: 0;
-  }
+  } 
 }
 
 .shop__item {
@@ -72,6 +72,9 @@
 
   @media (max-width: $tableW) {
     margin-bottom: 20px;
+  }
+
+  @media (max-width: 480px) {
     width: 100%;
     padding: 0;
   }
@@ -88,8 +91,11 @@
   border-radius: 20px;
 
   @media (max-width: $tableW) {
-    width: 100%;
     padding: 20px 15px;
+  }
+  
+  @media (max-width: 480px) {
+    width: 100%;
   }
 }
 
