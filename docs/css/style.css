@@ -1329,6 +1329,11 @@ button {
 .header__login::after {
   content: "";
   position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 24px;
   height: 24px;
   background-image: url("../img/icons/icons.svg#log-in");
@@ -4473,6 +4478,7 @@ button {
 }
 
 .popup__wrap {
+  border-radius: 20px;
   overflow-y: auto;
   height: 100%;
   max-width: 550px;
@@ -4482,20 +4488,13 @@ button {
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+  position: relative;
+  z-index: 9999;
+  margin: auto;
 }
 
 .popup__wrap::-webkit-scrollbar {
   display: none;
-}
-
-.popup__inner {
-  max-height: 670px;
-  height: 100%;
-  max-width: 550px;
-  width: 100%;
-  position: relative;
-  z-index: 9999;
-  margin: auto;
 }
 
 .no-webp .popup__header{
@@ -4577,8 +4576,8 @@ button {
 .popup__close {
   position: absolute;
   z-index: 9999;
-  top: -20px;
-  right: -20px;
+  top: 10px;
+  right: 15px;
   width: 22px;
   height: 22px;
   font-size: 0;
@@ -4613,10 +4612,6 @@ button {
           transform: rotate(45deg);
 }
 
-.discount-popup .popup__inner {
-  max-height: 690px;
-}
-
 .discount-popup .popup__wrap {
   max-height: 690px;
 }
@@ -4637,10 +4632,6 @@ button {
   top: 20px;
   width: 105px;
   height: 105px;
-}
-
-.buy-popup .popup__inner {
-  max-height: 725px;
 }
 
 .buy-popup .popup__wrap {
@@ -4696,10 +4687,6 @@ button {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-.quest-popup .popup__inner {
-  max-height: 827px;
 }
 
 .quest-popup .popup__wrap {
@@ -5431,11 +5418,6 @@ button {
   .about-index__inner {
     padding-left: 150px;
     padding-right: 150px;
-  }
-
-  .popup__close {
-    right: 10px;
-    top: 10px;
   }
 
   .about__video-big {
@@ -6617,10 +6599,6 @@ button {
   }
 
   .popup__wrap {
-    max-width: none;
-  }
-
-  .popup__inner {
     max-width: 375px;
   }
 

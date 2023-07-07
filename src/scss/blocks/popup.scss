@@ -19,6 +19,7 @@
 }
 
 .popup__wrap {
+  border-radius: 20px;
   overflow-y: auto;
   height: 100%;
   max-width: 550px;
@@ -26,21 +27,6 @@
   max-height: 670px;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-
-  @media (max-width: $tableW) {
-    max-width: none;
-  }
-}
-
-.popup__wrap::-webkit-scrollbar {
-  display: none;
-}
-
-.popup__inner {
-  max-height: 670px;
-  height: 100%;
-  max-width: 550px;
-  width: 100%;
   position: relative;
   z-index: 9999;
   margin: auto;
@@ -48,6 +34,10 @@
   @media (max-width: $tableW) {
     max-width: 375px;
   }
+}
+
+.popup__wrap::-webkit-scrollbar {
+  display: none;
 }
 
 .popup__header {
@@ -141,16 +131,11 @@
 .popup__close {
   position: absolute;
   z-index: 9999;
-  top: -20px;
-  right: -20px;
+  top: 10px;
+  right: 15px;
   width: 22px;
   height: 22px;
   font-size: 0;
-
-  @media (max-width: $desktopW) {
-    right: 10px;
-    top:  10px;
-  }
 
   &:hover {
     &::after,
@@ -181,10 +166,6 @@
 }
 
 .discount-popup {
-  .popup__inner {
-    max-height: 690px;
-  }
-
   .popup__wrap {
     max-height: 690px;
   }
@@ -225,10 +206,6 @@
 }
 
 .buy-popup {
-  .popup__inner {
-    max-height: 725px;
-  }
-
   .popup__wrap {
     max-height: 725px;
   }
@@ -286,10 +263,6 @@
 }
 
 .quest-popup {
-  .popup__inner {
-    max-height: 827px;
-  }
-
   .popup__wrap {
     max-height: 827px;
   }

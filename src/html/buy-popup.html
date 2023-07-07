@@ -1,46 +1,44 @@
 <article class="buy-popup popup">
-  <div class="popup__inner">
-    <div class="popup__wrap">
-      <div class="popup__header">
-        <h2 class="popup__title title-3">Забронировать товар</h2>
-        <div class="popup__img">
-          <picture>
-            <source type="image/webp" srcset="@img/category/shop-category.webp">
-            <img src="@img/category/shop-category.png" alt="Фоновое изображение" width="200">
-          </picture>
-        </div>
-      </div>
-      <div class="popup__body">
-  
-        <div class="buy-popup__item">
-          <span class="buy-popup__category shop__category-yellow">Канцелярия</span>
-          <div class="buy-popup__img">
-            <img src="@img/shop/shop-1.png" alt="Изображение товара" width="242">
-          </div>
-        </div>
-  
-        <form action="#" method="POST" class="popup__form form-sign">
-          <div class="form-sign__item form-sign__id visually-hidden">
-            <input type="hidden" id="buy-id" name="Товар" value="">
-          </div>
-          <div class="form-sign__item form-sign__name">
-            <label for="buy-name" class="visually-hidden">Имя</label>
-            <input type="text" id="buy-name" name="Имя" value="" placeholder="Как Вас зовут?" minlength="2" required>
-          </div>
-          <div class="form-sign__item form-sign__group">
-            <label for="buy-group" class="visually-hidden">Какая у тебя группа</label>
-            <input type="text" id="buy-group" name="Группа" value="" placeholder="Какая у тебя группа?" required>
-          </div>
-          <div class="form-sign__item captcha">
-            
-          </div>
-          <button type="submit" class="form-sign__button button button-normal">Отправить</button>
-        </form>
-        
-        <p class="popup__agree">Оставляя заявĸу Вы принимаете условия <a href="#" target="_blank">соглашения</a> об обработĸе персональных данных</p>
+  <div class="popup__wrap">
+    <div class="popup__header">
+      <h2 class="popup__title title-3">Забронировать товар</h2>
+      <div class="popup__img">
+        <picture>
+          <source type="image/webp" srcset="@img/category/shop-category.webp">
+          <img src="@img/category/shop-category.png" alt="Фоновое изображение" width="200">
+        </picture>
       </div>
     </div>
-  
+    <div class="popup__body">
+
+      <div class="buy-popup__item">
+        <span class="buy-popup__category shop__category-yellow">Канцелярия</span>
+        <div class="buy-popup__img">
+          <img src="@img/shop/shop-1.png" alt="Изображение товара" width="242">
+        </div>
+      </div>
+
+      <form action="#" method="POST" class="popup__form form-sign">
+        <div class="form-sign__item form-sign__id visually-hidden">
+          <input type="hidden" id="buy-id" name="Товар" value="">
+        </div>
+        <div class="form-sign__item form-sign__name">
+          <label for="buy-name" class="visually-hidden">Имя</label>
+          <input type="text" id="buy-name" name="Имя" value="" placeholder="Как Вас зовут?" minlength="2" required>
+        </div>
+        <div class="form-sign__item form-sign__group">
+          <label for="buy-group" class="visually-hidden">Какая у тебя группа</label>
+          <input type="text" id="buy-group" name="Группа" value="" placeholder="Какая у тебя группа?" required>
+        </div>
+        <div class="form-sign__item captcha">
+          
+        </div>
+        <button type="submit" class="form-sign__button button button-normal">Отправить</button>
+      </form>
+      
+      <p class="popup__agree">Оставляя заявĸу Вы принимаете условия <a href="#" target="_blank">соглашения</a> об обработĸе персональных данных</p>
+    </div>
+
     <button type="button" class="popup__close">Закрыть окно</button>
   </div>
 </article>

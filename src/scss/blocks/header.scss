@@ -164,6 +164,9 @@
   &::after {
     content: '';
     position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 24px;
     height: 24px;
     background-image: url('@img/icons/icons.svg#log-in');
