@@ -1091,8 +1091,8 @@ button {
 
 @-webkit-keyframes moveDown {
   from {
-    -webkit-transform: translateY(200%);
-            transform: translateY(200%);
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
   }
 
   to {
@@ -1103,8 +1103,8 @@ button {
 
 @keyframes moveDown {
   from {
-    -webkit-transform: translateY(200%);
-            transform: translateY(200%);
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
   }
 
   to {
@@ -4690,7 +4690,7 @@ button {
 }
 
 .quest-popup .popup__wrap {
-  max-height: 827px;
+  max-height: 700px;
 }
 
 .quest-popup .popup__body {
