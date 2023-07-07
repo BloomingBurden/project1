@@ -5426,6 +5426,11 @@ button {
     padding-right: 150px;
   }
 
+  .popup__close {
+    right: 10px;
+    top: 10px;
+  }
+
   .about__video-big {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
@@ -6631,11 +6636,6 @@ button {
 
   .popup__body {
     padding: 45px 20px 40px;
-  }
-
-  .popup__close {
-    right: 10px;
-    top: 10px;
   }
 
   .discount-popup .popup__img {

@@ -4,6 +4,13 @@ let myTimeout = null;
 let isFirstTime = true;
 let anotherForm = false;
 
+const resetQuest = (item) => {
+    const questPopup = item.closest('.quest-popup');
+    if (questPopup) {
+        questPopup.querySelectorAll('.quest-popup__item').forEach(item => item.classList.remove('quest-popup__item--active'));
+    }
+};
+
 const expandTextQuest = (target) => {
     const item = target.closest('.quest-popup__item');
 
@@ -62,11 +69,7 @@ const popupClose = () => {
             document.documentElement.classList.remove('no-scrolling');
             document.body.classList.remove('no-scrolling');
 
-            const questPopup = item.closest('.quest-popup');
-            if (questPopup) {
-                questPopup.querySelectorAll('.quest-popup__item').forEach(item => item.classList.remove('quest-popup__item--active'));
-            }
-
+            resetQuest(item);
             anotherForm = false;
         });
     });

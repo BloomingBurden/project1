@@ -19,7 +19,13 @@ export const buyItem = (target) => {
     img.src = selectImg.src;
     category.textContent = selectCategory.textContent;
     if (selectClass) {
-        category.classList.add(selectClass);
+        const strFromClass = selectClass.split('-');
+
+        category.classList.forEach((item, i) => {
+            if (item.includes(strFromClass[0])) category.classList.remove(item);
+        });
+
+        category.classList.add(strFromClass[0] + '-' + strFromClass[1]);
     }
 
     buy.classList.add('popup--active');

@@ -147,7 +147,7 @@
   height: 22px;
   font-size: 0;
 
-  @media (max-width: $tableW) {
+  @media (max-width: $desktopW) {
     right: 10px;
     top:  10px;
   }
