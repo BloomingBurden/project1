@@ -26,7 +26,6 @@ window.addEventListener('load', () => {
     showHelp();
     clickFilter();
     onClickSubmitForm();
-    setYandexMap();
     popup();
     
     elementMove('.no-page-body', '.no-page__img');
@@ -192,5 +191,7 @@ window.addEventListener('load', () => {
                 }
               },
         }); 
+
+        setYandexMap();
     }
 });
