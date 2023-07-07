@@ -1047,8 +1047,8 @@ button {
   width: 100%;
   height: 2px;
   background-color: #fff;
-  -webkit-box-shadow: 0 0 80px 12px rgba(0, 0, 0, 0.7);
-          box-shadow: 0 0 80px 12px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0 0 100px 15px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 100px 15px rgba(0, 0, 0, 0.7);
 }
 
 .custom-video__close::before {
@@ -2591,11 +2591,6 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   z-index: 100;
-  bottom: calc(100% + 20px);
-  left: 50%;
-  -webkit-transform: translate(-50%, 0%);
-      -ms-transform: translate(-50%, 0%);
-          transform: translate(-50%, 0%);
   width: 234px;
   border-radius: 10px;
   background: #ffffff;
@@ -4476,15 +4471,30 @@ button {
           user-select: auto;
 }
 
-.popup__inner {
-  position: relative;
-  margin: auto;
+.popup__wrap {
   overflow-y: auto;
   height: 100%;
-  z-index: 9999;
   max-width: 550px;
   width: 100%;
   max-height: 670px;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.popup__wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.popup__inner {
+  max-height: 670px;
+  height: 100%;
+  max-width: 550px;
+  width: 100%;
+  position: relative;
+  z-index: 9999;
+  margin: auto;
 }
 
 .no-webp .popup__header{
@@ -4566,11 +4576,16 @@ button {
 .popup__close {
   position: absolute;
   z-index: 9999;
-  top: 20px;
-  right: 10px;
+  top: -20px;
+  right: -20px;
   width: 22px;
   height: 22px;
   font-size: 0;
+}
+
+.popup__close:hover::after,
+.popup__close:hover::before {
+  background-color: #ECECEC;
 }
 
 .popup__close::after,
@@ -4580,7 +4595,7 @@ button {
   z-index: 9999;
   width: 100%;
   height: 2px;
-  top: 0;
+  top: 10px;
   left: 0;
   background-color: #ffffff;
 }
@@ -4598,6 +4613,10 @@ button {
 }
 
 .discount-popup .popup__inner {
+  max-height: 690px;
+}
+
+.discount-popup .popup__wrap {
   max-height: 690px;
 }
 
@@ -4620,6 +4639,10 @@ button {
 }
 
 .buy-popup .popup__inner {
+  max-height: 725px;
+}
+
+.buy-popup .popup__wrap {
   max-height: 725px;
 }
 
@@ -4672,6 +4695,76 @@ button {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.quest-popup .popup__inner {
+  max-height: 827px;
+}
+
+.quest-popup .popup__wrap {
+  max-height: 827px;
+}
+
+.quest-popup .popup__body {
+  padding: 45px 30px;
+}
+
+.quest-popup .popup__title {
+  max-width: 280px;
+}
+
+.quest-popup .popup__img {
+  right: 0px;
+  top: -25px;
+  width: 200px;
+  height: 200px;
+}
+
+.quest-popup__item {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.quest-popup__subtitle {
+  text-align: left;
+  font-weight: 400;
+  width: 100%;
+  padding-right: 60px;
+  position: relative;
+}
+
+.quest-popup__subtitle::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-image: url("../img/icons/icons.svg#chevron-bottom-normal");
+  background-position: center;
+  background-size: cover;
+  -webkit-filter: invert(61%) sepia(71%) saturate(452%) hue-rotate(342deg) brightness(97%) contrast(90%);
+          filter: invert(61%) sepia(71%) saturate(452%) hue-rotate(342deg) brightness(97%) contrast(90%);
+}
+
+.quest-popup__text {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+  height: 100%;
+}
+
+.quest-popup__item--active .quest-popup__text {
+  max-height: 300px;
+  opacity: 1;
+  visibility: visible;
+  margin-top: 15px;
 }
 
 .footer {
@@ -6518,9 +6611,12 @@ button {
     left: calc(50% - 150px);
   }
 
+  .popup__wrap {
+    max-width: none;
+  }
+
   .popup__inner {
-    max-width: 355px;
-    max-height: 670px;
+    max-width: 375px;
   }
 
   .popup__header {
@@ -6539,7 +6635,7 @@ button {
 
   .popup__close {
     right: 10px;
-    top: 30px;
+    top: 10px;
   }
 
   .discount-popup .popup__img {
@@ -6561,6 +6657,13 @@ button {
     height: 70px;
     top: 30px;
     right: -15px;
+  }
+
+  .quest-popup .popup__img {
+    width: 150px;
+    height: 150px;
+    top: 5px;
+    right: -40px;
   }
 
   .footer {

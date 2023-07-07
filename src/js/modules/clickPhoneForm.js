@@ -29,9 +29,16 @@ const setNewMask = (target) => {
 
     input.placeholder = `+${currentCode} (000)000-00-00`;
     img.src = selectImg.src;
+    
+    firstMask.forEach(item => {
+        const currentInput = item[0];
+        const currentMask = item[1];
 
-    firstMask.updateOptions({
-        mask: result, // обновляем формат маски с учетом выбранного кода страны
+        if (currentInput === input) {
+            currentMask.updateOptions({
+                mask: result, // обновляем формат маски с учетом выбранного кода страны
+            });
+        }
     });
 }
 

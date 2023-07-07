@@ -4,6 +4,24 @@ let myTimeout = null;
 let isFirstTime = true;
 let anotherForm = false;
 
+const expandTextQuest = (target) => {
+    const item = target.closest('.quest-popup__item');
+
+    item.classList.toggle('quest-popup__item--active');
+};
+
+const showQuest = () => {
+    const quest = document.querySelector('.quest-popup');
+
+    if (!quest) return;
+    
+    quest.classList.add('popup--active');
+    document.documentElement.classList.add('no-scrolling');
+    document.body.classList.add('no-scrolling');
+
+    anotherForm = true;
+}
+
 const showChance = () => {
     const chance = document.querySelector('.chance-popup');
 
@@ -36,9 +54,19 @@ const popupClose = () => {
 
     popupList.forEach(item => {
         item.addEventListener('click', (evt) => {
-            item.closest('.popup').classList.remove('popup--active');
+            const currentPopup = item.closest('.popup');
+            currentPopup.classList.remove('popup--active');
+            currentPopup.querySelectorAll('input').forEach(item => {
+                item.value = '';
+            });
             document.documentElement.classList.remove('no-scrolling');
             document.body.classList.remove('no-scrolling');
+
+            const questPopup = item.closest('.quest-popup');
+            if (questPopup) {
+                questPopup.querySelectorAll('.quest-popup__item').forEach(item => item.classList.remove('quest-popup__item--active'));
+            }
+
             anotherForm = false;
         });
     });
@@ -67,7 +95,15 @@ const onClickAnyBtn = (evt) => {
         showChance();
     }
 
-    if (target.closest('[data-shop-id]')) {
+    if(target.closest('.button-quest')) {
+        showQuest();
+    }
+
+    if(target.closest('.quest-popup__subtitle')) {
+        expandTextQuest(target);
+    }
+
+    if (target.closest('.button-buy')) {
         buyItem(target);
         anotherForm = true;
     }

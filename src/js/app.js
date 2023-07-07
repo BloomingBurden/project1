@@ -33,6 +33,7 @@ window.addEventListener('load', () => {
     elementMove('.discount-popup', '.discount-popup .popup__img');
     elementMove('.chance-popup', '.chance-popup .popup__img');
     elementMove('.buy-popup', '.buy-popup .popup__img');
+    elementMove('.quest-popup', '.quest-popup .popup__img');
 
     moveCircle('.my-circle-1');
     moveCircle('.my-circle-2');
@@ -171,7 +172,7 @@ window.addEventListener('load', () => {
             },
             breakpoints: {
                 // when window width is >= 320px
-                375: {
+                320: {
                   slidesPerView: 1.3,
                   spaceBetween: 10
                 },

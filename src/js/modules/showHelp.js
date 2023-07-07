@@ -17,14 +17,20 @@ export const showHelp = () => {
         let posX = target.getBoundingClientRect().left;
         let posY = target.getBoundingClientRect().top;
         let widthTarget = target.getBoundingClientRect().width / 2;
-        let heightTooltip = help.getBoundingClientRect().height;
+        let height = 130;
 
-
-        if (posX + widthTarget + 100 > window.innerWidth) posX = posX - 50;
-        if (posX - 100 < 0) posX = posX + 30;
+        if (posX + widthTarget + 110 > window.innerWidth || posX - 100 < 0) {
+            help.style.width = '160px';
+            height = 160;
+        } else {
+            help.style.width = '234px';
+            height=  130;
+        }
+        
         help.classList.add('program__help--active');
         help.style.left = `${posX + widthTarget}px`;
-        help.style.top = `${posY - heightTooltip - 10}px`;
+        
+        help.style.top = `${posY - height}px`;
     });
 
     window.addEventListener('scroll', (evt) => {

@@ -1,6 +1,6 @@
 import IMask from 'imask';
 
-let firstMask = null;
+let firstMask = [];
 
 const setMaskForm = (code) => {
     let element = document.querySelectorAll('.form-sign__phone input');
@@ -12,7 +12,7 @@ const setMaskForm = (code) => {
             mask: `+{${code}} (000)000-00-00`,
         };
     
-        firstMask = IMask(item, maskOptions);
+        firstMask = [...firstMask, [item, IMask(item, maskOptions)]];
     });
 };
 

@@ -61,7 +61,7 @@
 
     <main class="main">
       <article class="quest">
-        <button type="button" class="quest__btn">Помочь?</button>
+        <button type="button" class="quest__btn button-quest">Помочь?</button>
       </article>
 
       <section class="category">
@@ -139,7 +139,7 @@
                 </div>
                 <h3 class="shop__subtitle">Шариковая ручка</h3>
                 <span class="shop__price">40 ProG</span>
-                <button type="button" class="shop__button button button-normal button-icon">Купить</button>
+                <button type="button" class="shop__button button-buy button button-normal button-icon">Купить</button>
               </div>
             </li>
             <li class="shop__item category-f mix" data-shop-id="2">
@@ -170,7 +170,7 @@
                 </div>
                 <h3 class="shop__subtitle">Наушники</h3>
                 <span class="shop__price">600 ProG</span>
-                <button type="button" class="shop__button button button-normal button-icon">Купить</button>
+                <button type="button" class="shop__button button-buy button button-normal button-icon">Купить</button>
               </div>
             </li>
             <li class="shop__item category-a mix" data-shop-id="3">
@@ -201,7 +201,7 @@
                 </div>
                 <h3 class="shop__subtitle">Сумка мешок</h3>
                 <span class="shop__price">200 ProG</span>
-                <button type="button" class="shop__button button button-normal button-icon">Купить</button>
+                <button type="button" class="shop__button button-buy button button-normal button-icon">Купить</button>
               </div>
             </li>
             <li class="shop__item category-b mix" data-shop-id="4">
@@ -232,7 +232,7 @@
                 </div>
                 <h3 class="shop__subtitle">Орудие minecraft</h3>
                 <span class="shop__price">220 ProG</span>
-                <button type="button" class="shop__button button button-normal button-icon">Купить</button>
+                <button type="button" class="shop__button button-buy button button-normal button-icon">Купить</button>
               </div>
             </li>
             <li class="shop__item category-d mix" data-shop-id="5">
@@ -263,7 +263,7 @@
                 </div>
                 <h3 class="shop__subtitle">костюм roblox</h3>
                 <span class="shop__price">520 ProG</span>
-                <button type="button" class="shop__button button button-normal button-icon">Купить</button>
+                <button type="button" class="shop__button button-buy button button-normal button-icon">Купить</button>
               </div>
             </li>
             <li class="shop__item category-a mix" data-shop-id="6">
@@ -294,7 +294,7 @@
                 </div>
                 <h3 class="shop__subtitle">Попсокет</h3>
                 <span class="shop__price">80 ProG</span>
-                <button type="button" class="shop__button button button-normal button-icon">Купить</button>
+                <button type="button" class="shop__button button-buy button button-normal button-icon">Купить</button>
               </div>
             </li>
             <li class="shop__item category-c mix" data-shop-id="7">
@@ -325,7 +325,7 @@
                 </div>
                 <h3 class="shop__subtitle">Roblox стикеры</h3>
                 <span class="shop__price">60 ProG</span>
-                <button type="button" class="shop__button button button-normal button-icon">Купить</button>
+                <button type="button" class="shop__button button-buy button button-normal button-icon">Купить</button>
               </div>
             </li>
             <li class="shop__item category-f mix" data-shop-id="8">
@@ -356,7 +356,7 @@
                 </div>
                 <h3 class="shop__subtitle">Светильник тигр</h3>
                 <span class="shop__price">80 ProG</span>
-                <button type="button" class="shop__button button button-normal button-icon">Купить</button>
+                <button type="button" class="shop__button button-buy button button-normal button-icon">Купить</button>
               </div>
             </li>
             <li class="shop__item category-a mix" data-shop-id="9">
@@ -387,7 +387,7 @@
                 </div>
                 <h3 class="shop__subtitle">Коврик для мыши</h3>
                 <span class="shop__price">120 ProG</span>
-                <button type="button" class="shop__button button button-normal button-icon">Купить</button>
+                <button type="button" class="shop__button button-buy button button-normal button-icon">Купить</button>
               </div>
             </li>
             <li class="shop__item category-f mix" data-shop-id="10">
@@ -418,7 +418,7 @@
                 </div>
                 <h3 class="shop__subtitle">Мышь</h3>
                 <span class="shop__price">190 ProG</span>
-                <button type="button" class="shop__button button button-normal button-icon">Купить</button>
+                <button type="button" class="shop__button button-buy button button-normal button-icon">Купить</button>
               </div>
             </li>
             <li class="shop__item category-c mix" data-shop-id="11">
@@ -449,7 +449,7 @@
                 </div>
                 <h3 class="shop__subtitle">Блокнот prog</h3>
                 <span class="shop__price">200 ProG</span>
-                <button type="button" class="shop__button button button-normal button-icon">Купить</button>
+                <button type="button" class="shop__button button-buy button button-normal button-icon">Купить</button>
               </div>
             </li>
             <li class="shop__item category-f mix" data-shop-id="12">
@@ -480,7 +480,7 @@
                 </div>
                 <h3 class="shop__subtitle">Флешка 16 gb</h3>
                 <span class="shop__price">160 ProG</span>
-                <button type="button" class="shop__button button button-normal button-icon">Купить</button>
+                <button type="button" class="shop__button button-buy button button-normal button-icon">Купить</button>
               </div>
             </li>
           </ul>
@@ -602,72 +602,116 @@
       </section>
     </main>
 
-    <article class="discount-popup popup">
+    <article class="quest-popup popup">
       <div class="popup__inner">
-        <div class="popup__header">
-          <h2 class="popup__title title-3">Получи скидку прямо сейчас!</h2>
-          <div class="popup__img">
-            <picture>
-              <source type="image/webp" srcset="img/contacts/contacts-bg.webp">
-              <img src="img/contacts/contacts-bg.png" alt="Фоновое изображение" width="200">
-            </picture>
+        <div class="popup__wrap">
+          <div class="popup__header">
+            <h2 class="popup__title title-3">Вопросы<br> и ответы</h2>
+            <div class="popup__img">
+              <picture>
+                <source type="image/webp" srcset="img/header-popup-quest.webp">
+                <img src="img/header-popup-quest.png" alt="Фоновое изображение" width="200">
+              </picture>
+            </div>
+          </div>
+
+          <div class="popup__body">
+            <div class="quest-popup__item">
+              <button type="button" class="quest-popup__subtitle">Как поступить в Школу программистов?</button>
+              <p class="quest-popup__text">Выбери отделение, в котором хочешь изучать программирование. Запишись на вступительный экзамен через нашу систему InformaticsСдай экзамен и начни путь настоящего программиста!</p>
+            </div>
+            <div class="quest-popup__item">
+              <button type="button" class="quest-popup__subtitle">Как проходит вступительный экзамен и как к нему подготовиться?</button>
+              <p class="quest-popup__text">Выбери отделение, в котором хочешь изучать программирование. Запишись на вступительный экзамен через нашу систему InformaticsСдай экзамен и начни путь настоящего программиста!</p>
+            </div>
+            <div class="quest-popup__item">
+              <button type="button" class="quest-popup__subtitle">Сколько лет длится обучение в Школе программистов?</button>
+              <p class="quest-popup__text">Выбери отделение, в котором хочешь изучать программирование. Запишись на вступительный экзамен через нашу систему InformaticsСдай экзамен и начни путь настоящего программиста!</p>
+            </div>
+            <div class="quest-popup__item">
+              <button type="button" class="quest-popup__subtitle">Какие курсы я смогу изучать в Школе программистов?</button>
+              <p class="quest-popup__text">Выбери отделение, в котором хочешь изучать программирование. Запишись на вступительный экзамен через нашу систему InformaticsСдай экзамен и начни путь настоящего программиста!</p>
+            </div>
+            <div class="quest-popup__item">
+              <button type="button" class="quest-popup__subtitle">А что если мне не подойдет расписание?</button>
+              <p class="quest-popup__text">Выбери отделение, в котором хочешь изучать программирование. Запишись на вступительный экзамен через нашу систему InformaticsСдай экзамен и начни путь настоящего программиста!</p>
+            </div>
+            <div class="quest-popup__item">
+              <button type="button" class="quest-popup__subtitle">Какой документ я получу после окончания Школы программистов?</button>
+              <p class="quest-popup__text">Выбери отделение, в котором хочешь изучать программирование. Запишись на вступительный экзамен через нашу систему InformaticsСдай экзамен и начни путь настоящего программиста!</p>
+            </div>
           </div>
         </div>
-        <div class="popup__body">
-          <p class="popup__text">Оставь заявĸу прямо сейчас и получи сĸидĸу 15% на первый месяц обучения.</p>
 
-          <form action="#" method="POST" class="popup__form form-sign">
-            <div class="form-sign__item form-sign__name">
-              <label for="form-sign-name" class="visually-hidden">Имя</label>
-              <input type="text" id="form-sign-name" name="Имя" value="" placeholder="Как Вас зовут?" minlength="2" required>
+        <button type="button" class="popup__close">Закрыть окно</button>
+      </div>
+    </article>
+    <article class="discount-popup popup">
+      <div class="popup__inner">
+        <div class="popup__wrap">
+          <div class="popup__header">
+            <h2 class="popup__title title-3">Получи скидку прямо сейчас!</h2>
+            <div class="popup__img">
+              <picture>
+                <source type="image/webp" srcset="img/contacts/contacts-bg.webp">
+                <img src="img/contacts/contacts-bg.png" alt="Фоновое изображение" width="200">
+              </picture>
             </div>
-            <div class="form-sign__item form-sign__phone">
-              <div class="form-sign__countries">
-                <span class="countries__img countries__img-current">
-              <img src="img/icons/icons.svg#icon-code-7" alt="Иконка страны" width="18">
-            </span>
-                <button type="button" class="form-sign__country-btn">Выбрать страну</button>
+          </div>
+          <div class="popup__body">
+            <p class="popup__text">Оставь заявĸу прямо сейчас и получи сĸидĸу 15% на первый месяц обучения.</p>
+            <form action="#" method="POST" class="popup__form form-sign">
+              <div class="form-sign__item form-sign__name">
+                <label for="form-sign-name" class="visually-hidden">Имя</label>
+                <input type="text" id="form-sign-name" name="Имя" value="" placeholder="Как Вас зовут?" minlength="2" required>
               </div>
-              <ul class="countries__list">
-                <li class="countries__item">
-                  <a href="#" class="countries__link" data-country-code="7">
-                    <span class="countries__img">
-                  <img src="img/icons/icons.svg#icon-code-7" alt="Иконка страны" width="18">
-                </span>
-                    <span>Российская Федерация</span>
-                  </a>
-                </li>
-                <li class="countries__item">
-                  <a href="#" class="countries__link" data-country-code="7">
-                    <span class="countries__img">
-                  <img src="img/icons/icons.svg#kazah-flag" alt="Иконка страны" width="18">
-                </span>
-                    <span>Казахстан</span>
-                  </a>
-                </li>
-                <li class="countries__item">
-                  <a href="#" class="countries__link" data-country-code="998">
-                    <span class="countries__img">
-                  <img src="img/icons/icons.svg#uzbekistan-flag" alt="Иконка страны" width="18">
-                </span>
-                    <span>Узбекистан</span>
-                  </a>
-                </li>
-              </ul>
-              <label for="form-sign-phone" class="visually-hidden">Телефон</label>
-              <input type="tel" id="form-sign-phone" name="phone" value="" placeholder="+7 (000) 000-00-00" required>
-            </div>
-            <div class="form-sign__item form-sign__email">
-              <label for="form-sign-email" class="visually-hidden">Email</label>
-              <input type="email" id="form-sign-email" name="Email" value="" placeholder="Ваш email" required>
-            </div>
-            <div class="form-sign__item captcha">
+              <div class="form-sign__item form-sign__phone">
+                <div class="form-sign__countries">
+                  <span class="countries__img countries__img-current">
+                <img src="img/icons/icons.svg#icon-code-7" alt="Иконка страны" width="18">
+              </span>
+                  <button type="button" class="form-sign__country-btn">Выбрать страну</button>
+                </div>
+                <ul class="countries__list">
+                  <li class="countries__item">
+                    <a href="#" class="countries__link" data-country-code="7">
+                      <span class="countries__img">
+                    <img src="img/icons/icons.svg#icon-code-7" alt="Иконка страны" width="18">
+                  </span>
+                      <span>Российская Федерация</span>
+                    </a>
+                  </li>
+                  <li class="countries__item">
+                    <a href="#" class="countries__link" data-country-code="7">
+                      <span class="countries__img">
+                    <img src="img/icons/icons.svg#kazah-flag" alt="Иконка страны" width="18">
+                  </span>
+                      <span>Казахстан</span>
+                    </a>
+                  </li>
+                  <li class="countries__item">
+                    <a href="#" class="countries__link" data-country-code="998">
+                      <span class="countries__img">
+                    <img src="img/icons/icons.svg#uzbekistan-flag" alt="Иконка страны" width="18">
+                  </span>
+                      <span>Узбекистан</span>
+                    </a>
+                  </li>
+                </ul>
+                <label for="form-sign-phone" class="visually-hidden">Телефон</label>
+                <input type="tel" id="form-sign-phone" name="phone" value="" placeholder="+7 (000) 000-00-00" required>
+              </div>
+              <div class="form-sign__item form-sign__email">
+                <label for="form-sign-email" class="visually-hidden">Email</label>
+                <input type="email" id="form-sign-email" name="Email" value="" placeholder="Ваш email" required>
+              </div>
+              <div class="form-sign__item captcha">
 
-            </div>
-            <button type="submit" class="form-sign__button button button-normal">Отправить</button>
-          </form>
-
-          <p class="popup__agree">Оставляя заявĸу Вы принимаете условия <a href="#" target="_blank">соглашения</a> об обработĸе персональных данных</p>
+              </div>
+              <button type="submit" class="form-sign__button button button-normal">Отправить</button>
+            </form>
+            <p class="popup__agree">Оставляя заявĸу Вы принимаете условия <a href="#" target="_blank">соглашения</a> об обработĸе персональных данных</p>
+          </div>
         </div>
 
         <button type="button" class="popup__close">Закрыть окно</button>
@@ -748,44 +792,46 @@
     </article>
     <article class="buy-popup popup">
       <div class="popup__inner">
-        <div class="popup__header">
-          <h2 class="popup__title title-3">Забронировать товар</h2>
-          <div class="popup__img">
-            <picture>
-              <source type="image/webp" srcset="img/category/shop-category.webp">
-              <img src="img/category/shop-category.png" alt="Фоновое изображение" width="200">
-            </picture>
-          </div>
-        </div>
-        <div class="popup__body">
-
-          <div class="buy-popup__item">
-            <span class="buy-popup__category">Канцелярия</span>
-            <div class="buy-popup__img">
-              <img src="img/shop/shop-1.png" alt="Изображение товара" width="242">
+        <div class="popup__wrap">
+          <div class="popup__header">
+            <h2 class="popup__title title-3">Забронировать товар</h2>
+            <div class="popup__img">
+              <picture>
+                <source type="image/webp" srcset="img/category/shop-category.webp">
+                <img src="img/category/shop-category.png" alt="Фоновое изображение" width="200">
+              </picture>
             </div>
           </div>
+          <div class="popup__body">
 
-          <form action="#" method="POST" class="popup__form form-sign">
-            <div class="form-sign__item form-sign__id visually-hidden">
-              <label for="form-sign-id" class="visually-hidden">Товар</label>
-              <input type="hidden" id="form-sign-id" name="Товар" value="" placeholder="ID товара" required>
+            <div class="buy-popup__item">
+              <span class="buy-popup__category">Канцелярия</span>
+              <div class="buy-popup__img">
+                <img src="img/shop/shop-1.png" alt="Изображение товара" width="242">
+              </div>
             </div>
-            <div class="form-sign__item form-sign__name">
-              <label for="form-sign-name" class="visually-hidden">Имя</label>
-              <input type="text" id="form-sign-name" name="Имя" value="" placeholder="Как Вас зовут?" minlength="2" required>
-            </div>
-            <div class="form-sign__item form-sign__group">
-              <label for="form-sign-group" class="visually-hidden">Какая у тебя группа</label>
-              <input type="text" id="form-sign-group" name="Группа" value="" placeholder="Какая у тебя группа?" required>
-            </div>
-            <div class="form-sign__item captcha">
 
-            </div>
-            <button type="submit" class="form-sign__button button button-normal">Отправить</button>
-          </form>
+            <form action="#" method="POST" class="popup__form form-sign">
+              <div class="form-sign__item form-sign__id visually-hidden">
+                <label for="form-sign-id" class="visually-hidden">Товар</label>
+                <input type="hidden" id="form-sign-id" name="Товар" value="" placeholder="ID товара" required>
+              </div>
+              <div class="form-sign__item form-sign__name">
+                <label for="form-sign-name" class="visually-hidden">Имя</label>
+                <input type="text" id="form-sign-name" name="Имя" value="" placeholder="Как Вас зовут?" minlength="2" required>
+              </div>
+              <div class="form-sign__item form-sign__group">
+                <label for="form-sign-group" class="visually-hidden">Какая у тебя группа</label>
+                <input type="text" id="form-sign-group" name="Группа" value="" placeholder="Какая у тебя группа?" required>
+              </div>
+              <div class="form-sign__item captcha">
 
-          <p class="popup__agree">Оставляя заявĸу Вы принимаете условия <a href="#" target="_blank">соглашения</a> об обработĸе персональных данных</p>
+              </div>
+              <button type="submit" class="form-sign__button button button-normal">Отправить</button>
+            </form>
+
+            <p class="popup__agree">Оставляя заявĸу Вы принимаете условия <a href="#" target="_blank">соглашения</a> об обработĸе персональных данных</p>
+          </div>
         </div>
 
         <button type="button" class="popup__close">Закрыть окно</button>
