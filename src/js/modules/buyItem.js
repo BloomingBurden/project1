@@ -28,6 +28,7 @@ export const buyItem = (target) => {
         category.classList.add(strFromClass[0] + '-' + strFromClass[1]);
     }
 
+    buy.classList.remove('d-none');
     buy.classList.add('popup--active');
     document.documentElement.classList.add('no-scrolling');
     document.body.classList.add('no-scrolling');

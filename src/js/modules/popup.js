@@ -22,6 +22,7 @@ const showQuest = () => {
 
     if (!quest) return;
     
+    quest.classList.remove('d-none');
     quest.classList.add('popup--active');
     document.documentElement.classList.add('no-scrolling');
     document.body.classList.add('no-scrolling');
@@ -34,6 +35,7 @@ const showChance = () => {
 
     if (!chance) return;
     
+    chance.classList.remove('d-none');
     chance.classList.add('popup--active');
     document.documentElement.classList.add('no-scrolling');
     document.body.classList.add('no-scrolling');
@@ -48,6 +50,7 @@ const showDiscount = () => {
 
     isFirstTime = false;
 
+    discount.classList.remove('d-none');
     discount.classList.add('popup--active');
     document.documentElement.classList.add('no-scrolling');
     document.body.classList.add('no-scrolling');
@@ -71,6 +74,10 @@ const popupClose = () => {
 
             resetQuest(item);
             anotherForm = false;
+
+            setTimeout(()=> {
+                currentPopup.classList.add('d-none');
+            },700)
         });
     });
 };

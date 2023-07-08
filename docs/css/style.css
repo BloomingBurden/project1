@@ -777,7 +777,7 @@ button {
 }
 
 .d-none {
-  display: none;
+  display: none !important;
 }
 
 .quest {
@@ -4448,33 +4448,103 @@ button {
           filter: blur(250px);
 }
 
+@-webkit-keyframes openPopupAnime {
+  from {
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    -webkit-user-select: none;
+            user-select: none;
+  }
+
+  to {
+    z-index: 9998;
+    opacity: 1;
+    visibility: visible;
+    -webkit-user-select: auto;
+            user-select: auto;
+  }
+}
+
+@keyframes openPopupAnime {
+  from {
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+
+  to {
+    z-index: 9998;
+    opacity: 1;
+    visibility: visible;
+    -webkit-user-select: auto;
+       -moz-user-select: auto;
+        -ms-user-select: auto;
+            user-select: auto;
+  }
+}
+
+@-webkit-keyframes closePopup {
+  from {
+    z-index: 9998;
+    opacity: 1;
+    visibility: visible;
+    -webkit-user-select: auto;
+            user-select: auto;
+  }
+
+  to {
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    -webkit-user-select: none;
+            user-select: none;
+  }
+}
+
+@keyframes closePopup {
+  from {
+    z-index: 9998;
+    opacity: 1;
+    visibility: visible;
+    -webkit-user-select: auto;
+       -moz-user-select: auto;
+        -ms-user-select: auto;
+            user-select: auto;
+  }
+
+  to {
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+}
+
 .popup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-transition: 0.25s ease;
   transition: 0.25s ease;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   position: fixed;
-  z-index: -1;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  -webkit-animation: closePopup 1s cubic-bezier(0.06, 0.94, 0.21, 0.96) forwards;
+          animation: closePopup 1s cubic-bezier(0.06, 0.94, 0.21, 0.96) forwards;
 }
 
 .popup--active {
-  z-index: 9998;
-  opacity: 1;
-  visibility: visible;
-  -webkit-user-select: auto;
-     -moz-user-select: auto;
-      -ms-user-select: auto;
-          user-select: auto;
+  -webkit-animation: openPopupAnime 1s cubic-bezier(0.06, 0.94, 0.21, 0.96) forwards;
+          animation: openPopupAnime 1s cubic-bezier(0.06, 0.94, 0.21, 0.96) forwards;
 }
 
 .popup__wrap {
