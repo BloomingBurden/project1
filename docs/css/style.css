@@ -6403,13 +6403,6 @@ button {
     line-height: 36px;
   }
 
-  .category__link {
-    background: -webkit-linear-gradient(#EBD1FF, #F5F3E9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0px 0px rgba(0, 0, 0, 0);
-  }
-
   .courses {
     padding: 60px 0;
   }
