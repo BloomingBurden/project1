@@ -206,6 +206,14 @@
   background: -webkit-linear-gradient(#EBD1FF, #EFF8D9, #E9DBEF, #F5F3E9, #C9C2A6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px #00000000;
+
+  @media (max-width: $tableW) {
+    background: -webkit-linear-gradient(#EBD1FF, #F5F3E9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px #00000000;
+  }
 }
 
 .category__item-current {

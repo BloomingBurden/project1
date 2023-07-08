@@ -3212,6 +3212,7 @@ button {
   background: -webkit-linear-gradient(#EBD1FF, #EFF8D9, #E9DBEF, #F5F3E9, #C9C2A6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px rgba(0, 0, 0, 0);
 }
 
 .category__item-current {
@@ -3539,6 +3540,7 @@ button {
 }
 
 .form-sign__item input {
+  outline: none;
   width: 100%;
   padding: 15px;
   color: #46444D;
@@ -6399,6 +6401,13 @@ button {
 
   .category__title {
     line-height: 36px;
+  }
+
+  .category__link {
+    background: -webkit-linear-gradient(#EBD1FF, #F5F3E9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 0px rgba(0, 0, 0, 0);
   }
 
   .courses {
