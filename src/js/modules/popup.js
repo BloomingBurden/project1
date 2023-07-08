@@ -77,7 +77,7 @@ const popupClose = () => {
 
             setTimeout(()=> {
                 currentPopup.classList.add('d-none');
-            },700)
+            },200)
         });
     });
 };
