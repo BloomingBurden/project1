@@ -28,7 +28,6 @@ export function scss() {
         }))
         .pipe(autoprefixer({
             grid: true,
-            overrideBrowserslist: ["last 5 versions"],
             cascade: true,
         }))
         .pipe(app.gulp.dest(app.path.build.css))
