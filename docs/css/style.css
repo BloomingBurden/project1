@@ -4613,7 +4613,7 @@ button {
 }
 
 .discount-popup .popup__wrap {
-  max-height: 690px;
+  max-height: 650px;
 }
 
 .discount-popup .popup__img {
@@ -6614,6 +6614,10 @@ button {
 
   .popup__body {
     padding: 45px 20px 40px;
+  }
+
+  .discount-popup .popup__wrap {
+    max-height: 690px;
   }
 
   .discount-popup .popup__img {

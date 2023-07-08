@@ -167,7 +167,11 @@
 
 .discount-popup {
   .popup__wrap {
-    max-height: 690px;
+    max-height: 650px;
+
+    @media (max-width: $tableW) {
+      max-height: 690px;
+    }
   }
 
   .popup__img {
