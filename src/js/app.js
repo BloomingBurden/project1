@@ -23,9 +23,9 @@ window.addEventListener('load', () => {
     setCustomVideoPlayer();
     parallax('.preview__bg');
     onClickPhoneForm();
+    onClickSubmitForm();
     showHelp();
     clickFilter();
-    onClickSubmitForm();
     popup();
     
     elementMove('.no-page-body', '.no-page__img');
@@ -90,7 +90,8 @@ window.addEventListener('load', () => {
             spaceBetween: 20
           }); 
 
-          const swiper4 = new Swiper('.swiper-4', {       
+          const swiper4 = new Swiper('.swiper-4', { 
+            loop: true,      
             // Navigation arrows
             navigation: {
               nextEl: '.swiper-button-next',

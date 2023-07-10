@@ -3,12 +3,29 @@ import { buyItem } from "./buyItem.js";
 let myTimeout = null;
 let isFirstTime = true;
 let anotherForm = false;
+let currentPopup = null;
+
+const showImage = (target) => {
+    const selectedImg = target.closest('.button-image').querySelector('img');
+    const image = document.querySelector('.image-popup');
+
+    if (!selectedImg || !image) return;
+
+    currentPopup = image;
+
+    image.classList.remove('d-none');
+    image.classList.add('popup--active');
+    document.documentElement.classList.add('no-scrolling');
+    document.body.classList.add('no-scrolling');
+
+    anotherForm = true;
+    
+    const img = image.querySelector('img');
+    img.src = selectedImg.src;
+}
 
 const resetQuest = (item) => {
-    const questPopup = item.closest('.quest-popup');
-    if (questPopup) {
-        questPopup.querySelectorAll('.quest-popup__item').forEach(item => item.classList.remove('quest-popup__item--active'));
-    }
+    currentPopup.querySelectorAll('.quest-popup__item').forEach(item => item.classList.remove('quest-popup__item--active'));
 };
 
 const expandTextQuest = (target) => {
@@ -22,8 +39,35 @@ const showQuest = () => {
 
     if (!quest) return;
     
+    currentPopup = quest;
+
     quest.classList.remove('d-none');
     quest.classList.add('popup--active');
+    document.documentElement.classList.add('no-scrolling');
+    document.body.classList.add('no-scrolling');
+
+    anotherForm = true;
+}
+
+const showCourse = (target) => {
+    const course = target.closest('.course__item');
+    const coursePopup = document.querySelector('.course-popup');
+
+    if (!coursePopup || !course) return;
+
+    currentPopup = coursePopup;
+
+    
+    const selectedName = course.querySelector('.course__subtitle');
+    const selectedAge = course.querySelector('.course__age');
+    const popupName = coursePopup.querySelector('.form-sign__course-name');
+    const popupAge = coursePopup.querySelector('.form-sign__course-age');
+
+    popupName.value = selectedName.textContent;
+    popupAge.value = selectedAge.textContent;
+
+    coursePopup.classList.remove('d-none');
+    coursePopup.classList.add('popup--active');
     document.documentElement.classList.add('no-scrolling');
     document.body.classList.add('no-scrolling');
 
@@ -34,6 +78,8 @@ const showChance = () => {
     const chance = document.querySelector('.chance-popup');
 
     if (!chance) return;
+
+    currentPopup = chance;
     
     chance.classList.remove('d-none');
     chance.classList.add('popup--active');
@@ -48,6 +94,8 @@ const showDiscount = () => {
     
     if (!discount || anotherForm) return;
 
+    currentPopup = discount;
+
     isFirstTime = false;
 
     discount.classList.remove('d-none');
@@ -57,29 +105,34 @@ const showDiscount = () => {
 };
 
 const popupClose = () => {
-    const popupList = document.querySelectorAll('.popup__close');
+    if (!currentPopup) return;
 
-    if (!popupList[0]) return;
-
-
-    popupList.forEach(item => {
-        item.addEventListener('click', (evt) => {
-            const currentPopup = item.closest('.popup');
-            currentPopup.classList.remove('popup--active');
-            currentPopup.querySelectorAll('input').forEach(item => {
-                item.value = '';
-            });
-            document.documentElement.classList.remove('no-scrolling');
-            document.body.classList.remove('no-scrolling');
-
-            resetQuest(item);
-            anotherForm = false;
-
-            setTimeout(()=> {
-                currentPopup.classList.add('d-none');
-            },200)
-        });
+    currentPopup.classList.remove('popup--active');
+    currentPopup.querySelectorAll('input').forEach(item => {
+        item.value = '';
     });
+    const isSpan = currentPopup.querySelectorAll('.span--error');
+
+    if (isSpan[0]) {
+        isSpan.forEach(item => {
+            item.closest('.form-sign__item').classList.remove('form-sign__item--error');
+            item.remove();
+        });
+    }
+
+    document.documentElement.classList.remove('no-scrolling');
+    document.body.classList.remove('no-scrolling');
+
+    if (currentPopup.classList.contains('quest-popup')) {
+        resetQuest(currentPopup);
+    }
+
+    setTimeout(()=> {
+        currentPopup.classList.add('d-none');
+        currentPopup = null;
+    },200)
+
+    anotherForm = false;
 };
 
 function setInactive() {
@@ -109,13 +162,30 @@ const onClickAnyBtn = (evt) => {
         showQuest();
     }
 
+    if(target.closest('.button-course')) {
+        showCourse(target);
+    }
+
+    if(target.closest('.button-image')) {
+        showImage(target);
+    }
+
     if(target.closest('.quest-popup__subtitle')) {
         expandTextQuest(target);
     }
 
     if (target.closest('.button-buy')) {
+        const buy = document.querySelector('.buy-popup');
+        if (!buy) return;
+        
+        currentPopup = buy;
+
         buyItem(target);
         anotherForm = true;
+    }
+
+    if (!target.closest('.popup__wrap') && target.closest('.popup') || target.closest('.popup__close')) {
+        popupClose();
     }
 
 };
@@ -125,7 +195,13 @@ export const popup = () => {
     document.addEventListener('touchmove', resetTimer);
     document.addEventListener('keypress', resetTimer);
     document.addEventListener('click', onClickAnyBtn);
+    document.addEventListener('keydown', (evt) => {
+        const target = evt.key;
+
+        if (target === 'Escape') {
+            popupClose();
+        }
+    });
     
     resetTimer();
-    popupClose();
 }

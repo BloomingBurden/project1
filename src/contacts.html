@@ -99,52 +99,55 @@
         </div>
       </div>
 
-      <div class="contacts__map map">
-        <h3 class="map__title title-3">Адрес центра progin в г.Казань</h3>
-        <p class="map__address">г. Казань,ул. Дубравная, 2Д</p>
-        <div class="map__inner">
-          <div id="map" style="width: 100%; height: 400px;"></div>
+      <div class="contacts__place place-1">
+        <div class="contacts__map map">
+          <h3 class="map__title title-3">Адрес центра progin в г.Казань</h3>
+          <p class="map__address">г. Казань,ул. Дубравная, 2Д</p>
+          <div class="map__inner">
+            <div id="map" style="width: 100%; height: 400px;"></div>
+          </div>
+        </div>
+        
+        <h3 class="contacts__caption title-3">Как пройти в учебный центр в г.Казань</h3>
+        <div class="contacts__swiper swiper swiper-contacts">
+          <div class="swiper-button-prev swiper-btn" onmousedown="event.preventDefault()"></div>
+          <div class="swiper-button-next swiper-btn" onmousedown="event.preventDefault()"></div>
+          <div class="contacts__list-img swiper-wrapper">
+            <div class="contacts__item-img swiper-slide button-image">
+              <picture>
+                <source type="image/webp" srcset="@img/contacts/contacts-1.webp">
+                <img src="@img/contacts/contacts-1.png" alt="Изображение места" width="283">
+              </picture>
+            </div>
+            <div class="contacts__item-img swiper-slide button-image">
+              <picture>
+                <source type="image/webp" srcset="@img/contacts/contacts-2.webp">
+                <img src="@img/contacts/contacts-2.png" alt="Изображение места" width="283">
+              </picture>
+            </div>
+            <div class="contacts__item-img swiper-slide button-image">
+              <picture>
+                <source type="image/webp" srcset="@img/contacts/contacts-3.webp">
+                <img src="@img/contacts/contacts-3.png" alt="Изображение места" width="283">
+              </picture>
+            </div>
+            <div class="contacts__item-img swiper-slide button-image">
+              <picture>
+                <source type="image/webp" srcset="@img/contacts/contacts-4.webp">
+                <img src="@img/contacts/contacts-4.png" alt="Изображение места" width="283">
+              </picture>
+            </div>
+            <div class="contacts__item-img swiper-slide button-image">
+              <picture>
+                <source type="image/webp" srcset="@img/contacts/contacts-1.webp">
+                <img src="@img/contacts/contacts-1.png" alt="Изображение места" width="283">
+              </picture>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
 
-      <h3 class="contacts__caption title-3">Как пройти в учебный центр в г.Казань</h3>
-      <div class="contacts__swiper swiper swiper-contacts">
-        <div class="swiper-button-prev swiper-btn" onmousedown="event.preventDefault()"></div>
-        <div class="swiper-button-next swiper-btn" onmousedown="event.preventDefault()"></div>
-        <div class="contacts__list-img swiper-wrapper">
-          <div class="contacts__item-img swiper-slide">
-            <picture>
-              <source type="image/webp" srcset="@img/contacts/contacts-1.webp">
-              <img src="@img/contacts/contacts-1.png" alt="Изображение места" width="283">
-            </picture>
-          </div>
-          <div class="contacts__item-img swiper-slide">
-            <picture>
-              <source type="image/webp" srcset="@img/contacts/contacts-2.webp">
-              <img src="@img/contacts/contacts-2.png" alt="Изображение места" width="283">
-            </picture>
-          </div>
-          <div class="contacts__item-img swiper-slide">
-            <picture>
-              <source type="image/webp" srcset="@img/contacts/contacts-3.webp">
-              <img src="@img/contacts/contacts-3.png" alt="Изображение места" width="283">
-            </picture>
-          </div>
-          <div class="contacts__item-img swiper-slide">
-            <picture>
-              <source type="image/webp" srcset="@img/contacts/contacts-4.webp">
-              <img src="@img/contacts/contacts-4.png" alt="Изображение места" width="283">
-            </picture>
-          </div>
-          <div class="contacts__item-img swiper-slide">
-            <picture>
-              <source type="image/webp" srcset="@img/contacts/contacts-1.webp">
-              <img src="@img/contacts/contacts-1.png" alt="Изображение места" width="283">
-            </picture>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
     </div>
   </section>
 
@@ -157,6 +160,13 @@
   @@include('html/about-main.html', {})
 </main>
 
+<article class="image-popup popup d-none">
+  <div class="popup__wrap">
+    <img src="" alt="Изображение места">
+
+    <button type="button" class="popup__close">Закрыть окно</button>
+  </div>
+</article>
 @@include('html/popup-quest.html', {})
 @@include('html/chance-popup.html', {})
 @@include('html/discount-popup.html', {})

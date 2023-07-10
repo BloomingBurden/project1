@@ -98,8 +98,7 @@
     border: 2px solid  #EB5757;
   }
 
-  &::before {
-    content: 'Пожалуйста, введите правильный Email';
+  span.span--error {
     position: absolute;
     display: flex;
     align-items: flex-end;

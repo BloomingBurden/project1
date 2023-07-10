@@ -240,6 +240,10 @@
   }
 }
 
+.contacts__item-img {
+  cursor: pointer;
+}
+
 .contacts .swiper-pagination {
   display: none;
   bottom: 0;
@@ -253,22 +257,6 @@
   background: linear-gradient(180deg, #343434 0%, #111 100%);
 }
 
-.swiper {
-}
-
-.swiper-contacts {
-}
-
-.swiper-button-prev {
-}
-.swiper-btn {
-}
-.swiper-button-next {
-}
-.contacts__list-img {
-}
-.swiper-wrapper {
-}
 .contacts__item-img {
   height: 205px;
   border-radius: 20px;
@@ -279,6 +267,4 @@
     height: 100%;
     object-fit: contain;
   }
-}
-.swiper-slide {
 }

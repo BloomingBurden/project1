@@ -319,6 +319,43 @@
   }
 }
 
+.course-popup {
+  .popup__wrap {
+    max-height: 580px;
+  }
+
+  .popup__close {
+    &::after,
+    &::before {
+      background-color: $textcolor;
+    }
+    &:hover {
+      &::after,
+      &::before {
+        background-color: $dark-blue;
+      }
+    }
+  }
+
+  .popup__header {
+    padding-bottom: 0;
+    background: #fff!important;
+  }
+
+  .popup__title {
+    color: $textcolor;
+    max-width: none;
+  }
+
+  .popup__body {
+    padding: 45px 45px;
+
+    @media (max-width: $tableW) {
+      padding: 45px 20px;
+    }
+  }
+}
+
 
 .quest-popup__item {
   padding-top: 15px;
@@ -368,5 +405,18 @@
 
   .quest-popup__subtitle::after {
     transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+.image-popup {
+  .popup__wrap {
+    max-height: none;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: 50% 50%;
   }
 }

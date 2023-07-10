@@ -92,7 +92,7 @@ export const setCustomVideoPlayer = () => {
     const onStartVideo = (item, video, evt) => {
         const target = evt.target;
         
-        if (!target.closest('.custom-video__bottom') || !target.closest('.custom-video__close') || target.closest('.custom-video__play-small')) {
+        if (!target.closest('.custom-video__bottom') || target.closest('.custom-video__play-small')) {
             pagination(target.closest('.swiper'), 1);
             
             if (video.paused) {

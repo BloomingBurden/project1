@@ -19,16 +19,17 @@
       </div>
 
       <form action="#" method="POST" class="popup__form form-sign">
-        <div class="form-sign__item form-sign__id visually-hidden">
-          <input type="hidden" id="buy-id" name="Товар" value="">
-        </div>
+        <input class="form-sign__id" type="hidden" id="buy-id" name="id" value="">
+        <input class="form-sign__product-name" type="hidden" id="buy-product-name" name="Product-name" value="">
+        <input class="form-sign__category" type="hidden" id="buy-category" name="Category" value="">
+        <input class="form-sign__price" type="hidden" id="buy-price" name="Price" value="">
         <div class="form-sign__item form-sign__name">
           <label for="buy-name" class="visually-hidden">Имя</label>
-          <input type="text" id="buy-name" name="Имя" value="" placeholder="Как Вас зовут?" minlength="2" required>
+          <input type="text" id="buy-name" name="Name" value="" placeholder="Как Вас зовут?" minlength="2" required>
         </div>
         <div class="form-sign__item form-sign__group">
           <label for="buy-group" class="visually-hidden">Какая у тебя группа</label>
-          <input type="text" id="buy-group" name="Группа" value="" placeholder="Какая у тебя группа?" required>
+          <input type="text" id="buy-group" name="Group" value="" placeholder="Какая у тебя группа?" required>
         </div>
         <div class="form-sign__item captcha">
           

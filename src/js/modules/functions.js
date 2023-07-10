@@ -13,4 +13,11 @@ const isWebp = () => {
     });
 };
 
+const setYear = () => {
+    const year = document.querySelector('.footer__year');
+
+    year.textContent = new Date().getFullYear();
+}
+
 isWebp();
+setYear();

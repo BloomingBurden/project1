@@ -3,8 +3,10 @@ export const buyItem = (target) => {
     const wrap = target.closest('.shop__item');
     const selectCategory = wrap.querySelector('.shop__category');
     const selectImg = wrap.querySelector('.shop__img-item img');
+    const selectName = wrap.querySelector('.shop__subtitle');
+    const selectPrice = wrap.querySelector('.shop__price');
     let selectClass = Array.from(selectCategory.classList).find(item => item.startsWith('shop__category-'));
-    
+
     if (!wrap) return;
 
     const buy = document.querySelector('.buy-popup');
@@ -13,11 +15,20 @@ export const buyItem = (target) => {
     
     const img = buy.querySelector('.buy-popup__img img');
     const category = buy.querySelector('.buy-popup__category');
-    const inputId = buy.querySelector('.form-sign__id input');
+
+    const inputId = buy.querySelector('.form-sign__id');
+    const inputName = buy.querySelector('.form-sign__product-name');
+    const inputCategory = buy.querySelector('.form-sign__category');
+    const inputPrice = buy.querySelector('.form-sign__price');
 
     inputId.value = +id.dataset.shopId;
+    inputName.value = selectName.textContent;
+    inputCategory.value = selectCategory.textContent;
+    inputPrice.value = parseFloat(selectPrice.textContent);
+
     img.src = selectImg.src;
     category.textContent = selectCategory.textContent;
+
     if (selectClass) {
         const strFromClass = selectClass.split('-');
 

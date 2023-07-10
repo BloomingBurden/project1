@@ -18,7 +18,7 @@
     <header class="header">
       <div class="header__container">
         <div class="header__top">
-          <a href="#" class="header__logo logo">
+          <a href="./index.html" class="header__logo logo">
             <img src="img/logo-big.svg" alt="Логотип" width="204" height="66">
           </a>
           <a href="tel:+79600813434" class="header__contacts">+7 960 081 34 34</a>
@@ -27,7 +27,7 @@
           <button type="button" class="header__burger burger-btn">Открыть меню</button>
         </div>
         <div class="header__body">
-          <a href="#" class="header__logo-scroll logo">
+          <a href="./index.html" class="header__logo-scroll logo">
             <img src="img/logo-big.svg" alt="Логотип" width="204" height="66">
           </a>
           <nav class="header__nav nav">
@@ -524,7 +524,7 @@
               <form action="#" method="POST" class="sign__form form-sign">
                 <div class="form-sign__item form-sign__name">
                   <label for="form-sign-name" class="visually-hidden">Имя</label>
-                  <input type="text" id="form-sign-name" name="Имя" value="" placeholder="Как Вас зовут?" minlength="2" required>
+                  <input type="text" id="form-sign-name" name="Name" value="" placeholder="Как Вас зовут?" minlength="3" required>
                 </div>
                 <div class="form-sign__item form-sign__phone">
                   <div class="form-sign__countries">
@@ -661,7 +661,7 @@
           <form action="#" method="POST" class="popup__form form-sign">
             <div class="form-sign__item form-sign__name">
               <label for="discount-popup-name" class="visually-hidden">Имя</label>
-              <input type="text" id="discount-popup-name" name="Имя" value="" placeholder="Как Вас зовут?" minlength="2" required>
+              <input type="text" id="discount-popup-name" name="Name" value="" placeholder="Как Вас зовут?" minlength="2" required>
             </div>
             <div class="form-sign__item form-sign__phone">
               <div class="form-sign__countries">
@@ -731,7 +731,7 @@
           <form action="#" method="POST" class="popup__form form-sign">
             <div class="form-sign__item form-sign__name">
               <label for="chance-name" class="visually-hidden">Имя</label>
-              <input type="text" id="chance-name" name="Имя" value="" placeholder="Как Вас зовут?" minlength="2" required>
+              <input type="text" id="chance-name" name="Name" value="" placeholder="Как Вас зовут?" minlength="2" required>
             </div>
             <div class="form-sign__item form-sign__phone">
               <div class="form-sign__countries">
@@ -806,16 +806,17 @@
           </div>
 
           <form action="#" method="POST" class="popup__form form-sign">
-            <div class="form-sign__item form-sign__id visually-hidden">
-              <input type="hidden" id="buy-id" name="Товар" value="">
-            </div>
+            <input class="form-sign__id" type="hidden" id="buy-id" name="id" value="">
+            <input class="form-sign__product-name" type="hidden" id="buy-product-name" name="Product-name" value="">
+            <input class="form-sign__category" type="hidden" id="buy-category" name="Category" value="">
+            <input class="form-sign__price" type="hidden" id="buy-price" name="Price" value="">
             <div class="form-sign__item form-sign__name">
               <label for="buy-name" class="visually-hidden">Имя</label>
-              <input type="text" id="buy-name" name="Имя" value="" placeholder="Как Вас зовут?" minlength="2" required>
+              <input type="text" id="buy-name" name="Name" value="" placeholder="Как Вас зовут?" minlength="2" required>
             </div>
             <div class="form-sign__item form-sign__group">
               <label for="buy-group" class="visually-hidden">Какая у тебя группа</label>
-              <input type="text" id="buy-group" name="Группа" value="" placeholder="Какая у тебя группа?" required>
+              <input type="text" id="buy-group" name="Group" value="" placeholder="Какая у тебя группа?" required>
             </div>
             <div class="form-sign__item captcha">
 
@@ -928,7 +929,7 @@
           </div>
         </div>
 
-        <p class="footer__bottom">© Progin.tech 2023. Все права защищены. Любое ĸопирование информации возможно тольĸо с согласия правообладателя ресурса.</p>
+        <p class="footer__bottom">© Progin.tech <span class="footer__year">2023</span>. Все права защищены. Любое ĸопирование информации возможно тольĸо с согласия правообладателя ресурса.</p>
       </div>
     </footer>
   </div>

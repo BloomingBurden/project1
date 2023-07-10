@@ -57,9 +57,15 @@
   flex-wrap: wrap;
   margin: 0 -12px;
 
+  @media (max-width: $desktopW) {
+    justify-content: center;
+  }
+
   @media (max-width: $tableW) {
     margin: 0;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 
