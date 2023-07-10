@@ -2782,10 +2782,10 @@ button {
   content: "";
   border-radius: 20px;
   position: absolute;
-  left: -5px;
-  top: -5px;
-  width: calc(100% + 10px);
-  height: calc(100% + 10px);
+  left: -8px;
+  top: -8px;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
   z-index: -1;
   background: -webkit-gradient(linear, left top, left bottom, from(#e5e5e5), color-stop(#fcddfd), color-stop(#ede4f6), color-stop(#ecffeb), to(#e5e5e5));
   background: linear-gradient(#e5e5e5, #fcddfd, #ede4f6, #ecffeb, #e5e5e5);
@@ -5858,6 +5858,38 @@ button {
     margin-bottom: 50px;
   }
 
+  .about__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .about__bottom:hover .about__bottom-wrap {
+    -webkit-transform: translateX(-50%) rotate(14deg);
+            transform: translateX(-50%) rotate(14deg);
+  }
+
+  .about__bottom-header {
+    max-width: none;
+  }
+
+  .about__bottom-wrap:nth-child(1) {
+    bottom: 0;
+    -webkit-transform: rotate(-14.433deg) translateX(-50%);
+            transform: rotate(-14.433deg) translateX(-50%);
+    left: 50%;
+    right: auto;
+  }
+
+  .about__bottom-wrap:nth-child(2) {
+    bottom: -40px;
+    -webkit-transform: rotate(-14.433deg) translateX(-50%);
+            transform: rotate(-14.433deg) translateX(-50%);
+    left: 60%;
+    right: auto;
+  }
+
   .discount {
     padding-left: 200px;
   }
@@ -6333,8 +6365,32 @@ button {
     height: 175px;
   }
 
+  .about__bottom-header {
+    padding: 40px 15px 33px 30px;
+  }
+
+  .about__logo {
+    margin-bottom: 23px;
+  }
+
   .about__descr {
     margin-bottom: 10px;
+  }
+
+  .about__bottom-img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 260px;
+            flex: 0 0 260px;
+  }
+
+  .about__bottom-wrap:nth-child(1) {
+    width: 245px;
+    height: 239px;
+  }
+
+  .about__bottom-wrap:nth-child(2) {
+    width: 201px;
+    height: 127px;
   }
 
   .advantages__title {
@@ -6836,6 +6892,11 @@ button {
 
   .lessons__video {
     height: 221px;
+  }
+
+  .about__bottom-wrap:nth-child(2) {
+    left: 70%;
+    bottom: -30px;
   }
 
   .shop__list {

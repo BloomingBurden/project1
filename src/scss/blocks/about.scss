@@ -116,9 +116,17 @@
   display: flex;
   justify-content: space-between;
 
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+
   &:hover {
     .about__bottom-wrap {
       transform: rotate(14deg);
+
+      @media (max-width: 1000px) {
+        transform: translateX(-50%) rotate(14deg);
+      }
     }
   }
 }
@@ -127,12 +135,24 @@
   max-width: 640px;
   flex: 1 1 auto;
   padding: 40px 32px 63px 50px;
+
+  @media (max-width: 1000px) {
+    max-width: none;
+  }
+
+  @media (max-width: $tableW) {
+    padding: 40px 15px 33px 30px;
+  }
 }
 
 .about__logo {
   width: 180px;
   margin-bottom: 30px;
   margin-left: 10px;
+
+  @media (max-width: $tableW) {
+    margin-bottom: 23px;
+  }
 
   img {
     object-fit: contain;
@@ -157,20 +177,25 @@
 .about__bottom-img {
   position: relative;
   flex: 0 0 550px;
+
+  @media (max-width: $tableW) {
+    flex: 0 0 260px;
+  }
 }
 
 .about__bottom-wrap {
   position: absolute;
   transition: $trans;
 
+
   &::after {    
     content: '';
     border-radius: 20px;
     position: absolute;
-    left: -5px;
-    top: -5px;
-    width: calc(100% + 10px);
-    height: calc(100% + 10px);
+    left: -8px;
+    top: -8px;
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
     z-index: -1;
     background: linear-gradient(#e5e5e5, #fcddfd, #ede4f6, #ecffeb, #e5e5e5);
   }
@@ -183,6 +208,18 @@
     width: 490px;
     height: 476px;
     transform: rotate(-14.433deg);
+
+    @media (max-width: 1000px) {
+      bottom: 0;
+      transform: rotate(-14.433deg) translateX(-50%);
+      left: 50%;
+      right: auto;
+    }
+
+    @media (max-width: $tableW) {
+      width: 245px;
+      height: 239px;
+    }
   }
 
   &:nth-child(2) {
@@ -193,6 +230,23 @@
     width: 403px;
     height: 254px;
     transform: rotate(-14.433deg);
+
+    @media (max-width: 1000px) {
+      bottom: -40px;
+      transform: rotate(-14.433deg) translateX(-50%);
+      left: 60%;
+      right: auto;
+    }
+
+    @media (max-width: $tableW) {
+      width: 201px;
+      height: 127px;
+    }
+
+    @media (max-width: 480px) {
+      left: 70%;
+      bottom: -30px;
+    }
   }
 
   img {
