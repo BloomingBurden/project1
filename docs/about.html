@@ -10,6 +10,7 @@
   <title>О центре</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -383,7 +384,7 @@
           <form action="#" method="POST" class="popup__form form-sign">
             <div class="form-sign__item form-sign__name">
               <label for="chance-name" class="visually-hidden">Имя</label>
-              <input type="text" id="chance-name" name="Name" value="" placeholder="Как Вас зовут?" minlength="2" required>
+              <input type="text" id="chance-name" name="Name" value="" placeholder="Как Вас зовут?" minlength="3" required>
             </div>
             <div class="form-sign__item form-sign__phone">
               <div class="form-sign__countries">
@@ -453,7 +454,7 @@
           <form action="#" method="POST" class="popup__form form-sign">
             <div class="form-sign__item form-sign__name">
               <label for="discount-popup-name" class="visually-hidden">Имя</label>
-              <input type="text" id="discount-popup-name" name="Name" value="" placeholder="Как Вас зовут?" minlength="2" required>
+              <input type="text" id="discount-popup-name" name="Name" value="" placeholder="Как Вас зовут?" minlength="3" required>
             </div>
             <div class="form-sign__item form-sign__phone">
               <div class="form-sign__countries">
@@ -608,6 +609,8 @@
     </footer>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_ключ&lang=ru_RU" type="text/javascript"></script>
   <script src="js/app.min.js"></script>
 </body>
 

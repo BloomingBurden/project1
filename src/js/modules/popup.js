@@ -5,25 +5,6 @@ let isFirstTime = true;
 let anotherForm = false;
 let currentPopup = null;
 
-const showImage = (target) => {
-    const selectedImg = target.closest('.button-image').querySelector('img');
-    const image = document.querySelector('.image-popup');
-
-    if (!selectedImg || !image) return;
-
-    currentPopup = image;
-
-    image.classList.remove('d-none');
-    image.classList.add('popup--active');
-    document.documentElement.classList.add('no-scrolling');
-    document.body.classList.add('no-scrolling');
-
-    anotherForm = true;
-    
-    const img = image.querySelector('img');
-    img.src = selectedImg.src;
-}
-
 const resetQuest = (item) => {
     currentPopup.querySelectorAll('.quest-popup__item').forEach(item => item.classList.remove('quest-popup__item--active'));
 };
@@ -164,10 +145,6 @@ const onClickAnyBtn = (evt) => {
 
     if(target.closest('.button-course')) {
         showCourse(target);
-    }
-
-    if(target.closest('.button-image')) {
-        showImage(target);
     }
 
     if(target.closest('.quest-popup__subtitle')) {

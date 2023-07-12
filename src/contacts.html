@@ -22,10 +22,10 @@
         
         <ul class="category__list">
           <li class="category__item category__item-current">
-            <button type="button" class="category__link">Казань</button>
+            <button type="button" class="category__link" data-filter=".category-a">Казань</button>
           </li>
           <li class="category__item">
-            <button type="button" class="category__link">Высокая гора</button>
+            <button type="button" class="category__link" data-filter=".category-b">Высокая гора</button>
           </li>
         </ul>
       </div>
@@ -34,117 +34,255 @@
 
   <section class="contacts">
     <div class="contacts__container">
-      <div class="contacts__header">
-        <div class="contacts__contact">
-          <canvas class="my-circle my-circle-5" data-circle-speed="2" data-circle-rad="35" data-circle-quantity="4"></canvas>
-          <h3 class="contacts__subtitle title-3">Контакты центра Progin</h3>
-          <a href="tel:+79600813434" class="contacts__phone">+7 960 081 34 34</a>
-          <a href="mailto:admin@progin.tech" class="contacts__mail">admin@progin.tech</a>
+      <div class="contacts__coord place-1 mix category-a">
+        <div class="contacts__header">
+          <div class="contacts__contact">
+            <canvas class="my-circle my-circle-5" data-circle-speed="2" data-circle-rad="35" data-circle-quantity="4"></canvas>
+            <h3 class="contacts__subtitle title-3">Контакты центра Progin</h3>
+            <a href="tel:+79600813434" class="contacts__phone">+7 960 081 34 34</a>
+            <a href="mailto:admin@progin.tech" class="contacts__mail">admin@progin.tech</a>
+          </div>
+          <div class="contacts__social">
+            <canvas class="my-circle my-circle-6" data-circle-speed="2" data-circle-rad="35" data-circle-quantity="3"></canvas>
+            <h3 class="contacts__subtitle title-3">Progin в <br> социальных сетях</h3> 
+            <ul class="contacts__social-list social">
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <p class="social__img social__img-telega">
+                    <img src="@img/icons/icons.svg#Telegram" alt="Телеграм" width="12">
+                  </p>
+                  <span>
+                    @progin_tech
+                  </span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <p class="social__img social__img-vk">
+                    <img src="@img/icons/icons.svg#vk_logo" alt="Ввконтакте" width="24">
+                  </p>
+                  <span>
+                    progin_tech
+                  </span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="tel:+79600813434" class="social__link">
+                  <p class="social__img social__img-what">
+                    <img src="@img/icons/icons.svg#WhatsApp" alt="Ватсап" width="12">
+                  </p>
+                  <span>
+                    7 960 081 34 34
+                  </span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <p class="social__img social__img-inst">
+                    <img src="@img/icons/icons.svg#Instagram_logo" alt="Инстаграм" width="12">
+                  </p>
+                  <span>
+                    @progin_tech
+                  </span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <p class="social__img social__img-face">
+                    <img src="@img/icons/icons.svg#Facebook" alt="Фейсбук" width="12">
+                  </p>
+                  <span>
+                    progin.tech.official
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="contacts__social">
-          <canvas class="my-circle my-circle-6" data-circle-speed="2" data-circle-rad="35" data-circle-quantity="3"></canvas>
-          <h3 class="contacts__subtitle title-3">Progin в <br> социальных сетях</h3> 
-          <ul class="contacts__social-list social">
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <p class="social__img social__img-telega">
-                  <img src="@img/icons/icons.svg#Telegram" alt="Телеграм" width="12">
-                </p>
-                <span>
-                  @progin_tech
-                </span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <p class="social__img social__img-vk">
-                  <img src="@img/icons/icons.svg#vk_logo" alt="Ввконтакте" width="24">
-                </p>
-                <span>
-                  progin_tech
-                </span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="tel:+79600813434" class="social__link">
-                <p class="social__img social__img-what">
-                  <img src="@img/icons/icons.svg#WhatsApp" alt="Ватсап" width="12">
-                </p>
-                <span>
-                  7 960 081 34 34
-                </span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <p class="social__img social__img-inst">
-                  <img src="@img/icons/icons.svg#Instagram_logo" alt="Инстаграм" width="12">
-                </p>
-                <span>
-                  @progin_tech
-                </span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <p class="social__img social__img-face">
-                  <img src="@img/icons/icons.svg#Facebook" alt="Фейсбук" width="12">
-                </p>
-                <span>
-                  progin.tech.official
-                </span>
-              </a>
-            </li>
-          </ul>
+  
+        <div class="contacts__place">
+          <div class="contacts__map map">
+            <h3 class="map__title title-3">Адрес центра progin в г.Казань</h3>
+            <p class="map__address">г. Казань,ул. Дубравная, 2Д</p>
+            <div class="map__inner">
+              <div id="map" style="width: 100%; height: 400px;"></div>
+            </div>
+          </div>
+          
+          <h3 class="contacts__caption title-3">Как пройти в учебный центр в г.Казань</h3>
+          <div class="contacts__swiper swiper swiper-contacts">
+            <div class="swiper-button-prev swiper-btn" onmousedown="event.preventDefault()"></div>
+            <div class="swiper-button-next swiper-btn" onmousedown="event.preventDefault()"></div>
+            <div class="contacts__list-img swiper-wrapper">
+              <div class="contacts__item-img swiper-slide button-image">
+                <a href="@img/contacts/contacts-1.jpg" class="contacts__item-link" data-fancybox="gallery" data-caption="Caption #1">
+                  <picture>
+                    <source type="image/webp" srcset="@img/contacts/contacts-1.webp">
+                    <img src="@img/contacts/contacts-1.jpg" alt="Изображение места" width="283">
+                  </picture>
+                </a>
+              </div>
+              <div class="contacts__item-img swiper-slide button-image">
+                <a href="@img/contacts/contacts-2.jpg" class="contacts__item-link" data-fancybox="gallery" data-caption="Caption #1">
+                  <picture>
+                    <source type="image/webp" srcset="@img/contacts/contacts-2.webp">
+                    <img src="@img/contacts/contacts-2.jpg" alt="Изображение места" width="283">
+                  </picture>
+                </a>
+              </div>
+              <div class="contacts__item-img swiper-slide button-image">
+                <a href="@img/contacts/contacts-3.jpg" class="contacts__item-link" data-fancybox="gallery" data-caption="Caption #1">
+                  <picture>
+                    <source type="image/webp" srcset="@img/contacts/contacts-3.webp">
+                    <img src="@img/contacts/contacts-3.jpg" alt="Изображение места" width="283">
+                  </picture>
+                </a>
+              </div>
+              <div class="contacts__item-img swiper-slide button-image">
+                <a href="@img/contacts/contacts-4.jpg" class="contacts__item-link" data-fancybox="gallery" data-caption="Caption #1">
+                  <picture>
+                    <source type="image/webp" srcset="@img/contacts/contacts-4.webp">
+                    <img src="@img/contacts/contacts-4.jpg" alt="Изображение места" width="283">
+                  </picture>
+                </a>
+              </div>
+              <div class="contacts__item-img swiper-slide button-image">
+                <a href="@img/contacts/contacts-1.jpg" class="contacts__item-link" data-fancybox="gallery" data-caption="Caption #1">
+                  <picture>
+                    <source type="image/webp" srcset="@img/contacts/contacts-1.webp">
+                    <img src="@img/contacts/contacts-1.jpg" alt="Изображение места" width="283">
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
       </div>
 
-      <div class="contacts__place place-1">
-        <div class="contacts__map map">
-          <h3 class="map__title title-3">Адрес центра progin в г.Казань</h3>
-          <p class="map__address">г. Казань,ул. Дубравная, 2Д</p>
-          <div class="map__inner">
-            <div id="map" style="width: 100%; height: 400px;"></div>
+      <div class="contacts__coord place-2 mix category-b">
+        <div class="contacts__header">
+          <div class="contacts__contact">
+            <canvas class="my-circle my-circle-8" data-circle-speed="2" data-circle-rad="35" data-circle-quantity="4"></canvas>
+            <h3 class="contacts__subtitle title-3">Контакты центра Progin</h3>
+            <a href="tel:+79600813434" class="contacts__phone">+7 960 081 34 34</a>
+            <a href="mailto:admin@progin.tech" class="contacts__mail">admin@progin.tech</a>
+          </div>
+          <div class="contacts__social">
+            <canvas class="my-circle my-circle-9" data-circle-speed="2" data-circle-rad="35" data-circle-quantity="3"></canvas>
+            <h3 class="contacts__subtitle title-3">Progin в <br> социальных сетях</h3> 
+            <ul class="contacts__social-list social">
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <p class="social__img social__img-telega">
+                    <img src="@img/icons/icons.svg#Telegram" alt="Телеграм" width="12">
+                  </p>
+                  <span>
+                    @progin_tech
+                  </span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <p class="social__img social__img-vk">
+                    <img src="@img/icons/icons.svg#vk_logo" alt="Ввконтакте" width="24">
+                  </p>
+                  <span>
+                    progin_tech
+                  </span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="tel:+79600813434" class="social__link">
+                  <p class="social__img social__img-what">
+                    <img src="@img/icons/icons.svg#WhatsApp" alt="Ватсап" width="12">
+                  </p>
+                  <span>
+                    7 960 081 34 34
+                  </span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <p class="social__img social__img-inst">
+                    <img src="@img/icons/icons.svg#Instagram_logo" alt="Инстаграм" width="12">
+                  </p>
+                  <span>
+                    @progin_tech
+                  </span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <p class="social__img social__img-face">
+                    <img src="@img/icons/icons.svg#Facebook" alt="Фейсбук" width="12">
+                  </p>
+                  <span>
+                    progin.tech.official
+                  </span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-        
-        <h3 class="contacts__caption title-3">Как пройти в учебный центр в г.Казань</h3>
-        <div class="contacts__swiper swiper swiper-contacts">
-          <div class="swiper-button-prev swiper-btn" onmousedown="event.preventDefault()"></div>
-          <div class="swiper-button-next swiper-btn" onmousedown="event.preventDefault()"></div>
-          <div class="contacts__list-img swiper-wrapper">
-            <div class="contacts__item-img swiper-slide button-image">
-              <picture>
-                <source type="image/webp" srcset="@img/contacts/contacts-1.webp">
-                <img src="@img/contacts/contacts-1.png" alt="Изображение места" width="283">
-              </picture>
-            </div>
-            <div class="contacts__item-img swiper-slide button-image">
-              <picture>
-                <source type="image/webp" srcset="@img/contacts/contacts-2.webp">
-                <img src="@img/contacts/contacts-2.png" alt="Изображение места" width="283">
-              </picture>
-            </div>
-            <div class="contacts__item-img swiper-slide button-image">
-              <picture>
-                <source type="image/webp" srcset="@img/contacts/contacts-3.webp">
-                <img src="@img/contacts/contacts-3.png" alt="Изображение места" width="283">
-              </picture>
-            </div>
-            <div class="contacts__item-img swiper-slide button-image">
-              <picture>
-                <source type="image/webp" srcset="@img/contacts/contacts-4.webp">
-                <img src="@img/contacts/contacts-4.png" alt="Изображение места" width="283">
-              </picture>
-            </div>
-            <div class="contacts__item-img swiper-slide button-image">
-              <picture>
-                <source type="image/webp" srcset="@img/contacts/contacts-1.webp">
-                <img src="@img/contacts/contacts-1.png" alt="Изображение места" width="283">
-              </picture>
+  
+        <div class="contacts__place">
+          <div class="contacts__map map">
+            <h3 class="map__title title-3">Адрес центра progin в с. Высокая Гора</h3>
+            <p class="map__address">с. Высокая Гора, Большая Красная улица, 168, ТЦ Высокая Гора</p>
+            <div class="map__inner">
+              <div id="map-2" style="width: 100%; height: 400px;"></div>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
+          
+          <h3 class="contacts__caption title-3">Как пройти в учебный центр в с. Высокая Гора</h3>
+          <div class="contacts__swiper swiper swiper-contacts">
+            <div class="swiper-button-prev swiper-btn" onmousedown="event.preventDefault()"></div>
+            <div class="swiper-button-next swiper-btn" onmousedown="event.preventDefault()"></div>
+            <div class="contacts__list-img swiper-wrapper">
+              <div class="contacts__item-img swiper-slide button-image">
+                <a href="@img/contacts/contacts-1.jpg" class="contacts__item-link" data-fancybox="gallery-2" data-caption="Caption #1">
+                  <picture>
+                    <source type="image/webp" srcset="@img/contacts/contacts-1.webp">
+                    <img src="@img/contacts/contacts-1.jpg" alt="Изображение места" width="283">
+                  </picture>
+                </a>
+              </div>
+              <div class="contacts__item-img swiper-slide button-image">
+                <a href="@img/contacts/contacts-2.jpg" class="contacts__item-link" data-fancybox="gallery-2" data-caption="Caption #1">
+                  <picture>
+                    <source type="image/webp" srcset="@img/contacts/contacts-2.webp">
+                    <img src="@img/contacts/contacts-2.jpg" alt="Изображение места" width="283">
+                  </picture>
+                </a>
+              </div>
+              <div class="contacts__item-img swiper-slide button-image">
+                <a href="@img/contacts/contacts-3.jpg" class="contacts__item-link" data-fancybox="gallery-2" data-caption="Caption #1">
+                  <picture>
+                    <source type="image/webp" srcset="@img/contacts/contacts-3.webp">
+                    <img src="@img/contacts/contacts-3.jpg" alt="Изображение места" width="283">
+                  </picture>
+                </a>
+              </div>
+              <div class="contacts__item-img swiper-slide button-image">
+                <a href="@img/contacts/contacts-4.jpg" class="contacts__item-link" data-fancybox="gallery-2" data-caption="Caption #1">
+                  <picture>
+                    <source type="image/webp" srcset="@img/contacts/contacts-4.webp">
+                    <img src="@img/contacts/contacts-4.jpg" alt="Изображение места" width="283">
+                  </picture>
+                </a>
+              </div>
+              <div class="contacts__item-img swiper-slide button-image">
+                <a href="@img/contacts/contacts-1.jpg" class="contacts__item-link" data-fancybox="gallery-2" data-caption="Caption #1">
+                  <picture>
+                    <source type="image/webp" srcset="@img/contacts/contacts-1.webp">
+                    <img src="@img/contacts/contacts-1.jpg" alt="Изображение места" width="283">
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
       </div>
 
@@ -160,13 +298,6 @@
   @@include('html/about-main.html', {})
 </main>
 
-<article class="image-popup popup d-none">
-  <div class="popup__wrap">
-    <img src="" alt="Изображение места">
-
-    <button type="button" class="popup__close">Закрыть окно</button>
-  </div>
-</article>
 @@include('html/popup-quest.html', {})
 @@include('html/chance-popup.html', {})
 @@include('html/discount-popup.html', {})

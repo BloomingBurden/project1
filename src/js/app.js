@@ -15,8 +15,10 @@ import { onClickSubmitForm } from './modules/validatorForm.js';
 import { setYandexMap } from './modules/yandexMap.js';
 import { elementMove } from './modules/elementMove.js';
 import { popup } from './modules/popup.js';
+import { setPopupImage } from './modules/popupImage.js';
 
 window.addEventListener('load', () => {
+    setPopupImage();
     setMaskForm('7');
     clickMenu();
     onScrollMenu();
@@ -41,6 +43,8 @@ window.addEventListener('load', () => {
     moveCircle('.my-circle-5');
     moveCircle('.my-circle-6');
     moveCircle('.my-circle-7');
+    moveCircle('.my-circle-8');
+    moveCircle('.my-circle-9');
 
     onMouseRotate('.courses', '.course__inner');
     onMouseRotate('.shop', '.shop__inner');
@@ -192,6 +196,14 @@ window.addEventListener('load', () => {
                 }
               },
         }); 
+
+        let mixer = mixitup('.contacts', {
+            selectors: {
+              control: '.category__link' // Селектор фильтра
+            }
+        });
+
+         mixer.filter('.category-a');
 
         setYandexMap();
     }

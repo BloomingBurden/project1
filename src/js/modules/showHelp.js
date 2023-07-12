@@ -36,7 +36,6 @@ export const showHelp = () => {
     window.addEventListener('scroll', (evt) => {
         if (!isActive) return;
         isActive = false;
-        console.log(1);
         help.classList.remove('program__help--active');
     });
 }

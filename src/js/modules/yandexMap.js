@@ -1,20 +1,21 @@
 export const setYandexMap = () => {
-    ymaps.ready(init);
+    ymaps.ready(init.bind(null, [55.738997, 49.226806], 'map', 'Адрес центра progin в г.Казань'));
+    ymaps.ready(init.bind(null, [55.918938, 49.312991], 'map-2', 'Адрес центра progin в с. Высокая Гора'));
 
-    function init(){
-        const maps = document.querySelector('#map');
+    function init(coord, map, text){
+        const maps = document.querySelector('#' + map);
 
         if (!maps) return;
 
-        var myMap = new ymaps.Map("map", {
-            center: [55.738997, 49.226806], // координаты центра карты
+        var myMap = new ymaps.Map(map, {
+            center: coord, // координаты центра карты
             zoom: 16,
             controls: [],
         });
 
-        var myPlacemark = new ymaps.Placemark([55.738997, 49.226806], {
-            hintContent: 'Адрес центра progin в г.Казань',
-            balloonContent: 'Адрес центра progin в г.Казань'
+        var myPlacemark = new ymaps.Placemark(coord, {
+            hintContent: text,
+            balloonContent: text,
         }, {
             // Опции.
             // Необходимо указать данный тип макета.
@@ -25,7 +26,7 @@ export const setYandexMap = () => {
             iconImageSize: [64, 64], // размеры изображения
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38] // смещение изображения
+            iconImageOffset: [-20, -50] // смещение изображения
         });
 
         myMap.geoObjects.add(myPlacemark);

@@ -83,6 +83,19 @@
   }
 }
 
+.schedule-body .category__inner {
+  &::after {
+    width: 180px;
+    height: 180px;
+    background-image: url('@img/category/schedule-category.png');
+
+    @media (max-width: $tableW) {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}
+
 .about-body {
   .category__inner {
     &::after {
