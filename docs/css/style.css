@@ -445,29 +445,29 @@ template {
 
 @-webkit-keyframes gradientAnimation {
   0% {
-    background-position: 0px 0px;
+    background-position: 0px 0;
   }
 
   50% {
-    background-position: 100px 50px;
+    background-position: 0 300px;
   }
 
   100% {
-    background-position: 0 50px;
+    background-position: 0 0;
   }
 }
 
 @keyframes gradientAnimation {
   0% {
-    background-position: 0px 0px;
+    background-position: 0px 0;
   }
 
   50% {
-    background-position: 100px 50px;
+    background-position: 0 300px;
   }
 
   100% {
-    background-position: 0 50px;
+    background-position: 0 0;
   }
 }
 
@@ -1903,8 +1903,8 @@ button {
   background: -webkit-linear-gradient(#B994EA, #788EE7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: gradientAnimation 3s linear infinite;
-          animation: gradientAnimation 3s linear infinite;
+  -webkit-animation: gradientAnimation 7s linear infinite;
+          animation: gradientAnimation 7s linear infinite;
 }
 
 .teachers__descr {
@@ -2252,8 +2252,8 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0px 0px rgba(0, 0, 0, 0);
-  -webkit-animation: gradientAnimation 3s linear infinite;
-          animation: gradientAnimation 3s linear infinite;
+  -webkit-animation: gradientAnimation 7s linear infinite;
+          animation: gradientAnimation 7s linear infinite;
 }
 
 .program__item-1 .program__num {
@@ -2404,8 +2404,8 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0px 0px rgba(0, 0, 0, 0);
-  -webkit-animation: gradientAnimation 3s linear infinite;
-          animation: gradientAnimation 3s linear infinite;
+  -webkit-animation: gradientAnimation 7s linear infinite;
+          animation: gradientAnimation 7s linear infinite;
 }
 
 .program__item-2 .program__num {
@@ -2430,12 +2430,12 @@ button {
 }
 
 .program__item-3 .program__caption {
-  background: -webkit-linear-gradient(#EAF1FF, #AAC5F6);
+  background-image: -webkit-linear-gradient(#EAF1FF, #AAC5F6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0px 0px rgba(0, 0, 0, 0);
-  -webkit-animation: gradientAnimation 3s linear infinite;
-          animation: gradientAnimation 3s linear infinite;
+  -webkit-animation: gradientAnimation 7s linear infinite;
+          animation: gradientAnimation 7s linear infinite;
 }
 
 .program__item-3 .program__num {
@@ -2472,8 +2472,8 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0px 0px rgba(0, 0, 0, 0);
-  -webkit-animation: gradientAnimation 3s linear infinite;
-          animation: gradientAnimation 3s linear infinite;
+  -webkit-animation: gradientAnimation 7s linear infinite;
+          animation: gradientAnimation 7s linear infinite;
 }
 
 .program__item-4 .program__num {
@@ -2511,8 +2511,8 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0px 0px rgba(0, 0, 0, 0);
-  -webkit-animation: gradientAnimation 3s linear infinite;
-          animation: gradientAnimation 3s linear infinite;
+  -webkit-animation: gradientAnimation 7s linear infinite;
+          animation: gradientAnimation 7s linear infinite;
 }
 
 .program__item-5 .program__num {
@@ -3440,8 +3440,8 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0px 0px rgba(0, 0, 0, 0);
-  -webkit-animation: gradientAnimation 3s linear infinite;
-          animation: gradientAnimation 3s linear infinite;
+  -webkit-animation: gradientAnimation 7s linear infinite;
+          animation: gradientAnimation 7s linear infinite;
 }
 
 .category__item-current {
@@ -3449,8 +3449,8 @@ button {
   background: radial-gradient(2273.24% 127.91% at 4.57% 0%, #FDAAFF 0%, #FDEFD2 10.42%, #FEFFB9 22.4%, #DCD4AD 33.85%, #FFFDC1 45.31%, #FFE3CA 59.38%, #FDFF96 78.13%, #D6C0FF 100%), -webkit-gradient(linear, left top, right top, from(#EBD1FF), color-stop(29.69%, #EFF8D9), color-stop(58.33%, #E9DBEF), color-stop(75.52%, #F5F3E9), to(#C9C2A6));
   background: radial-gradient(2273.24% 127.91% at 4.57% 0%, #FDAAFF 0%, #FDEFD2 10.42%, #FEFFB9 22.4%, #DCD4AD 33.85%, #FFFDC1 45.31%, #FFE3CA 59.38%, #FDFF96 78.13%, #D6C0FF 100%), linear-gradient(90deg, #EBD1FF 0%, #EFF8D9 29.69%, #E9DBEF 58.33%, #F5F3E9 75.52%, #C9C2A6 100%);
   background-blend-mode: lighten, normal;
-  -webkit-animation: gradientAnimation 3s linear infinite;
-          animation: gradientAnimation 3s linear infinite;
+  -webkit-animation: gradientAnimation 7s linear infinite;
+          animation: gradientAnimation 7s linear infinite;
 }
 
 .category__item-current button {
