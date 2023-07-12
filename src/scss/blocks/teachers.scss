@@ -16,19 +16,36 @@
 }
 
 .teachers__swiper {
-  padding-top: 106px;
+  padding-top: 70px;
   margin-top: -58px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
+  margin-left: -20px;
+  margin-right: -20px;
 
   @media (max-width: $tableW) {
     padding: 0;
     margin: 0;
     margin-bottom: 40px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
 .teachers__item {
+  padding: 30px 20px;
   height: auto;
+  
+  @media (max-width: $tableW) {
+    min-height: 848px;
+    padding: 0;
+  }
+}
+
+.teachers__item-inner {
+  transition: transform $cubicTrans;
+  will-change: transform;
+  height: 100%;
+  width: 100%;
   padding: 15px 30px 30px 20px;
   display: flex;
   background-color: #ffffff;
@@ -37,7 +54,6 @@
   overflow: hidden;
 
   @media (max-width: $tableW) {
-    min-height: 848px;
     padding: 20px;
     padding-bottom: 30px;
     flex-direction: column;
@@ -80,12 +96,14 @@
   }
 }
 
+
 .teachers__subtitle {
   font-weight: 400;
   margin-bottom: 18px;
   background: -webkit-linear-gradient(#B994EA, #788EE7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: $anime-gradient;
 
   @media (max-width: $tableW) {
     background: -webkit-linear-gradient(#FFAC5F, #F18017);
@@ -141,7 +159,7 @@
     border-radius: 50%;
   }
 
-  @media (max-width: $tableW) {
+  @media (max-width: 1000px) {
     display: none;
   }
 
@@ -151,11 +169,11 @@
 }
 
 .swiper-button-prev {
-  left: calc(100% - 120px);
+  left: calc(100% - 140px);
   background-image: url('@img/icons/icons.svg#arrow-left-normal')
 }
 .swiper-button-next {
-  right: 0;
+  right: 20px;
   background-image: url('@img/icons/icons.svg#arrow-right-normal')
 }
 
@@ -170,6 +188,11 @@
 
   @media (max-width: $tableW) {
     padding: 40px 20px 0;
+  }
+
+  @media (max-width: 375px) {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 

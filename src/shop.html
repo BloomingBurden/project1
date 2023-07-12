@@ -9,6 +9,7 @@
   <section class="category">
     <div class="category__container">
       <div class="category__inner">
+        <div class="star star-1 stars-animation"></div>
         <ul class="category__breadcrumbs">
           <li class="category__bread-item">
             <a href="./index.html">Главная</a>
@@ -40,6 +41,9 @@
             <button type="button" class="category__link" data-filter=".category-f">Техника</button>
           </li>
         </ul>
+        <div class="category__img">
+          <img src="@img/category/shop-category.png" alt="Изображение категории">
+        </div>
       </div>
     </div>
   </section>
@@ -47,7 +51,7 @@
   <section class="shop" data-rotate-scale="1.04" data-rotate-speed="40">
     <div class="shop__container">
       <h2 class="visually-hidden">Магазин</h2>
-      <div class="shop__preview">
+      <div class="shop__preview gradient-anime-main">
         <p class="shop__prog">ProG</p>
         <p class="shop__descr">Это внутренняя валюта (ProG) нашего центра. На ĸаждом занятии ребеноĸ может заработать неограниченное ĸоличество ProG. Далее эти заработанные средства можно обменять на любой товар, представленный на этой странице сайта.</p>
       </div>
@@ -457,6 +461,7 @@
   @@include('html/sign.html', {})
 
   <div class="discount__container">
+    <div class="star star-1 stars-animation"></div>
     @@include('html/discount.html', {})
   </div>
 

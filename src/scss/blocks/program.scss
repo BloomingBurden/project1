@@ -26,11 +26,11 @@
   padding-top: 75px;
   border-radius: 20px;
   overflow: hidden;
-  background-image: url('@img/program/bg.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   color: #ffffff;
+
+  .star-1 {
+    background-image: url('@img/program/bg.png');
+  }
 
 
   @media (max-width: $desktopW) {
@@ -136,6 +136,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0px 0px #00000000;
+    animation: $anime-gradient;
   }
 
   .program__num {
@@ -320,11 +321,18 @@
     padding-top: 60px;
   }
 
+  .program__list {
+    @media (max-width: 370px) {
+      max-height: 140px;
+    }
+  }
+
   .program__caption {
     background: -webkit-linear-gradient(#C5FAC8, #97D49B);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0px 0px #00000000;
+    animation: $anime-gradient;
   }
 
   .program__num {
@@ -370,6 +378,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0px 0px #00000000;
+    animation: $anime-gradient;
   }
 
   .program__num {
@@ -430,6 +439,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0px 0px #00000000;
+    animation: $anime-gradient;
   }
 
   .program__num {
@@ -439,6 +449,10 @@
   .program__list {
     @media (max-width: $tableW) {
       max-height: 320px;
+    }
+
+    @media (max-width: 370px) {
+      max-height: 240px;
     }
   }
 
@@ -494,6 +508,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0px 0px #00000000;
+    animation: $anime-gradient;
   }
 
   .program__num {

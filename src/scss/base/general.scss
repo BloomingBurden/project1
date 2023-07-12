@@ -332,3 +332,22 @@ button {
 .d-none {
   display: none!important;
 }
+
+.stars {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.star {
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+}

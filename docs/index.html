@@ -10,7 +10,6 @@
   <title>ProgIN</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -68,6 +67,12 @@
       <section class="preview">
         <div class="preview__container">
           <div class="preview__body">
+            <div class="stars">
+              <div class="star star-1 stars-animation"></div>
+              <div class="star star-2 stars-animation"></div>
+              <div class="star star-3 stars-animation"></div>
+              <div class="star star-4 stars-animation"></div>
+            </div>
             <div class="parallax-bg preview__bg" data-parallax-speed="-4.5">
               <div class="parallax-inner">
                 <picture>
@@ -92,7 +97,7 @@
           </div>
         </div>
       </section>
-      <section class="teachers">
+      <section class="teachers" data-rotate-scale="1.02" data-rotate-speed="90">
         <div class="teachers__container">
           <h2 class="teachers__title title-2">Преподаватели умеют объяснять сложные вещи простыми словами</h2>
           <div class="teachers__swiper swiper swiper-1">
@@ -100,104 +105,110 @@
             <div class="swiper-button-next swiper-btn" onmousedown="event.preventDefault()"></div>
             <div class="teachers__list swiper-wrapper">
               <div class="teachers__item swiper-slide">
-                <div class="teachers__video custom-video">
-                  <div class="custom-video__bg" style="background-image: url('img/teachers/teacher-1.jpg');"></div>
-                  <div class="custom-video__controls">
-                    <button class="custom-video__play">Старт видео</button>
-                    <button type="button" class="custom-video__close">Закрыть видео</button>
-                    <div class="custom-video__bottom">
-                      <div class="custom-video__wrap">
-                        <button type="button" class="custom-video__play-small">Играть видео</button>
-                        <button type="button" class="custom-video__audio">Звук</button>
-                        <div class="custom-video__time">
-                          <span class="custom-video__current-time">00:00</span> /
-                          <span class="custom-video__duration">00:00</span>
+                <div class="teachers__item-inner">
+                  <div class="teachers__video custom-video">
+                    <div class="custom-video__bg" style="background-image: url('img/teachers/teacher-1.jpg');"></div>
+                    <div class="custom-video__controls">
+                      <button class="custom-video__play">Старт видео</button>
+                      <button type="button" class="custom-video__close">Закрыть видео</button>
+                      <div class="custom-video__bottom">
+                        <div class="custom-video__wrap">
+                          <button type="button" class="custom-video__play-small">Играть видео</button>
+                          <button type="button" class="custom-video__audio">Звук</button>
+                          <div class="custom-video__time">
+                            <span class="custom-video__current-time">00:00</span> /
+                            <span class="custom-video__duration">00:00</span>
+                          </div>
+                          <button type="button" class="custom-video__full">Полноэкранный режим</button>
                         </div>
-                        <button type="button" class="custom-video__full">Полноэкранный режим</button>
+                        <span class="custom-video__progress">
+                    <span class="custom-video__current"></span>
+                        </span>
                       </div>
-                      <span class="custom-video__progress">
-                  <span class="custom-video__current"></span>
-                      </span>
                     </div>
+                    <video src="./video/teachers/teacher.mp4" playsinline="" preload="none"></video>
                   </div>
-                  <video src="./video/teachers/teacher.mp4" playsinline="" preload="none"></video>
-                </div>
-                <div class="teachers__body">
-                  <h3 class="teachers__name title-3">Айгуль</h3>
-                  <p class="teachers__subtitle">«Не стоять на месте, двигаться вперед!»</p>
-                  <ul class="teachers__descr-list">
-                    <li class="teachers__descr">11 месяцев работаю с детьми</li>
-                    <li class="teachers__descr">Имею высшее образование КФУ ИФМК</li>
-                    <li class="teachers__descr">Стаж работы в сфере IT 12 месяцев</li>
-                  </ul>
+                  <div class="teachers__body">
+                    <h3 class="teachers__name title-3">Айгуль</h3>
+                    <p class="teachers__subtitle">«Не стоять на месте, двигаться вперед!»</p>
+                    <ul class="teachers__descr-list">
+                      <li class="teachers__descr">11 месяцев работаю с детьми</li>
+                      <li class="teachers__descr">Имею высшее образование КФУ ИФМК</li>
+                      <li class="teachers__descr">Стаж работы в сфере IT 12 месяцев</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div class="teachers__item swiper-slide">
-                <div class="teachers__video custom-video">
-                  <div class="custom-video__bg" style="background-image: url('img/teachers/teacher-2.jpg');"></div>
-                  <div class="custom-video__controls">
-                    <button class="custom-video__play">Старт видео</button>
-                    <button type="button" class="custom-video__close">Закрыть видео</button>
-                    <div class="custom-video__bottom">
-                      <div class="custom-video__wrap">
-                        <button type="button" class="custom-video__play-small">Играть видео</button>
-                        <button type="button" class="custom-video__audio">Звук</button>
-                        <div class="custom-video__time">
-                          <span class="custom-video__current-time">00:00</span> /
-                          <span class="custom-video__duration">00:00</span>
+                <div class="teachers__item-inner">
+                  <div class="teachers__video custom-video">
+                    <div class="custom-video__bg" style="background-image: url('img/teachers/teacher-2.jpg');"></div>
+                    <div class="custom-video__controls">
+                      <button class="custom-video__play">Старт видео</button>
+                      <button type="button" class="custom-video__close">Закрыть видео</button>
+                      <div class="custom-video__bottom">
+                        <div class="custom-video__wrap">
+                          <button type="button" class="custom-video__play-small">Играть видео</button>
+                          <button type="button" class="custom-video__audio">Звук</button>
+                          <div class="custom-video__time">
+                            <span class="custom-video__current-time">00:00</span> /
+                            <span class="custom-video__duration">00:00</span>
+                          </div>
+                          <button type="button" class="custom-video__full">Полноэкранный режим</button>
                         </div>
-                        <button type="button" class="custom-video__full">Полноэкранный режим</button>
+                        <span class="custom-video__progress">
+                    <span class="custom-video__current"></span>
+                        </span>
                       </div>
-                      <span class="custom-video__progress">
-                  <span class="custom-video__current"></span>
-                      </span>
                     </div>
+                    <video src="./video/teachers/teacher.mp4" playsinline="" preload="none"></video>
                   </div>
-                  <video src="./video/teachers/teacher.mp4" playsinline="" preload="none"></video>
-                </div>
-                <div class="teachers__body">
-                  <h3 class="teachers__name title-3">Данил</h3>
-                  <p class="teachers__subtitle">«Мало иметь талант, им нужно уметь пользоваться»</p>
-                  <ul class="teachers__descr-list">
-                    <li class="teachers__descr">Обучился в КАИ на программиста</li>
-                    <li class="teachers__descr">Обучаюсь КАИ в ПИ на роботехнике</li>
-                    <li class="teachers__descr">4 года принимаю участие в студенческой активности</li>
-                    <li class="teachers__descr">Окончил курсы в Центре "Интеллект"</li>
-                  </ul>
+                  <div class="teachers__body">
+                    <h3 class="teachers__name title-3">Данил</h3>
+                    <p class="teachers__subtitle">«Мало иметь талант, им нужно уметь пользоваться»</p>
+                    <ul class="teachers__descr-list">
+                      <li class="teachers__descr">Обучился в КАИ на программиста</li>
+                      <li class="teachers__descr">Обучаюсь КАИ в ПИ на роботехнике</li>
+                      <li class="teachers__descr">4 года принимаю участие в студенческой активности</li>
+                      <li class="teachers__descr">Окончил курсы в Центре "Интеллект"</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div class="teachers__item swiper-slide">
-                <div class="teachers__video custom-video">
-                  <div class="custom-video__bg" style="background-image: url('img/teachers/teacher-2.jpg');"></div>
-                  <div class="custom-video__controls">
-                    <button class="custom-video__play">Старт видео</button>
-                    <button type="button" class="custom-video__close">Закрыть видео</button>
-                    <div class="custom-video__bottom">
-                      <div class="custom-video__wrap">
-                        <button type="button" class="custom-video__play-small">Играть видео</button>
-                        <button type="button" class="custom-video__audio">Звук</button>
-                        <div class="custom-video__time">
-                          <span class="custom-video__current-time">00:00</span> /
-                          <span class="custom-video__duration">00:00</span>
+                <div class="teachers__item-inner">
+                  <div class="teachers__video custom-video">
+                    <div class="custom-video__bg" style="background-image: url('img/teachers/teacher-2.jpg');"></div>
+                    <div class="custom-video__controls">
+                      <button class="custom-video__play">Старт видео</button>
+                      <button type="button" class="custom-video__close">Закрыть видео</button>
+                      <div class="custom-video__bottom">
+                        <div class="custom-video__wrap">
+                          <button type="button" class="custom-video__play-small">Играть видео</button>
+                          <button type="button" class="custom-video__audio">Звук</button>
+                          <div class="custom-video__time">
+                            <span class="custom-video__current-time">00:00</span> /
+                            <span class="custom-video__duration">00:00</span>
+                          </div>
+                          <button type="button" class="custom-video__full">Полноэкранный режим</button>
                         </div>
-                        <button type="button" class="custom-video__full">Полноэкранный режим</button>
+                        <span class="custom-video__progress">
+                    <span class="custom-video__current"></span>
+                        </span>
                       </div>
-                      <span class="custom-video__progress">
-                  <span class="custom-video__current"></span>
-                      </span>
                     </div>
+                    <video src="./video/teachers/teacher.mp4" playsinline="" preload="none"></video>
                   </div>
-                  <video src="./video/teachers/teacher.mp4" playsinline="" preload="none"></video>
-                </div>
-                <div class="teachers__body">
-                  <h3 class="teachers__name title-3">Данил</h3>
-                  <p class="teachers__subtitle">«Мало иметь талант, им нужно уметь пользоваться»</p>
-                  <ul class="teachers__descr-list">
-                    <li class="teachers__descr">Обучился в КАИ на программиста</li>
-                    <li class="teachers__descr">Обучаюсь КАИ в ПИ на роботехнике</li>
-                    <li class="teachers__descr">4 года принимаю участие в студенческой активности</li>
-                    <li class="teachers__descr">Окончил курсы в Центре "Интеллект"</li>
-                  </ul>
+                  <div class="teachers__body">
+                    <h3 class="teachers__name title-3">Данил</h3>
+                    <p class="teachers__subtitle">«Мало иметь талант, им нужно уметь пользоваться»</p>
+                    <ul class="teachers__descr-list">
+                      <li class="teachers__descr">Обучился в КАИ на программиста</li>
+                      <li class="teachers__descr">Обучаюсь КАИ в ПИ на роботехнике</li>
+                      <li class="teachers__descr">4 года принимаю участие в студенческой активности</li>
+                      <li class="teachers__descr">Окончил курсы в Центре "Интеллект"</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -242,7 +253,7 @@
             <div class="swiper-button-next swiper-btn" onmousedown="event.preventDefault()"></div>
             <div class="lessons__list swiper-wrapper">
               <div class="lessons__item swiper-slide">
-                <div class="lessons__body">
+                <div class="lessons__body gradient-anime-main">
                   <h3 class="lessons__preview title-3">Ученик знакомится с будущим преподавателем</h3>
                   <p class="lessons__text">Равным образом реализация намеченных плановых заданий играет важную роль.</p>
                   <div class="lessons__video custom-video">
@@ -281,7 +292,7 @@
                 </div>
               </div>
               <div class="lessons__item swiper-slide">
-                <div class="lessons__body">
+                <div class="lessons__body gradient-anime-main">
                   <h3 class="lessons__preview title-3">Ученик знакомится с будущим преподавателем</h3>
                   <p class="lessons__text">Равным образом реализация намеченных плановых заданий играет важную роль.</p>
                   <div class="lessons__video custom-video">
@@ -320,7 +331,7 @@
                 </div>
               </div>
               <div class="lessons__item swiper-slide">
-                <div class="lessons__body">
+                <div class="lessons__body gradient-anime-main">
                   <h3 class="lessons__preview title-3">Ученик знакомится с будущим преподавателем</h3>
                   <p class="lessons__text">Равным образом реализация намеченных плановых заданий играет важную роль.</p>
                   <div class="lessons__video custom-video">
@@ -365,6 +376,7 @@
       <article class="program">
         <div class="program__container">
           <div class="program__inner">
+            <div class="star star-1 stars-animation"></div>
             <canvas class="my-circle my-circle-2" data-circle-speed="0.5" data-circle-rad="30" data-circle-quantity="6"></canvas>
             <h2 class="program__title title-1">Программа обучения</h2>
 
@@ -641,7 +653,7 @@
           </span>
         </div>
       </article>
-      <section class="about">
+      <section class="about" data-rotate-scale="1.02">
         <div class="about__container">
           <h2 class="about__title title-2">О центре Progin</h2>
 
@@ -953,7 +965,7 @@
 
           <div class="advantages__body">
             <div class="advantages__row">
-              <div class="avdvantages__item advantages__item-1 avdvantages__item-small">
+              <div class="avdvantages__item advantages__item-1 avdvantages__item-small gradient-anime-main">
                 <h3 class="advantages__subtitle title-3">Дети сами придумывают идеи проекта</h3>
               </div>
               <div class="avdvantages__item advantages__item-2 avdvantages__item-big">
@@ -962,6 +974,9 @@
             </div>
             <div class="advantages__row">
               <div class="avdvantages__item advantages__item-3 avdvantages__item-big">
+                <div class="stars">
+                  <div class="star star-1 stars-animation"></div>
+                </div>
                 <h3 class="advantages__subtitle title-2">Учимся выступать и защищать проекты</h3>
               </div>
               <div class="avdvantages__item advantages__item-4 avdvantages__item-small">
@@ -1002,6 +1017,7 @@
         </div>
       </section>
       <div class="discount__container">
+        <div class="star star-1 stars-animation"></div>
         <article class="discount discount-general">
           <h2 class="discount__title title-2">Получи скидку за приглашенного друга</h2>
           <button class="discount__button button button-large button-icon">Записаться</button>
@@ -1293,8 +1309,6 @@
     </footer>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_ключ&lang=ru_RU" type="text/javascript"></script>
   <script src="js/app.min.js"></script>
 </body>
 

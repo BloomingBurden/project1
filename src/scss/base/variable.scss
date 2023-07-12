@@ -1,5 +1,5 @@
 //Screen's width
-$mobileW: 375px;
+$mobileW: 355px;
 $tableW: 768px;
 $desktopW: 1240px;
 $viewportD: 1240px;
@@ -16,6 +16,9 @@ $dark-blue: #1D1C25;
 
 //BACKGROUND-color
 $basic-bg: #F5F8FF;
+
+//Animation
+$anime-gradient: gradientAnimation 3s linear infinite;;
 
 // Base variable
 $textcolor: #202020;

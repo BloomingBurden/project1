@@ -10,22 +10,48 @@
   }
 }
 
-.preview__bg {
-  &::after {
-    content: '';
-    position: absolute;
-    z-index: 0;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('@img/stars-preview.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
+.preview {
+  .star-1 {
+    background-image: url('@img/preview-star-main.png');
+  
     @media (max-width: $tableW) {
-      background-image: url('@img/starts-m.png');
+      background-image: url('@img/stars-preview-m.png');
+    }
+  }
+  .star-2 {
+    left: 50%;
+    top: 100px;
+    background-image: url('@img/preview-star-1.png');
+    width: 102px;
+    height: 102px;
+    animation-delay: 0.7s;
+  
+    @media (max-width: $tableW) {
+      width: 80px;
+      height: 80px;
+      top: auto;
+      bottom: 230px;
+    }
+  }
+  .star-3 {
+    left: 10px;
+    top: 30px;
+    background-image: url('@img/preview-star-2.png');
+    width: 55px;
+    height: 55px;
+    animation-delay: 0.7s;
+  }
+  .star-4 {
+    bottom: 20px;
+    left: 20px;
+    background-image: url('@img/preview-star-3.png');
+    height: 32px;
+    width: 32px;
+    animation-delay: 0.3s;
+  
+    @media (max-width: $tableW) {
+      bottom: 150px;
+      left: 30px;
     }
   }
 }

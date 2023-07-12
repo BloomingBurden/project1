@@ -1,7 +1,9 @@
 import { throttling } from "./utils.js";
 
 export const onMouseRotate = (wrap, elem) => {
-    if (window.innerWidth < 768) return;
+    let isSmallWidth = false;
+
+    if (window.innerWidth < 768) isSmallWidth = true;
     
     const wrapper = document.querySelector(wrap);
 
@@ -15,10 +17,13 @@ export const onMouseRotate = (wrap, elem) => {
     const SPEED = wrapper.dataset.rotateSpeed ? wrapper.dataset.rotateSpeed : 60;
 
     const changeRotateSlider = (evt) => {
+        if (isSmallWidth) return;
+
         const target = evt.target.closest(elem);
+
         
         if (currentTarget) {
-            currentTarget.style.cssText = `transform: perspective(700px) rotateX(${currentY / SPEED}deg) rotateY(${-currentX / SPEED}deg) scale3d(${SCALE}, ${SCALE}, ${SCALE})!important; box-shadow: 0 0 20px 3px rgba(0,0,0,0.2);`
+            currentTarget.style.cssText = `transform: perspective(700px) rotateX(${currentY / SPEED}deg) rotateY(${-currentX / SPEED}deg) scale3d(${SCALE}, ${SCALE}, ${SCALE})!important; box-shadow: 0 0 20px 2px rgba(0,0,0,0.2);`
         }   
       
         if (target !== currentTarget && currentTarget || currentTarget && !target) {
@@ -33,5 +38,15 @@ export const onMouseRotate = (wrap, elem) => {
     }
 
     const throttleRotate = throttling(changeRotateSlider, 40);
+
     wrapper.addEventListener('mousemove', throttleRotate);
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 768) {
+            isSmallWidth = true;
+            if (currentTarget) currentTarget.hasAttribute('style') ? currentTarget.removeAttribute('style') : false;
+        } else {
+            isSmallWidth = false;
+        }
+    })
 }

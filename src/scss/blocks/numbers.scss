@@ -81,6 +81,11 @@
     height: 44px;
   }
 
+  @media (max-width: 374px) {
+    width: 35px;
+    height: 35px;
+  }
+
   &::after {
     content: '';
     border-radius: 10px;

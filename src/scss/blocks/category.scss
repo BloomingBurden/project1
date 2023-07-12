@@ -32,86 +32,67 @@
   overflow: hidden;
   padding: 30px 300px 20px 50px;
   border-radius: 20px;
-  background-image: url('@img/category/category-stars.png'), linear-gradient(135deg, #313849 0%, #131822 100%);
-  background-repeat: no-repeat, no-repeat;
-  background-position: center, center;
-  background-size: cover, cover;
+  background-image: linear-gradient(135deg, #313849 0%, #131822 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   @media (max-width: $tableW) {
     padding: 30px 20px 20px;
   }
 
-  &::after {
-    content: '';
-    position: absolute;
-    z-index: 0;
-    right: 25px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 240px;
-    height: 240px;
+  .star-1 {
+    background-image: url('@img/category/category-stars.png');
+  }
+}
 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.category__img {
+  position: absolute;
+  will-change: transform;
+  z-index: 0;
+  right: 25px;
+  top: 50%;
+  margin-top: -120px;
+  width: 240px;
+  height: 240px;
+  transition: $cubicTrans;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: $tableW) {
+    width: 70px;
+    height: 70px;
+    right: 10px;
+    top: 15px;
+    transform: translate(0);
+    margin-top: 0;
+  }
+}
+
+.schedule-body {
+  .category__img {
+    width: 200px;
+    height: 200px;
+
+    margin-top: -100px;
 
     @media (max-width: $tableW) {
-      width: 70px;
-      height: 70px;
-      right: 20px;
-      top: 15px;
-      transform: translate(0);
-    }
-  }
-}
-
-.courses-body .category__inner {
-  &::after {
-    background-image: url('@img/category/category-courses.png');
-  }
-}
-
-.shop-body .category__inner {
-  &::after {
-    background-image: url('@img/category/shop-category.png');
-  }
-}
-
-.contacts-body .category__inner {
-  &::after {
-    background-image: url('@img/category/category-contact.png');
-  }
-}
-
-.schedule-body .category__inner {
-  &::after {
-    width: 180px;
-    height: 180px;
-    background-image: url('@img/category/schedule-category.png');
-
-    @media (max-width: $tableW) {
-      width: 70px;
-      height: 70px;
+      width: 60px;
+      height: 60px;
+      margin-top: 0;
     }
   }
 }
 
 .about-body {
-  .category__inner {
-    &::after {
-      right: 40px;
-      width: 180px;
-      height: 180px;
-      background-image: url('@img/category/category-about.png');
-  
-      @media (max-width: $tableW) {
-        width: 50px;
-        height: 50px;
-        right: 20px;
-      }
-    }
-  }
-
   .category__title {
     @media (max-width: $tableW) {
       margin-bottom: 25px;
@@ -220,12 +201,14 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0px 0px #00000000;
+  animation: $anime-gradient;
 }
 
 .category__item-current {
   border-radius: 50px;
   background: radial-gradient(2273.24% 127.91% at 4.57% -0.00%, #FDAAFF 0%, #FDEFD2 10.42%, #FEFFB9 22.40%, #DCD4AD 33.85%, #FFFDC1 45.31%, #FFE3CA 59.38%, #FDFF96 78.13%, #D6C0FF 100%), linear-gradient(90deg, #EBD1FF 0%, #EFF8D9 29.69%, #E9DBEF 58.33%, #F5F3E9 75.52%, #C9C2A6 100%);
   background-blend-mode: lighten, normal;
+  animation: $anime-gradient;
 
   button {
     -webkit-background-clip: text;

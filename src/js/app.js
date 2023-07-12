@@ -35,6 +35,8 @@ window.addEventListener('load', () => {
     elementMove('.chance-popup', '.chance-popup .popup__img');
     elementMove('.buy-popup', '.buy-popup .popup__img');
     elementMove('.quest-popup', '.quest-popup .popup__img');
+    elementMove(window, '.category__img');
+
 
     moveCircle('.my-circle-1');
     moveCircle('.my-circle-2');
@@ -48,6 +50,8 @@ window.addEventListener('load', () => {
 
     onMouseRotate('.courses', '.course__inner');
     onMouseRotate('.shop', '.shop__inner');
+    onMouseRotate('.teachers', '.teachers__item-inner');
+    onMouseRotate('.about', '.about__video');
 
 
     if (document.body.classList.contains('index-body')) {
@@ -67,7 +71,7 @@ window.addEventListener('load', () => {
 
                 1000: {
                     slidesPerView: 2,
-                    spaceBetween: 24
+                    spaceBetween: 0
                 }
               },
           });  

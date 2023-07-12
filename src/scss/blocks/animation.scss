@@ -1,0 +1,49 @@
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0px 0px;
+  }
+  50% {
+    background-position: 100px 50px;
+  }
+  100% {
+    background-position: 0 50px;
+  }
+}
+
+@keyframes gradientAnimationMain {
+  0% {
+    background-position: 80% 0%;
+  }
+  50% {
+    background-position: 20% 100%;
+  }
+  100% {
+    background-position: 80% 0;
+  }
+}
+
+.gradient-anime-main {
+  animation: gradientAnimationMain 3s linear infinite;
+}
+
+
+@keyframes starsAnime {
+  0% {
+    opacity: 1;
+    filter: brightness(150%);
+  }
+
+  50% {
+    opacity: 0;
+    filter: brightness(100%);
+  }
+
+  100% {
+    opacity: 1;
+    filter: brightness(130%);
+  }
+}
+
+.stars-animation {
+  animation: starsAnime 4s linear infinite;
+}

@@ -18,8 +18,11 @@
   overflow: hidden;
 
   padding-top: 100px;
+  padding-bottom: 30px;
   margin-top: -58px;
-  margin-bottom: 45px;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: 15px;
 
   @media (max-width: $tableW) {
     margin-top: 0;
@@ -29,6 +32,7 @@
 }
 
 .about__item {
+  padding: 0 20px;
   max-height: 678px;
   display: grid;
   gap: 24px;
@@ -68,6 +72,8 @@
 .about__video {
   border-radius: 20px;
   overflow: hidden;
+  transition: $cubicTrans transform;
+  will-change: transform;
 
   @media (max-width: $tableW) {
     width: 100%;
