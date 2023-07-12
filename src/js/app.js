@@ -18,7 +18,6 @@ import { popup } from './modules/popup.js';
 import { setPopupImage } from './modules/popupImage.js';
 
 window.addEventListener('load', () => {
-    setPopupImage();
     setMaskForm('7');
     clickMenu();
     onScrollMenu();
@@ -167,6 +166,7 @@ window.addEventListener('load', () => {
     }
 
     if (document.body.classList.contains('contacts-body')) {
+
         const swiper7 = new Swiper('.swiper-contacts', {       
             navigation: {
                 nextEl: '.swiper-button-next',
@@ -210,5 +210,6 @@ window.addEventListener('load', () => {
          mixer.filter('.category-a');
 
         setYandexMap();
+        setPopupImage();
     }
 });
