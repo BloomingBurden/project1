@@ -129,15 +129,31 @@
   padding-right: 280px;
   background-color: #ffffff;
 
-  background-image: url('@img/advantages/advantages-2.png');
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: 290px 290px;
-
   @media (max-width: $tableW) {
     padding-right: 20px;
-    background-size: 200px 200px;
-    background-position: center bottom;
+    padding-bottom: 200px;
+  }
+
+  .advantages__img {
+    position: absolute;
+    width: 290px;
+    height: 290px;
+    right: 0;
+    bottom: 0;
+
+    @media (max-width: $tableW) {
+      width: 200px;
+      height: 200px;
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
   }
 }
 

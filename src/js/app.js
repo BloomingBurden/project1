@@ -16,6 +16,7 @@ import { setYandexMap } from './modules/yandexMap.js';
 import { elementMove } from './modules/elementMove.js';
 import { popup } from './modules/popup.js';
 import { setPopupImage } from './modules/popupImage.js';
+import { moveScreen } from './modules/moveScreen.js';
 
 window.addEventListener('load', () => {
     setMaskForm('7');
@@ -28,12 +29,14 @@ window.addEventListener('load', () => {
     showHelp();
     clickFilter();
     popup();
+    moveScreen();
     
     elementMove('.no-page-body', '.no-page__img');
     elementMove('.discount-popup', '.discount-popup .popup__img');
     elementMove('.chance-popup', '.chance-popup .popup__img');
     elementMove('.buy-popup', '.buy-popup .popup__img');
     elementMove('.quest-popup', '.quest-popup .popup__img');
+    elementMove(window, '.advantages__img');
     elementMove(window, '.category__img');
 
 
